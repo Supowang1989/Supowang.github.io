@@ -1,0 +1,38 @@
+site_name: TencentOS Tiny 用户文档中心
+dev_addr: '172.27.0.3:8000' #默认值8000
+
+nav:
+  - 主页: index.md
+  - 01.Introduction : 01.Introduction.md
+  - 02.Help: 02.Help.md 
+  - 03.Summary: 03.Summary.md 
+  - 04.Development_Manual: 04.Development_Manual.md  
+  - 05.SDK_Manual: 05.SDK_Manual.md 
+  - 06.FAQ: 06.FAQ.md 
+  - 07.Glossary: 07.Glossary.md 
+  - 08.QCloud_IoTHub_Quick_Start: 08.QCloud_IoTHub_Quick_Start.md 
+  - 09.Code_Directories: 09.Code_Directories.md 
+  - 10.Porting_Manual_for_KEIL: 10.Porting_Manual_for_KEIL.md 
+  - 11.Porting_Manual_for_IAR: 11.Porting_Manual_for_IAR.md 
+  - 12.Porting_Manual_for_GCC: 12.Porting_Manual_for_GCC.md 
+  - 13.Porting_Manual_for_MacOS_STM32CubeIDE: 13.Porting_Manual_for_MacOS_STM32CubeIDE.md 
+  - 14.RISC-V_Eclipse_Environment_Quick_Start: 14.RISC-V_Eclipse_Environment_Quick_Start.md 
+  - 15.TencentOS_tiny_EVB_MX_Plus_Quick_Start: 15.TencentOS_tiny_EVB_MX_Plus_Quick_Start.md 
+  - 16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide: 16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide.md 
+  - 17.Mini_Program_Quick_Start: 17.Mini_Program_Quick_Start.md 
+  - 18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start: 18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start.md 
+  - 19.TencentOS_Tiny_Simulator_Use_MDK: 19.TencentOS_Tiny_Simulator_Use_MDK.md 
+  - 20.In_Application_Programming_based_EVB_MX_Plus: 20.In_Application_Programming_based_EVB_MX_Plus.md 
+  - 21.OTA_Quick_Start_based_EVB_MX_Plus: 21.OTA_Quick_Start_based_EVB_MX_Plus.md 
+  - 22.ElfLoader_Quick_Start: 22.ElfLoader_Quick_Start.md 
+  - 23.CMSIS_RTOS_API_Use_Guide: 23.CMSIS_RTOS_API_Use_Guide.md 
+  - 24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer: 24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer.md 
+  - 25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub: 25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub.md 
+  - 26.TencentOS_tiny_EVB_WL_Quick_Start: 26.TencentOS_tiny_EVB_WL_Quick_Start.md 
+  - 27.AT_Firmware_and_SAL_Firmware_User_Guide: 27.AT_Firmware_and_SAL_Firmware_User_Guide.md 
+  - 28.BLE_Device_Quick_Start: 28.BLE_Device_Quick_Start.md 
+  - 29.TencentOS_Tiny_EVB_G0_QuickStart: 29.TencentOS_Tiny_EVB_G0_QuickStart.md 
+
+
+theme: 
+  name: readthedocs
