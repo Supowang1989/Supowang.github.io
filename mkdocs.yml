@@ -1,5 +1,6 @@
 site_name: TencentOS Tiny 用户文档中心
-dev_addr: '172.27.0.3:8000' #默认值8000
+site_url: https://supowang1989.github.io/mymkdocs/
+site_author: Supowang
 
 nav:
   - 主页: index.md
