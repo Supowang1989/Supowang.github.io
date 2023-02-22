@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Qmk（Quick Makefile） - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Qmk\uff08Quick Makefile\uff09";
+        var mkdocs_page_input_path = "qmk/01. Intro_Qmk_A_Makefile_Framework_For_TencentOS.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Qmk（Quick Makefile）</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="qmkquick-makefile">Qmk（Quick Makefile）</h1>
+<h2 id="1">1. 介绍</h2>
+<h3 id="qmk">Qmk 是什么</h3>
+<p><a href="../../qmk">qmk</a>， 是TencentOS的一个Makefile编译框架。</p>
+<h3 id="qmk_1">Qmk 的特点</h3>
+<ul>
+<li>使用简单，任意目录均可make，支持帮助<code>make help</code>；</li>
+<li>支持Makefile调试，任何 目录<code>make BP= dm</code>打印Makefile 的所有变量值。</li>
+<li>支持编译调试, <code>make V=1</code>，<code>Make V=2</code>。</li>
+<li>支持宏扩展调试。<code>make E=1</code>。</li>
+<li>目录分离。源码，编译产物目录分离。</li>
+<li>入门简单，新源码目录 Makefile 拷贝即可使用；</li>
+<li>多架构支持。支持多种 MCU ARCH、多种CC工具链；</li>
+<li>模板化。多种场景的Makefile拷贝即用;</li>
+<li>配置化。board-pack提供mcu/arch/bsp等编译时参数、目录的配置；</li>
+<li>耦合低。跟源码目录结构的耦合低；</li>
+<li>子目录单独make支持。支持子目录编译.a静态库；</li>
+</ul>
+<h2 id="tencentosmake">TencentOS的make编译</h2>
+<h3 id="tencentosmake_1">TencentOS的整体make</h3>
+<pre><code class="language-shell"># 进入board目录支持qmk的board
+cd board/TencentOS_tiny_EVB_MX_Plus/GCC-QMK
+
+# 本目录编译
+make
+
+# 查看帮助
+make help
+</code></pre>
+<p>TencentOS的整体编译过程是：
+- 先编译静态库</p>
+<ol>
+<li>从<code>board/</code>下的顶级Makefile开始，该Makefile 确定了BP 。</li>
+<li>Makefile 通过 <code>make -C BP=</code>访问各个目录，BP用于选择<code>qmk/board-pack</code>下的一个<code>bp.xxx</code>作为编译参数集合。</li>
+<li><code>make -C BP=</code> 进入 <code>arch/</code> <code>kernel/</code> <code>platform/vendor_bsp</code>等需要的目录。 </li>
+<li>make进入各个目录，根据<code>BP</code>，生成对应的<code>.a</code>静态库，如访问 <code>arch/</code>, 生成<code>libarch.a</code>，具备编译哪些arch/下的源码文件由<code>board-pack</code>确定。</li>
+<li>make递归访问其他源码目录，目录的<code>节点Makefile</code>通过BP渲染<code>include Make.tpl</code>模板生成。</li>
+<li>依据目录的<code>节点Makefile</code>，生成<code>libxxx.a</code> 。</li>
+<li>
+<p>各个源码目录节点，依次生成<code>.a</code>静态库文件，均位于 <code>build/</code>目录下 。</p>
+</li>
+<li>
+<p>再链接</p>
+</li>
+<li>make 回到 <code>board/</code>的顶级Makefile。</li>
+<li>需要链接生成<code>elf</code>的目录通过<code>include Make.exec</code> 。</li>
+<li>编译本目录及其子目录下所有源文件，生成<code>.o</code>文件。</li>
+<li>根据 <code>LD_A_FILES</code>和<code>LD_L_LISTS</code>进行链接。</li>
+<li>整体链接完成，生成文件位于<code>build/</code>目录下。</li>
+</ol>
+<h3 id="tecentosmake">TecentOS的子目录make</h3>
+<pre><code class="language-shell"># 进入某包含Makefile的目录
+cd kernel/
+
+# 本目录编译，使用Linux_Posix作为Board-Pack 
+make BP=Linux_Posix
+# 本目录编译，使用TencentOS_tiny_EVB_MX_Plus作为Board-Pack 
+make BP=TencentOS_tiny_EVB_MX_Plus
+
+# 查看帮助
+make help
+</code></pre>
+<p>单目录的编译过程是：
+3. make访问本目录，读取本目录Makefile，根据命令行<code>make BP=xxx</code>的BP，选择<code>mk/board-pack</code>。
+3. 根据BP选择的构建参数。
+3. 使用ar进行打包，.a 文件放在<code>build/</code>目录。
+3. 构建完成。</p>
+<h2 id="qmk_2">Qmk 的概念</h2>
+<h3 id="generic-makefilemkgeneric">generic-Makefile(mk/generic)</h3>
+<p><code>qmk/generic/Make.tpl</code> 属于这类。
+又称全局通用型Makefile模板。位于 <code>mk/generic)</code>。</p>
+<p>要求对所有board、所有gcc-toolchain、cpu、arch、bsp适用。
+所以一般只包含通用的规则。</p>
+<table>
+<thead>
+<tr>
+<th align="left">模板文件</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="../../qmk/generic/Make.tpl">Make.tpl</a></td>
+<td align="left">一个目录或者多个目录编译成<code>.a</code>的通用模板</td>
+</tr>
+<tr>
+<td align="left"><a href="../../qmk/generic/Make.exec">Make.exec</a></td>
+<td align="left">多个<code>.a</code>链接成 <code>elf</code>，生成<code>.bin</code>的通用模板</td>
+</tr>
+<tr>
+<td align="left"><a href="../../qmk/generic/Make.lib">Make.lib</a></td>
+<td align="left">处理多个<code>.o</code>生成<code>.a</code>的通用模板</td>
+</tr>
+<tr>
+<td align="left"><a href="../../qmk/generic/Make.subdirs">Make.subdirs</a></td>
+<td align="left">处理 make递归进入多个subdir make的通用模板</td>
+</tr>
+<tr>
+<td align="left"><a href="../../qmk/generic/Make.depend">Make.depend</a></td>
+<td align="left">处理 一个<code>.o</code>依赖多个<code>.h</code>,的规则模板</td>
+</tr>
+<tr>
+<td align="left"><a href="../../qmk/generic/Make.debug">Make.debug</a></td>
+<td align="left">用于调试Makefile的模板</td>
+</tr>
+<tr>
+<td align="left"><a href="../../qmk/generic/Make.debug">Make.tools</a></td>
+<td align="left">用于屏蔽在多种OS使用qmk，sed、等基础shell/cli命令路径不同</td>
+</tr>
+</tbody>
+</table>
+<h3 id="boardpack-makefilemkboard-pack">boardpack-Makefile(mk/board-pack)</h3>
+<p><code>board-pack/bp.TencentOS_tiny_EVB_MX_Plus</code> 属于这类。</p>
+<p>又称板级Makefile模板。是一个硬件产品工程开发过程中在编译时的参数抽象文件。</p>
+<p>位于mk/board-pack 的 bp.${BP}，属于board配置型Makefile，需要确定工具链，mcu，arch、board、bsp等方面的编译时参数集合。
+嵌入式应用开发工程师主要修改这部分Makefile。</p>
+<h3 id="srctree-makefile">srctree-Makefile</h3>
+<p><code>kernel/Makefile</code> <code>arch/Makefile</code> 都属于这类。
+又称节点Makefile，位于各个源码目录的 Makefile。多个board都适用的Makefile，属于源码节点配置型Makefile。</p>
+<p>不能包含arch，board级别的编译参数。</p>
+<h3 id="link-makefile">link-Makefile</h3>
+<p><code>board/TencentOS_tiny_EVB_MX_Plus/GCC-QMK/app_tencent_os_mqtt/Makefile</code> 属于这类。</p>
+<h2 id="qmk_3">Qmk 的使用</h2>
+<h3 id="ca">当前目录所有.c，编译成一个.a库</h3>
+<p><code>这类Makefile编写参考 osal/posix/Makefile</code>。
+复制粘贴 以下 Makefile 内容到源码目录 Makefile。
+无需修改。</p>
+<blockquote>
+<ol>
+<li>
+<p>注意<code>TREE_LIB_ENABLE=0</code>，,cc和ar时，只搜索当前目录源码，不包含子目录；</p>
+</li>
+<li>
+<p>注意<code>lib=</code>，表示链接后的库名使用目录名；</p>
+</li>
+<li>有特别的CFLAG请根据情况配置 <code>CFGFLAGS</code>。</li>
+<li>注意板级的编译参数请配置到pack-Makefile，否则会导致其他pack编译报错.</li>
+</ol>
+</blockquote>
+<pre><code class="language-Makefile">###################################################################
+#automatic detection QTOP and LOCALDIR
+CUR_DIR := $(patsubst %/,%,$(dir $(realpath $(firstword $(MAKEFILE_LIST)))))
+TRYQTOP := $(shell if [ -n &quot;$$QTOP&quot; ] ; then\
+        echo $$QTOP;\
+        else\
+        cd $(CUR_DIR); while /usr/bin/test ! -d qmk ; do \
+        dir=`cd ../;pwd`;                       \
+        if [ &quot;$$dir&quot; = &quot;/&quot; ] ; then             \
+           echo Cannot find QTOP in $(firstword $(MAKEFILE_LIST)) 1&gt;&amp;2; \
+           exit 1;                              \
+        fi ;                                    \
+        cd $$dir;                               \
+        done ;                                  \
+        pwd;                                    \
+        fi)
+QTOP ?= $(realpath ${TRYQTOP})
+
+ifeq ($(QTOP),)
+$(error Please run this in a tree)
+endif
+LOCALDIR = $(patsubst %/,%,$(subst $(realpath $(QTOP))/,,$(CUR_DIR)))
+
+####################################################################
+
+
+TREE_LIB_ENABLE=0
+lib=
+subdirs=
+
+CFGFLAGS += -I$(CUR_DIR)/include
+
+include ${QTOP}/qmk/generic/Make.tpl
+
+</code></pre>
+<h3 id="ca_1">某目录及其子目录的所有.c，编译成一个.a库</h3>
+<p><code>这类Makefile编写参考 kernel/Makefile</code>。
+复制粘贴 以下 Makefile 内容到源码目录 Makefile。
+无需修改。
+有特别的CFLAG请根据情况配置 <code>CFGFLAGS</code>。</p>
+<blockquote>
+<ol>
+<li>
+<p>注意<code>TREE_LIB_ENABLE=1</code>,cc和ar时，会递归搜索源码，包含当前目录及其子目录。</p>
+</li>
+<li>
+<p>注意<code>lib=</code>，表示链接后的库名使用目录名；</p>
+</li>
+<li>注意板级的编译参数请配置到pack-Makefile，否则会导致其他pack编译报错.
+</li>
+</ol>
+</blockquote>
+<pre><code class="language-Makefile">###################################################################
+#automatic detection QTOP and LOCALDIR
+CUR_DIR := $(patsubst %/,%,$(dir $(realpath $(firstword $(MAKEFILE_LIST)))))
+TRYQTOP := $(shell if [ -n &quot;$$QTOP&quot; ] ; then\
+        echo $$QTOP;\
+        else\
+        cd $(CUR_DIR); while /usr/bin/test ! -d qmk ; do \
+        dir=`cd ../;pwd`;                       \
+        if [ &quot;$$dir&quot; = &quot;/&quot; ] ; then             \
+           echo Cannot find QTOP in $(firstword $(MAKEFILE_LIST)) 1&gt;&amp;2; \
+           exit 1;                              \
+        fi ;                                    \
+        cd $$dir;                               \
+        done ;                                  \
+        pwd;                                    \
+        fi)
+QTOP ?= $(realpath ${TRYQTOP})
+
+ifeq ($(QTOP),)
+$(error Please run this in a tree)
+endif
+LOCALDIR = $(patsubst %/,%,$(subst $(realpath $(QTOP))/,,$(CUR_DIR)))
+
+####################################################################
+
+
+TREE_LIB_ENABLE=1
+lib=
+subdirs=
+
+CFGFLAGS += -I${QTOP}/kernel/core/include
+CFGFLAGS += -I${QTOP}/kernel/evtdrv/include
+CFGFLAGS += -I${QTOP}/kernel/hal/include
+CFGFLAGS += -I${QTOP}/kernel/pm/include
+
+include ${QTOP}/qmk/generic/Make.tpl
+</code></pre>
+<h3 id="_1">当前目录进入所有子目录、进入指定目录编译</h3>
+<p><code>这类Makefile编写参考 platform/Makefile</code>。
+复制粘贴 以下 Makefile 内容到源码目录 Makefile。
+无需修改。
+有特别的CFLAG请根据情况配置 <code>CFGFLAGS</code>。</p>
+<blockquote>
+<p>注意<code>subdirs=</code>为空，默认会进入所有子目录。
+如果需要指定子目录请给<code>subdirs</code>赋值。
+</p>
+</blockquote>
+<pre><code class="language-Makefile">###################################################################
+#automatic detection QTOP and LOCALDIR
+CUR_DIR := $(patsubst %/,%,$(dir $(realpath $(firstword $(MAKEFILE_LIST)))))
+TRYQTOP := $(shell if [ -n &quot;$$QTOP&quot; ] ; then\
+        echo $$QTOP;\
+        else\
+        cd $(CUR_DIR); while /usr/bin/test ! -e qmk ; do \
+        dir=`cd ../;pwd`;                       \
+        if [ &quot;$$dir&quot; = &quot;/&quot; ] ; then             \
+           echo Cannot find QTOP in $(firstword $(MAKEFILE_LIST)) 1&gt;&amp;2; \
+           exit 1;                              \
+        fi ;                                    \
+        cd $$dir;                               \
+        done ;                                  \
+        pwd;                                    \
+        fi)
+QTOP ?= $(realpath ${TRYQTOP})
+
+ifeq ($(QTOP),)
+$(error Please run this in a tree)
+endif
+LOCALDIR = $(patsubst %/,%,$(subst $(realpath $(QTOP))/,,$(CUR_DIR)))
+####################################################################
+
+
+TREE_LIB_ENABLE=0
+lib=
+subdirs=
+
+
+include ${QTOP}/qmk/generic/Make.tpl
+
+</code></pre>
+<h3 id="board-packboard">新增一个 board-pack，支持新的board</h3>
+<p>参考 <code>mk/board-pack/</code>下的各个文件。</p>
+<p>参考 <code>qmk/board-pack/bp.TencentOS_tiny_EVB_MX_Plus</code>。</p>
+<p>board-pack 是对 board 在编译时的一个抽象。
+一个board 确定了 MCU、 arch、工具链，把这些编译时参数写成一个bp.xxx。</p>
+<p>新整一个board-pack的步骤：
+- qmk/board-pack/目录下，新建一个bp.xxx.
+- 在bp.xxx定义以下变量：</p>
+<pre><code> 注意 CFGFLAGS 需要包括 cpu、arch、board 等类型的FLAG。  
+ 赋值建议用`+=`，不允许用 `:=`。注意 可以引用`QTOP`，`BLDROOT`变量,不建议引用其他`qmk/generic/`模板的变量。
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">Makefile变量名</th>
+<th>变量赋值举例</th>
+<th align="left">变量说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CROSS_COMPILE</td>
+<td>CROSS_COMPILE =arm-none-eabi-</td>
+<td align="left">工具链前缀</td>
+</tr>
+<tr>
+<td align="left">CC</td>
+<td>CC       = $(CROSS_COMPILE)gcc</td>
+<td align="left">工具链</td>
+</tr>
+<tr>
+<td align="left">CXX</td>
+<td>CXX      = $(CROSS_COMPILE)g++</td>
+<td align="left">工具链</td>
+</tr>
+<tr>
+<td align="left">LD</td>
+<td>LD       = $(CROSS_COMPILE)ld</td>
+<td align="left">工具链</td>
+</tr>
+<tr>
+<td align="left">ARFLAGS</td>
+<td>ARFLAGS  = -rc</td>
+<td align="left">工具链</td>
+</tr>
+<tr>
+<td align="left">STRIP</td>
+<td>STRIP    = $(CROSS_COMPILE)strip</td>
+<td align="left">工具链</td>
+</tr>
+<tr>
+<td align="left">CFGFLAGS</td>
+<td>参考<code>bp.TencentOS_tiny_EVB_MX_Plus</code></td>
+<td align="left">对CFLAGS、CXXFLAGS 进行增加</td>
+</tr>
+<tr>
+<td align="left">ARCH_LSRCS</td>
+<td>参考<code>bp.TencentOS_tiny_EVB_MX_Plus</code></td>
+<td align="left">board-pack对应的arch/源码，`make -C arch/时需要编译的源码，绝对路径，或相对于QTOP的相对路径</td>
+</tr>
+<tr>
+<td align="left">BSP_LSRCS</td>
+<td>参考<code>bp.TencentOS_tiny_EVB_MX_Plus</code></td>
+<td align="left">board-pack对应的board/bsp源码</td>
+</tr>
+<tr>
+<td align="left">PLATFORM_VENDOR_BSP_LSRCS</td>
+<td>参考<code>bp.TencentOS_tiny_EVB_MX_Plus</code></td>
+<td align="left">board-pack对应的vendor_bsp 源码,`make -C platform/vendor_bsp时需要编译的源码</td>
+</tr>
+<tr>
+<td align="left">PLATFORM_VENDOR_BSP_LSRCS</td>
+<td>参考<code>bp.TencentOS_tiny_EVB_MX_Plus</code></td>
+<td align="left">board-pack对应的vendor_bsp 源码,`make -C platform/vendor_bsp时需要编译的源码</td>
+</tr>
+<tr>
+<td align="left">PLATFORM_HAL_LSRCS</td>
+<td>参考<code>bp.TencentOS_tiny_EVB_MX_Plus</code></td>
+<td align="left">board-pack对应的 hal 源码,`make -C platform/hal时</td>
+</tr>
+</tbody>
+</table>
+<h2 id="qmk_4">Qmk 的模板的内置变量</h2>
+<table>
+<thead>
+<tr>
+<th align="left">变量名</th>
+<th align="left">赋值</th>
+<th align="left">变量值说明</th>
+<th align="left">值举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">AR</td>
+<td align="left">bp中赋值</td>
+<td align="left">工具链</td>
+<td align="left">"arm-none-eabi-ar"</td>
+</tr>
+<tr>
+<td align="left">ARCH_LSRCS</td>
+<td align="left">bp中赋值</td>
+<td align="left">进入arch/需要编译的源码，绝对路径或相对于QTOP的源码路径</td>
+<td align="left">"/root/democode/TencentOS-tiny/arch/arm/arm-v7m/cortex-m4/gcc/port_c.c  /root/democode/TencentOS-tiny/arch/arm/arm-v7m/cortex-m4/gcc/port_s.S /root/democode/TencentOS-tiny/arch/arm/arm-v7m/common/tos_fault.c /root/democode/TencentOS-tiny/arch/arm/arm-v7m/common/tos_cpu.c   /root/democode/TencentOS-tiny/arch/arm/arm-v7m/cortex-m4/gcc/port_c.c  /root/democode/TencentOS-tiny/arch/arm/arm-v7m/cortex-m4/gcc/port_s.S /root/democode/TencentOS-tiny/arch/arm/arm-v7m/common/tos_fault.c /root/democode/TencentOS-tiny/arch/arm/arm-v7m/common/tos_cpu.c  "</td>
+</tr>
+<tr>
+<td align="left">ARFLAGS</td>
+<td align="left">bp中赋值</td>
+<td align="left">工具链参数</td>
+<td align="left">ar 参数,含义见<code>ar --help</code></td>
+</tr>
+<tr>
+<td align="left">BLDDIR</td>
+<td align="left">禁止赋值</td>
+<td align="left">标识.o等编译产物所在的目录，跟源码LOCALDIR有关</td>
+<td align="left">"/root/democode/TencentOS-tiny/build/TencentOS_tiny_EVB_MX_Plus.arm-none-eabi-gcc.tos/arch"</td>
+</tr>
+<tr>
+<td align="left">BLDROOT</td>
+<td align="left">禁止赋值</td>
+<td align="left">标识编译产物位置目录。</td>
+<td align="left">"/root/democode/TencentOS-tiny/build/TencentOS_tiny_EVB_MX_Plus.arm-none-eabi-gcc.tos"</td>
+</tr>
+<tr>
+<td align="left">BLD_SUFFIX</td>
+<td align="left">禁止赋值</td>
+<td align="left">编译产物位置目录的后缀名</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">BOBJS</td>
+<td align="left">禁止赋值</td>
+<td align="left">所有OBJ集合，绝对路径</td>
+<td align="left">"/root/democode/TencentOS-tiny/build/TencentOS_tiny_EVB_MX_Plus.arm-none-eabi-gcc.tos/arch/arm/arm-v7m/cortex-m4/gcc/port_c.o /root/democode/TencentOS-tiny/build/TencentOS_tiny_EVB_MX_Plus.arm-none-eabi-gcc.tos/arch/arm/arm-v7m/cortex-m4/gcc/port_s.o /root/democode/TencentOS-tiny/build/TencentOS_tiny_EVB_MX_Plus.arm-none-eabi-gcc.tos/arch/arm/arm-v7m/common/tos_fault.o /root/democode/TencentOS-tiny/build/TencentOS_tiny_EVB_MX_Plus.arm-none-eabi-gcc.tos/arch/arm/arm-v7m/common/tos_cpu.o"</td>
+</tr>
+<tr>
+<td align="left">CC</td>
+<td align="left">bp中赋值</td>
+<td align="left">"arm-none-eabi-gcc"</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">CROSS_COMPILE</td>
+<td align="left">工具链</td>
+<td align="left">"arm-none-eabi-"</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">CURDIR</td>
+<td align="left">禁止赋值</td>
+<td align="left">标识当前Makefile 所在的目录</td>
+<td align="left">"/root/democode/TencentOS-tiny/arch"</td>
+</tr>
+<tr>
+<td align="left">CUR_DIR</td>
+<td align="left">禁止赋值</td>
+<td align="left">标识当前Makefile 所在的目录</td>
+<td align="left">"/root/democode/TencentOS-tiny/arch"</td>
+</tr>
+<tr>
+<td align="left">CUR_MK_NODE_DIR</td>
+<td align="left">禁止赋值</td>
+<td align="left">标识当前Makefile 所在的目录</td>
+<td align="left">"/root/democode/TencentOS-tiny/arch"</td>
+</tr>
+<tr>
+<td align="left">CXX</td>
+<td align="left">bp中赋值</td>
+<td align="left">"arm-none-eabi-g++"</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">LD</td>
+<td align="left">bp中赋值</td>
+<td align="left">"arm-none-eabi-ld"</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">LDFLAGS</td>
+<td align="left">bp中赋值</td>
+<td align="left">"    "</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">LOBJS</td>
+<td align="left">禁止赋值</td>
+<td align="left">OBJ文件集合，相对路径，相对于当前Makefile目录</td>
+<td align="left">"arm/arm-v7m/cortex-m4/gcc/port_c.o arm/arm-v7m/cortex-m4/gcc/port_s.o arm/arm-v7m/common/tos_fault.o arm/arm-v7m/common/tos_cpu.o"</td>
+</tr>
+<tr>
+<td align="left">LOCALDIR</td>
+<td align="left">禁止赋值</td>
+<td align="left">源码目录位置，相对路径，相对于QTOP</td>
+<td align="left">"arch"</td>
+</tr>
+<tr>
+<td align="left">LSRCS</td>
+<td align="left">禁止在bp中赋值，可以在src-Makefile赋值</td>
+<td align="left">编译源代码文件集合，相对路径，相对于当前Makefile目录，或者绝对路径</td>
+<td align="left">"arm/arm-v7m/cortex-m4/gcc/port_c.c  arm/arm-v7m/cortex-m4/gcc/port_s.S arm/arm-v7m/common/tos_fault.c arm/arm-v7m/common/tos_cpu.c  "</td>
+</tr>
+<tr>
+<td align="left">QTOP</td>
+<td align="left">禁止赋值</td>
+<td align="left">源码一级目录</td>
+<td align="left">"/root/democode/TencentOS-tiny"</td>
+</tr>
+<tr>
+<td align="left">RANLIB</td>
+<td align="left">bp中赋值</td>
+<td align="left">"arm-none-eabi-ranlib"</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">STRIP</td>
+<td align="left">bp中赋值</td>
+<td align="left">"arm-none-eabi-strip"</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">TREE_LIB_ENABLE</td>
+<td align="left">src-Makefile赋值，非0 表示编译所有子目录源码</td>
+<td align="left">LSRCS是否把子目录源码</td>
+<td align="left">"0"</td>
+</tr>
+<tr>
+<td align="left">lib</td>
+<td align="left">不建议赋值</td>
+<td align="left"><code>.a</code>库名变量，默认目录名</td>
+<td align="left">"libarch"</td>
+</tr>
+<tr>
+<td align="left">targetlib</td>
+<td align="left">禁止赋值</td>
+<td align="left">"/root/democode/TencentOS-tiny/build/TencentOS_tiny_EVB_MX_Plus.arm-none-eabi-gcc.tos/libarch.a"</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="qmk-make">qmk的 make 命令行参数</h2>
+<pre><code class="language-shell">make help
+</code></pre>
+<h3 id="make-v1-e1">make V=1 E=1</h3>
+<pre><code class="language-shell"># verbose打印编译时的命令
+make V=1 
+# 调试头文件包含，宏扩展时很有用，会在生成`.o`文件的同时生成`.i`预处理文件
+make E=1
+</code></pre>
+<pre><code class="language-shell"># verbose打印链接时的库搜索过程
+make V=2
+make V=3
+</code></pre>
+<h2 id="makefile">调试Makefile</h2>
+<pre><code class="language-shell">#进入含Makefile的目录
+make BP=TencentOS_tiny_EVB_MX_Plus dm
+</code></pre>
+<h2 id="qmk_5">Qmk 后续</h2>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

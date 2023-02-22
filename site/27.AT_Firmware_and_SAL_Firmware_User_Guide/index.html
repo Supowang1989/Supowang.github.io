@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>27.AT_Firmware_and_SAL_Firmware_User_Guide - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "27.AT_Firmware_and_SAL_Firmware_User_Guide";
+        var mkdocs_page_input_path = "27.AT_Firmware_and_SAL_Firmware_User_Guide.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#11">1.1. 百花绽放的通信模组</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12-at">1.2. AT指令集</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13-at">1.3. AT指令解析方式</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#14-atsal">1.4. AT框架与SAL层</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>27.AT_Firmware_and_SAL_Firmware_User_Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="1">1. 概述</h1>
+<h2 id="11">1.1. 百花绽放的通信模组</h2>
+<p>随着嵌入式系统终端对网络的需求越来越多，各种通信模组百花齐放，几乎覆盖了所有的网络接入方式：WIFI、2G、4G Cat.1、4G Cat.4、NB-IoT、LoRa……未来还会有更多。</p>
+<p>对于嵌入式系统终端而言，这些通信模组屏蔽了网络接入方式的差异化，无论使用哪种方式接入网络，设备仅仅需要提供一个串口与模组交互即可。</p>
+<p>交互双方有了通信的硬件基础（串口），还需要制定和遵循一套有效的软件协议，目前大多数模组厂商都采用AT指令集。</p>
+<h2 id="12-at">1.2. AT指令集</h2>
+<p>AT指令有两种：</p>
+<p>① 普通AT指令：以AT开头、换行符结束的一组字符串，每个指令执行成功与否都有相应的返回。</p>
+<pre><code>---&gt; AT
+
+&lt;--- OK
+</code></pre>
+<p>②其他的一些非预期的信息，模块将有对应的一些信息提示，主动发送：</p>
+<pre><code>&lt;--- +IPD:...
+
+&lt;--- +URC:...
+</code></pre>
+<p>AT指令交互类似服务器/客户端架构，一般来说模组侧作为AT服务端，MCU侧作为AT客户端，交互方式对应也有两种：</p>
+<ul>
+<li>客户端发出一条AT指令，服务端收到处理之后返回结果给客户端；</li>
+<li>服务端主动发送数据给客户端，客户端被动接收处理；</li>
+</ul>
+<p>整体架构如下图：</p>
+<p><img alt="AT architecture" src="../image/AT_Firmware/AT_architecture.png" /></p>
+<p>模组的功能非常丰富，有修改模组配置的AT指令、有TCP/IP协议栈通信的AT指令、甚至还有MQTT、HTTP、NTP协议栈的通信指令，这些指令合在一起构成了该模组的AT指令集。一般来说，同一家厂商的不同模组之间，AT指令集差异不大，而不同厂商之间的AT指令集之间差异较大。</p>
+<h2 id="13-at">1.3. AT指令解析方式</h2>
+<p>AT指令有三种解析方式：</p>
+<ul>
+<li>裸机直接在串口中断处理函数中解析</li>
+</ul>
+<p>因为解析时间未知，所以这种解析方式最不可取，极容易出现数据丢失问题。</p>
+<ul>
+<li>裸机使用ringbuff（环形缓冲区）缓存数据，在main函数中构造状态机解析</li>
+</ul>
+<p>串口每来一个字符就送入缓冲区，最大程度保证数据不会丢失，这种解析方式随着main函数中其它业务逻辑的增多，导致缓冲区数据迟迟得不到解析，依然会出现问题。</p>
+<ul>
+<li>RTOS使用ringbuff缓存数据，创建一个任务专门用于数据解析</li>
+</ul>
+<p>同样，串口每来一个字符就送入缓冲区，保证数据不丢失，只要数据解析任务的优先级够高，数据总是会被及时解析，大幅提升系统的实时性能。</p>
+<h2 id="14-atsal">1.4. AT框架与SAL层</h2>
+<p>什么是AT框架？其实并不神秘~</p>
+<p>AT框架是RTOS官方人员/社区开发者编写的一个通用AT指令解析任务，使开发者只需要调用 AT 框架提供的 API 即可处理与模组的交互数据。</p>
+<p>SAL框架全称Socket Abstract Layer，提供了类似socket网络编程的抽象层。基于AT框架实现SAL的底层函数叫做通信模组的驱动程序。</p>
+<h1 id="2-tencentos-tinyat">2. TencentOS-tiny的AT框架</h1>
+<h2 id="21">2.1. 整体架构</h2>
+<p><img alt="AT_SAL_architecture" src="../image/AT_Firmware/AT_SAL_architecture.png" /></p>
+<h2 id="22">2.2. 实现原理</h2>
+<p>TencentOS-tiny AT 框架的实现在 <code>net/at</code> 目录下的 <code>tos_at.h</code>和<code>tos_at.c</code>两个文件中。</p>
+<p>① AT框架所有接收数据的数据流向如图所示：</p>
+<ul>
+<li>串口中断中逐个字节接收，写入 chr_fifo 缓冲区；</li>
+<li>解析任务 at_parser 从 chr_fifo 缓冲区中逐个字节读取，读取一行数据到 recv_cache （行缓冲区）并进行处理；</li>
+<li>处理之后如果不是模组上报的普通的数据，也不是AT命令期望的返回结果，也不是 "OK"、"FAIL"、"ERROR"，则为普通数据，将行缓冲区的数据复制到用户传入的 echo_buffer中，由用户处理。</li>
+</ul>
+<p><img alt="AT_data_flow" src="../image/AT_Firmware/AT_data_flow.png" /></p>
+<p>② AT框架将模组主动上报的数据作为事件，将上报数据的数据头和用户指定的回调处理函数作为事件表，在AT框架初始化时注册。</p>
+<p>比如 ESP8266 在 TCP/IP 通信时，收到远程服务器发送来的数据时会使用+IPD头主动上报数据，将此事件注册的示例如下：</p>
+<pre><code class="language-c">/* esp8266.c */
+
+at_event_t esp8266_at_event[] = {
+    { &quot;+IPD,&quot;, esp8266_incoming_data_process },
+};
+</code></pre>
+<p>注册之后，每次行解析的时候都会判断是否为事件头，如果是则证明有事件发生，拉起注册的回调函数进行处理。</p>
+<blockquote>
+<p>注意，AT框架只从 chr_fifo 中读取出了事件头，事件头之后的所有数据依然在缓冲区中，所在开发者在编写回调函数时可以边读出数据，边解析数据。</p>
+</blockquote>
+<p>③ 如何完成一次交互？</p>
+<p>AT框架将每一次交互抽象为一个 at_echo_t 对象，用户交互的流程如下：</p>
+<p><img alt="AT_exec_flow" src="../image/AT_Firmware/AT_exec_flow.png" /></p>
+<p>④ 如何实现多个channel同时存在？</p>
+<p>大多数通信模组在进行 TCP/IP 通信时，支持同时创建多个socket通信（一般为6个），作为一个通用的AT框架，也为了更好的上层SAL服务，AT框架也相应的支持多channel。</p>
+<p>每个channel对象如下：</p>
+<pre><code class="language-c">typedef struct at_data_channel_st {
+    uint8_t             is_free;
+    k_chr_fifo_t        rx_fifo;
+    uint8_t            *rx_fifo_buffer;
+    k_mutex_t           rx_lock;
+
+    at_channel_status_t status;
+
+    const char         *remote_ip;
+    const char         *remote_port;
+} at_data_channel_t;
+</code></pre>
+<p>每次上层发起 Socket Connect连接时，将此Socket的ip和port绑定到channel对象，然后动态申请一块内存作为该channnel的接收缓冲区，当Socket close时，随即释放此缓冲区。</p>
+<h2 id="23-tencentos-tiny-at">2.3. TencentOS-tiny AT框架参数配置</h2>
+<p>AT框架的所有缓冲区内存都是使用动态内存，内部机制使用到了信号量sem、互斥锁mutex、字符流队列chr_fifo、计时表stopwatch，所以请首先保证在<code>tos_config.h</code>中这些配置处于使能模式，其中动态内存池的大小可以根据随后 AT 框架的配置修改：</p>
+<pre><code class="language-c">#define TOS_CFG_MUTEX_EN                    1u
+
+#define TOS_CFG_SEM_EN                      1u
+
+#define TOS_CFG_MMHEAP_EN                   1u
+
+#define TOS_CFG_MMHEAP_DEFAULT_POOL_EN      1u
+
+#define TOS_CFG_MMHEAP_DEFAULT_POOL_SIZE    0x8000
+</code></pre>
+<p>AT框架的所有可配置选项都已在<code>tos_at.h</code>中使用宏定义给出，可以根据自己的需要进行裁剪配置：</p>
+<pre><code class="language-c">#define AT_DATA_CHANNEL_NUM                     6
+#define AT_DATA_CHANNEL_FIFO_BUFFER_SIZE        (2048 + 1024)
+
+#define AT_UART_RX_FIFO_BUFFER_SIZE             (2048 + 1024)
+#define AT_RECV_CACHE_SIZE                      2048
+
+#define AT_CMD_BUFFER_SIZE                      512
+
+#define AT_PARSER_TASK_STACK_SIZE               2048
+#define AT_PARSER_TASK_PRIO                     2
+</code></pre>
+<p>配置项的意义如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">配置项</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">AT_DATA_CHANNEL_NUM</td>
+<td align="center">AT框架支持的最大通道数</td>
+</tr>
+<tr>
+<td align="center">AT_DATA_CHANNEL_FIFO_BUFFER_SIZE</td>
+<td align="center">每个通道的缓冲区大小</td>
+</tr>
+<tr>
+<td align="center">AT_UART_RX_FIFO_BUFFER_SIZE</td>
+<td align="center">串口接收缓冲区大小</td>
+</tr>
+<tr>
+<td align="center">AT_RECV_CACHE_SIZE</td>
+<td align="center">行缓冲区大小</td>
+</tr>
+<tr>
+<td align="center">AT_CMD_BUFFER_SIZE</td>
+<td align="center">命令缓冲区大小</td>
+</tr>
+<tr>
+<td align="center">AT_PARSER_TASK_STACK_SIZE</td>
+<td align="center">解析任务的任务栈大小</td>
+</tr>
+<tr>
+<td align="center">AT_PARSER_TASK_PRIO</td>
+<td align="center">解析任务的任务优先级</td>
+</tr>
+</tbody>
+</table>
+<h2 id="24-atapi">2.4. AT框架提供的API</h2>
+<ul>
+<li>AT框架写入一个字节数据</li>
+</ul>
+<pre><code class="language-c">__API__ void tos_at_uart_input_byte(uint8_t data);
+</code></pre>
+<p>此 API 通常在串口中断中调用。</p>
+<ul>
+<li>AT框架初始化</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_init(hal_uart_port_t uart_port, at_event_t *event_table, size_t event_table_size);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">uart_port</td>
+<td align="center">AT框架使用的串口</td>
+</tr>
+<tr>
+<td align="center">event_table</td>
+<td align="center">事件表地址</td>
+</tr>
+<tr>
+<td align="center">event_table_size</td>
+<td align="center">事件表大小</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>创建一个 at_echo_t 对象</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_echo_create(at_echo_t *echo, char *buffer, size_t buffer_size, char *echo_expect);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">echo</td>
+<td align="center">at_echo_t对象句柄</td>
+</tr>
+<tr>
+<td align="center">buffer</td>
+<td align="center">用于保存命令执行结果的缓冲区</td>
+</tr>
+<tr>
+<td align="center">buffer_size</td>
+<td align="center">缓冲区大小</td>
+</tr>
+<tr>
+<td align="center">echo_expect</td>
+<td align="center">期望的字符串</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>执行一条AT命令,timeout超时后才返回</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_cmd_exec(at_echo_t *echo, uint32_t timeout, const char *cmd, ...);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">echo</td>
+<td align="center">at_echo_t对象句柄</td>
+</tr>
+<tr>
+<td align="center">timeout</td>
+<td align="center">命令执行之后的等待时间</td>
+</tr>
+<tr>
+<td align="center">cmd</td>
+<td align="center">要执行的AT命令</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>执行一条AT命令，一旦有期望结果立马返回，若无，则timeout超时后返回</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_cmd_exec_until(at_echo_t *echo, uint32_t timeout, const char *cmd, ...);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">echo</td>
+<td align="center">at_echo_t对象句柄</td>
+</tr>
+<tr>
+<td align="center">timeout</td>
+<td align="center">命令执行之后的等待时间</td>
+</tr>
+<tr>
+<td align="center">cmd</td>
+<td align="center">要执行的AT命令</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>发送十六进制原始数据，timeout超时后才返回</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_raw_data_send(at_echo_t *echo, uint32_t timeout, const uint8_t *buf, size_t size);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">echo</td>
+<td align="center">at_echo_t对象句柄</td>
+</tr>
+<tr>
+<td align="center">timeout</td>
+<td align="center">命令执行之后的等待时间</td>
+</tr>
+<tr>
+<td align="center">buf</td>
+<td align="center">待发送的缓冲区</td>
+</tr>
+<tr>
+<td align="center">size</td>
+<td align="center">缓冲区大小</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>发送十六进制数据，一旦有期望结果立马返回，若无，则timeout超时后返回</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_raw_data_send_until(at_echo_t *echo, uint32_t timeout, const uint8_t *buf, size_t size);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">echo</td>
+<td align="center">at_echo_t对象句柄</td>
+</tr>
+<tr>
+<td align="center">timeout</td>
+<td align="center">命令执行之后的等待时间</td>
+</tr>
+<tr>
+<td align="center">buf</td>
+<td align="center">待发送的缓冲区</td>
+</tr>
+<tr>
+<td align="center">size</td>
+<td align="center">缓冲区大小</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>直接从串口接收缓冲区中读取数据</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_uart_read(uint8_t *buffer, size_t buffer_len);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">buf</td>
+<td align="center">存放读取数据的缓冲区</td>
+</tr>
+<tr>
+<td align="center">size</td>
+<td align="center">读取数据的长度</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>直接从串口接收缓冲区中读取一行数据</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_uart_readline(uint8_t *buffer, size_t buffer_len);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">buf</td>
+<td align="center">存放读取数据的缓冲区</td>
+</tr>
+<tr>
+<td align="center">size</td>
+<td align="center">读取数据的长度</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>申请一个channel</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_channel_alloc(const char *ip, const char *port);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ip</td>
+<td align="center">socket ip</td>
+</tr>
+<tr>
+<td align="center">port</td>
+<td align="center">socket port</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：非负值、通道ID，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>写入数据到channel的接收缓冲区</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_channel_write(int channel_id, uint8_t *buffer, size_t buffer_len);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">channel_id</td>
+<td align="center">已经申请成功的channel 通道ID</td>
+</tr>
+<tr>
+<td align="center">buf</td>
+<td align="center">存放写入数据的缓冲区</td>
+</tr>
+<tr>
+<td align="center">size</td>
+<td align="center">写入数据的长度</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>在TCP/IP通信时，解析完AT指令上报的数据时，就可以将真正网络接收的数据调用此API写入channle的接收缓冲区。</p>
+</blockquote>
+<ul>
+<li>从channel的接收缓冲区中读取数据</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_channel_read(int channel_id, uint8_t *buffer, size_t buffer_len);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">channel_id</td>
+<td align="center">已经申请成功的channel 通道ID</td>
+</tr>
+<tr>
+<td align="center">buf</td>
+<td align="center">存放读取数据的缓冲区</td>
+</tr>
+<tr>
+<td align="center">size</td>
+<td align="center">读取数据的长度</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>从channel的接收缓冲区中读取数据，有超时时间</li>
+</ul>
+<pre><code class="language-c">__API__ int tos_at_channel_read_timed(int channel_id, uint8_t *buffer, size_t buffer_len, uint32_t timeout);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">channel_id</td>
+<td align="center">已经申请成功的channel 通道ID</td>
+</tr>
+<tr>
+<td align="center">buf</td>
+<td align="center">存放读取数据的缓冲区</td>
+</tr>
+<tr>
+<td align="center">size</td>
+<td align="center">读取数据的长度</td>
+</tr>
+<tr>
+<td align="center">timeout</td>
+<td align="center">读取等待时间</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3-tencentos-tinysal">3. TencentOS-tiny的SAL框架</h1>
+<h2 id="31-sal">3.1. 什么是SAL框架</h2>
+<p>SAL框架全称Socket Abstract Layer，提供了类似socket网络编程的抽象层，为上层应用一层统一的网络API，屏蔽了底层不同通信模组/方式的差异。</p>
+<h2 id="32-sal">3.2. SAL框架的实现原理</h2>
+<p>TencentOS-tiny SAL框架的实现在<code>net/sal_module_wrapper</code>路径中，仅有两个文件：<code>sal_module_wrapper.h</code>和<code>sal_module_wrapper.c</code>。</p>
+<p>SAL框架的底层是一套函数指针，如下：</p>
+<pre><code class="language-c">typedef struct sal_module_st {
+    int (*init)(void);
+
+    int (*get_local_mac)(char *mac);
+
+    int (*get_local_ip)(char *ip, char *gw, char *mask);
+
+    int (*parse_domain)(const char *host_name, char *host_ip, size_t host_ip_len);
+
+    int (*connect)(const char *ip, const char *port, sal_proto_t proto);
+
+    int (*send)(int sock, const void *buf, size_t len);
+
+    int (*recv_timeout)(int sock, void *buf, size_t len, uint32_t timeout);
+
+    int (*recv)(int sock, void *buf, size_t len);
+
+    int (*sendto)(int sock, char *ip, char *port, const void *buf, size_t len);
+
+    int (*recvfrom)(int sock, void *buf, size_t len);
+
+    int (*recvfrom_timeout)(int sock, void *buf, size_t len, uint32_t timeout);
+
+    int (*close)(int sock);
+} sal_module_t;
+</code></pre>
+<p>不同的通信模组驱动都去实现这一套函数指针即可，TencentOS-tiny官方已经提供了非常多的通信模组驱动实现SAL框架，覆盖常用的通信方式，比如2G、4G Cat.4、4G Cat.1、NB-IoT等，在<code>devices</code>文件夹下：</p>
+<ul>
+<li>air724</li>
+<li>bc26</li>
+<li>bc25_28_95</li>
+<li>bc35_28_95_lwm2m</li>
+<li>ec20</li>
+<li>esp8266</li>
+<li>m26</li>
+<li>m5310a</li>
+<li>m6312</li>
+<li>sim800a</li>
+<li>sim7600ce</li>
+<li>欢迎贡献更多驱动...</li>
+</ul>
+<h2 id="33-salapi">3.3. SAL框架提供的网络编程API</h2>
+<ul>
+<li>注册该模组实现到SAL框架</li>
+</ul>
+<pre><code class="language-c">int tos_sal_module_register(sal_module_t *module);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">module</td>
+<td align="center">模组实现的函数指针结构体句柄</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>模组初始化</li>
+</ul>
+<pre><code class="language-c">int tos_sal_module_init(void);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>域名解析</li>
+</ul>
+<pre><code class="language-c">int tos_sal_module_parse_domain(const char *host_name, char *host_ip, size_t host_ip_len);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">host_name</td>
+<td align="center">域名</td>
+</tr>
+<tr>
+<td align="center">host_ip</td>
+<td align="center">存放解析出的ip缓冲区</td>
+</tr>
+<tr>
+<td align="center">host_ip_len</td>
+<td align="center">缓冲区大小</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>建立 TCP/UDP socket连接</li>
+</ul>
+<pre><code class="language-c">int tos_sal_module_connect(const char *ip, const char *port, sal_proto_t proto);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ip</td>
+<td align="center">目的主机ip</td>
+</tr>
+<tr>
+<td align="center">port</td>
+<td align="center">目的主机port</td>
+</tr>
+<tr>
+<td align="center">proto</td>
+<td align="center">协议类型：TOS_SAL_PROTO_TCP或者TOS_SAL_PROTO_UDP</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：socket id，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>TCP socket发送数据</li>
+</ul>
+<pre><code class="language-c">int tos_sal_module_send(int sock, const void *buf, size_t len);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">sock</td>
+<td align="center">socket id</td>
+</tr>
+<tr>
+<td align="center">buf</td>
+<td align="center">待发送数据</td>
+</tr>
+<tr>
+<td align="center">len</td>
+<td align="center">待发送数据长度</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：实际发送数据的长度，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>TCP socket接收数据</li>
+</ul>
+<pre><code class="language-c">int tos_sal_module_recv(int sock, void *buf, size_t len);
+int tos_sal_module_recv_timeout(int sock, void *buf, size_t len, uint32_t timeout);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">sock</td>
+<td align="center">socket id</td>
+</tr>
+<tr>
+<td align="center">buf</td>
+<td align="center">存放接收数据的缓冲区</td>
+</tr>
+<tr>
+<td align="center">len</td>
+<td align="center">缓冲区长度</td>
+</tr>
+<tr>
+<td align="center">timeout</td>
+<td align="center">等待超时时间</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：实际读取数据的长度，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>UDP socket发送数据</li>
+</ul>
+<pre><code class="language-c">int tos_sal_module_sendto(int sock, char *ip, char *port, const void *buf, size_t len);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">sock</td>
+<td align="center">socket id</td>
+</tr>
+<tr>
+<td align="center">ip</td>
+<td align="center">目的主机ip</td>
+</tr>
+<tr>
+<td align="center">port</td>
+<td align="center">目的主机port</td>
+</tr>
+<tr>
+<td align="center">buf</td>
+<td align="center">待发送数据</td>
+</tr>
+<tr>
+<td align="center">len</td>
+<td align="center">待发送数据长度</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：实际发送数据的长度，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>UDP socket接收数据</li>
+</ul>
+<pre><code class="language-c">int tos_sal_module_recvfrom(int sock, void *buf, size_t len);
+int tos_sal_module_recvfrom_timeout(int sock, void *buf, size_t len, uint32_t timeout);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">sock</td>
+<td align="center">socket id</td>
+</tr>
+<tr>
+<td align="center">buf</td>
+<td align="center">存放接收数据的缓冲区</td>
+</tr>
+<tr>
+<td align="center">len</td>
+<td align="center">缓冲区长度</td>
+</tr>
+<tr>
+<td align="center">timeout</td>
+<td align="center">等待超时时间</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：实际读取数据的长度，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>关闭socket</li>
+</ul>
+<pre><code class="language-c">int tos_sal_module_close(int sock);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">sock</td>
+<td align="center">socket id</td>
+</tr>
+<tr>
+<td align="center">返回值</td>
+<td align="center">成功：0，失败：-1</td>
+</tr>
+</tbody>
+</table>
+<h1 id="4-atsal">4. AT框架+SAL框架移植方法</h1>
+<h2 id="41">4.1. 移植前的准备</h2>
+<p>本文中我使用官方EVB_MX+开发板为例，主控芯片为STM32L431RCT6，USART1用于printf打印日志信息，LPUART1用于和通信模组交互，通信模组使用 WIFI 模组 ESP8266为例。</p>
+<p>移植AT框架前需要准备好一个移植好TencentOS-tiny内核的工程，可以做到串口的正常收发，这里我使用 TencentOS-tiny 中<code>TencentOS-tiny\board\TencentOS_tiny_EVB_MX_Plus\KEIL\hello_world</code>中的工程。</p>
+<h2 id="42-at">4.2. 移植AT框架</h2>
+<p>TencentOS-tiny AT 框架的实现在 <code>net/at</code> 目录下的 <code>tos_at.h</code>和<code>tos_at.c</code>两个文件中，TencentOS-tiny AT框架底层使用的串口驱动HAL层在<code>platform\hal\st\stm32l4xx\src</code>目录下的文件<code>tos_hal_uart.c</code>中，头文件在<code>kernel\hal\include</code>路径中。</p>
+<p>首先将这两个c文件添加到Keil工程中：</p>
+<p><img alt="add_at_file_to_project" src="../image/AT_Firmware/add_at_file_to_project.png" /></p>
+<p>然后将头文件路径添加到Keil MDK中：</p>
+<p><img alt="add_at_path_to_project" src="../image/AT_Firmware/add_at_path_to_project.png" /></p>
+<p>然后在串口中断中配置调用AT框架的字节接收函数，编辑<code>stm32l4xx_it.c</code>文件：</p>
+<p>① 添加AT框架的头文件：</p>
+<pre><code class="language-c">/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include &quot;tos_at.h&quot;
+/* USER CODE END Includes */
+</code></pre>
+<p>② 在文件最后添加串口中断回调函数：</p>
+<pre><code class="language-c">/* USER CODE BEGIN 1 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    extern uint8_t data;
+    if (huart-&gt;Instance == LPUART1) {
+        HAL_UART_Receive_IT(&amp;hlpuart1, &amp;data, 1);
+        tos_at_uart_input_byte(data);
+    }
+}
+/* USER CODE END 1 */
+</code></pre>
+<p>注意，在回调函数中声明data变量在外部定义，这是因为STM32 HAL库的机制，需要在初始化完成之后先调用一次串口接收函数，使能串口接收中断，编辑<code>usart.c</code>文件：</p>
+<p>① 在文件开头定义data变量为全局变量：</p>
+<pre><code class="language-c">/* USER CODE BEGIN 0 */
+uint8_t data;
+/* USER CODE END 0 */
+</code></pre>
+<p>② 在串口初始化完成之后使能接收中断：</p>
+<pre><code class="language-c">/* LPUART1 init function */
+
+void MX_LPUART1_UART_Init(void)
+{
+    hlpuart1.Instance = LPUART1;
+    hlpuart1.Init.BaudRate = 115200;
+    hlpuart1.Init.WordLength = UART_WORDLENGTH_8B;
+    hlpuart1.Init.StopBits = UART_STOPBITS_1;
+    hlpuart1.Init.Parity = UART_PARITY_NONE;
+    hlpuart1.Init.Mode = UART_MODE_TX_RX;
+    hlpuart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+    hlpuart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+    hlpuart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+    if (HAL_UART_Init(&amp;hlpuart1) != HAL_OK)
+    {
+    Error_Handler();
+    }
+
+    //手动添加，使能串口中断
+    HAL_UART_Receive_IT(&amp;hlpuart1, &amp;data, 1);
+}
+</code></pre>
+<h2 id="43-sal">4.3. 移植SAL框架</h2>
+<p>TencentOS-tiny SAL框架的实现在<code>net/sal_module_wrapper</code>路径中，仅有两个文件：<code>sal_module_wrapper.h</code>和<code>sal_module_wrapper.c</code>。</p>
+<p>将c文件添加到Keil MDK工程中：</p>
+<p><img alt="add_sal_file_to_project" src="../image/AT_Firmware/add_sal_file_to_project.png" /></p>
+<p>将头文件所在路径添加到Keil MDK中：</p>
+<p><img alt="add_sal_path_to_project" src="../image/AT_Firmware/add_sal_path_to_project.png" /></p>
+<h2 id="44">4.4. 移植通信模组驱动</h2>
+<p>TencentOS-tiny官方已经提供了非常多的通信模组驱动实现SAL框架，覆盖常用的通信方式，比如2G、4G Cat.4、4G Cat.1、NB-IoT等，在<code>devices</code>文件夹下,：</p>
+<ul>
+<li>air724</li>
+<li>bc26</li>
+<li>bc25_28_95</li>
+<li>bc35_28_95_lwm2m</li>
+<li>ec20</li>
+<li>esp8266</li>
+<li>m26</li>
+<li>m5310a</li>
+<li>m6312</li>
+<li>sim800a</li>
+<li>sim7600ce</li>
+<li>欢迎贡献更多驱动...</li>
+</ul>
+<p>因为这些驱动都是SAL框架的实现，所以这些通信模组的驱动可以根据实际硬件情况<strong>选择一种加入到工程中</strong>，这里我以 WIFI 模组 ESP8266为例，演示如何加入通信模组驱动到工程中。</p>
+<p>ESP8266的驱动在<code>devices\esp8266</code>目录中。</p>
+<p>首先将<code>esp8266.c</code>文件加入到Keil MDK工程中：</p>
+<p><img alt="add_devices_file_to_project" src="../image/AT_Firmware/add_devices_file_to_project.png" /></p>
+<p>然后将<code>esp8266.h</code>头文件所在路径添加到Keil MDK工程中：</p>
+<p><img alt="add_devices_path_to_project" src="../image/AT_Firmware/add_devices_path_to_project.png" /></p>
+<p>移植完成。</p>
+<h2 id="45">4.5. 测试网络通信</h2>
+<p>移植完成之后，可直接使用官方提供的示例代码进行测试，测试双socket进行TCP通信的测试程序为<code>examples\tcp_through_module\tcp_through_module.c</code>。</p>
+<p>将工程中的 helloworld 示例代码更换为该文件，如图：</p>
+<p><img alt="add_example_file_to_project" src="../image/AT_Firmware/add_example_file_to_project.png" /></p>
+<p>在这个示例中，首先通过宏定义来配置当前使用的是哪个模组：</p>
+<p><img alt="tcp_example_module_config" src="../image/AT_Firmware/tcp_example_module_config.png" /></p>
+<p>然后调用对应模组的初始化函数：</p>
+<p><img alt="tcp_example_module_init" src="../image/AT_Firmware/tcp_example_module_init.png" /></p>
+<p>此处需要注意：初始化模组时指定的串口号即为AT通信模组所使用的串口，在<code>tos_hal_uart.h</code>中定义：</p>
+<pre><code class="language-c">typedef enum hal_uart_port_en {
+    HAL_UART_PORT_0 = 0,    //对应LPUART1
+    HAL_UART_PORT_1,        //对应USART1
+    HAL_UART_PORT_2,        //依此类推
+    HAL_UART_PORT_3,
+    HAL_UART_PORT_4,
+    HAL_UART_PORT_5,
+    HAL_UART_PORT_6,
+} hal_uart_port_t;
+</code></pre>
+<p>最后修改两个TCP Socket 的ip和端口为自己测试服务器的ip和端口：</p>
+<pre><code class="language-c">socket_id_0 = tos_sal_module_connect(&quot;117.50.111.72&quot;, &quot;8080&quot;, TOS_SAL_PROTO_TCP);
+socket_id_1 = tos_sal_module_connect(&quot;117.50.111.72&quot;, &quot;8001&quot;, TOS_SAL_PROTO_TCP);
+</code></pre>
+<blockquote>
+<p>TCP测试服务器需要自己搭建或者使用一些小工具，此处不再详述。</p>
+</blockquote>
+<p>修改完成之后，编译程序，烧录到开发板中，在串口助手中查看结果：</p>
+<p><img alt="tcp_example_result_uart" src="../image/AT_Firmware/tcp_example_result_uart.png" /></p>
+<p>在 socket0 的服务端查看模组发送的消息：</p>
+<p><img alt="tcp_example_result_server1" src="../image/AT_Firmware/tcp_example_result_server1.png" /></p>
+<p>在 socket1 的服务端查看模组发送的消息：</p>
+<p><img alt="tcp_example_result_server2" src="../image/AT_Firmware/tcp_example_result_server2.png" /></p>
+<p>至此，测试完成。</p>
+<h1 id="5">5. 如何适配一个新的通信模组驱动</h1>
+<p>基于模组的AT指令集，使用 TencentOS-tiny AT 框架与模组交互，实现SAL框架所定义的函数，这个过程称为通信模组适配。</p>
+<p>本文中我以移远通信的4G通信模组 EC20 作为示例，讲述一个全新的通信模组适配流程。</p>
+<h2 id="step1-at">Step1. 使用串口助手调试，熟悉该模组的AT指令集</h2>
+<p>适配SAL层需要熟悉模组的三类AT指令：</p>
+<ul>
+<li>基本查询配置指令</li>
+<li>TCP/IP网络协议栈AT指令</li>
+<li>TCP/IP网络协议栈数据接收机制</li>
+</ul>
+<p>比如EC20相关的AT指令如下：</p>
+<h3 id="1_1">① 基本查询配置指令</h3>
+<ul>
+<li>测试AT指令是否正常？</li>
+</ul>
+<pre><code>AT
+
+OK
+</code></pre>
+<ul>
+<li>查询SIM卡是否正常？</li>
+</ul>
+<pre><code class="language-c">AT+CPIN?
+
++CPIN: READY
+
+OK
+</code></pre>
+<ul>
+<li>查询模组的信号强度</li>
+</ul>
+<pre><code class="language-c">AT+CSQ
+
++CSQ: 17,0
+
+OK
+</code></pre>
+<ul>
+<li>查询模组是否注册到GSM网络</li>
+</ul>
+<pre><code>AT+CREG?
+
++CREG: 0,1
+
+OK
+</code></pre>
+<ul>
+<li>查询模组是否注册上GPRS网络</li>
+</ul>
+<pre><code>AT+CGREG?
+
++CGREG: 0,1
+
+OK
+</code></pre>
+<ul>
+<li>设置GPRS的APN</li>
+</ul>
+<pre><code>AT+QICSGP=1,1,&quot;CMNET&quot;
+
+OK
+</code></pre>
+<ul>
+<li>激活移动场景</li>
+</ul>
+<pre><code>AT+QIACT=1
+
+OK
+</code></pre>
+<h3 id="2-tcpipat">② TCP/IP网络协议栈AT指令</h3>
+<p>TCP/IP网络协议栈至少需要TCP/UDP socket的通信AT指令，其它上层协议的AT指令暂时不用。</p>
+<ul>
+<li>建立Socket</li>
+</ul>
+<pre><code>AT+QIOPEN=1,0,&quot;TCP&quot;,&quot;117.50.111.72&quot;,8902,0,0
+
+OK
+
++QIOPEN: 0,0
+</code></pre>
+<blockquote>
+<p>在建立socket的时候需要注意，有的通信模组需要提前使用AT指令配置单链路模式还是多链路模式（eg. ESP8266）,而有的通信模组默认直接支持多链路模式，无需配置。</p>
+</blockquote>
+<ul>
+<li>发送数据</li>
+</ul>
+<pre><code class="language-c">AT+QISEND=0
+
+&gt; hello&lt;0x1a&gt;
+
+SEND OK
+</code></pre>
+<blockquote>
+<p>发送数据的时候需要注意，有的通信模组发送数据使用ASCII字符(eg. ESP8266、EC20等)，而有的通信模组发送数据使用十六进制（eg. NB-IoT类模组）</p>
+</blockquote>
+<ul>
+<li>接收数据</li>
+</ul>
+<p>接下来的一节重点讲述。</p>
+<ul>
+<li>关闭Socket</li>
+</ul>
+<pre><code>AT+QICLOSE=0
+
+OK
+</code></pre>
+<h3 id="3-tcpip">③ TCP/IP网络协议栈数据接收机制</h3>
+<p>通信模组在接收到服务器发来的数据时，会有两种方式上报给MCU：</p>
+<ul>
+<li>使用固定的IP头上报socket id和数据长度，需要再次去读取数据(缓冲模式接收)</li>
+</ul>
+<pre><code class="language-c">//模组上报
++QIURC: &quot;recv&quot;,0
+
+//MCU发出AT指令去读取数据
+AT+QIRD=0,1500
+
++QIRD: 14
+Hello, client!
+
+OK
+</code></pre>
+<ul>
+<li>使用固定的IP头上报socket id和数据长度，同时一起上报数据(直接模式接收)</li>
+</ul>
+<pre><code class="language-c">+QIURC: &quot;recv&quot;,0,14
+Hello, client!
+</code></pre>
+<p>有的模组只支持某一种模式，有的模组两种模式都支持，可以自己配置，对于TencentOS-tiny的AT框架来说，第二种直接上报模式解析起来会更加方便。</p>
+<h2 id="step2-at">Step2. 三类AT指令，三种实现方式</h2>
+<p>上面讲述了适配SAL层需要熟悉模组的三类AT指令：基本查询配置指令、TCP/IP网络协议栈AT指令、TCP/IP网络协议栈数据接收机制，这节讲述如何使用AT框架实现这三类AT指令。</p>
+<p>① 只需要判断是否返回OK的AT指令</p>
+<p>这一类AT指令的实现函数除了指令内容不同，别的都相同，比如关闭回显的AT指令：</p>
+<pre><code>ATE0
+
+OK
+</code></pre>
+<p>对应的实现方法如下：</p>
+<pre><code class="language-c">static int ec20_echo_close(void)
+{
+    at_echo_t echo;
+
+    /* 创建一个echo 对象，缓冲区为NULL，期望字符串为NULL */
+    tos_at_echo_create(&amp;echo, NULL, 0, NULL);
+
+    /* 执行AT命令，超时时长1000ms */
+    tos_at_cmd_exec(&amp;echo, 1000, &quot;ATE0\r\n&quot;);
+
+    /* 判断执行结果是否为OK */
+    if (echo.status == AT_ECHO_STATUS_OK)
+    {
+        return 0;
+    }
+    return -1;
+}
+</code></pre>
+<p>② 需要判断是否OK，也需要解析执行结果的AT指令</p>
+<p>这一类AT指令的实现函数中，不同点在于，创建echo对象的时候需要传入一个buffer来存放指令执行的结果，比如查询信号强度的AT指令：</p>
+<pre><code>AT+CSQ
+
++CSQ: 17,0
+
+OK
+</code></pre>
+<p>对应的实现方法如下：</p>
+<pre><code class="language-c">static int ec20_signal_quality_check(void)
+{
+    int rssi, ber;
+    at_echo_t echo;
+    char echo_buffer[32], *str;
+    int try = 0;
+
+    /* 创建echo对象，传入一个缓冲区存放AT命令执行结果 */
+    tos_at_echo_create(&amp;echo, echo_buffer, sizeof(echo_buffer), NULL);
+
+    /* 尝试检测10次，一旦有一次正常，返回 */
+    while (try++ &lt; 10) 
+    {
+        /* 执行AT命令，超时时长1000ms */
+        tos_at_cmd_exec(&amp;echo, 1000, &quot;AT+CSQ\r\n&quot;);
+
+        /* 判断执行结果是否返回了OK */
+        if (echo.status != AT_ECHO_STATUS_OK)
+        {
+            return -1;
+        }
+
+        /* 从AT指令的执行结果中解析提取CSQ值进行判断 */
+        str = strstr(echo.buffer, &quot;+CSQ:&quot;);
+        sscanf(str, &quot;+CSQ:%d,%d&quot;, &amp;rssi, &amp;ber);
+        if (rssi != 99) {
+            return 0;
+        }
+    }
+
+    return -1;
+}
+</code></pre>
+<p>③ 模组主动上报的数据处理</p>
+<p>这一类AT指令对应TCP/IP协议栈接收数据的上报机制，使用AT框架的事件机制进行处理。</p>
+<p>首先将固定的ip头和事件处理回调函数注册：</p>
+<pre><code class="language-c">at_event_t ec20_at_event[] = {
+    { &quot;+QIURC: \&quot;recv\&quot;,&quot;,   ec20_incoming_data_process},   //处理远程服务器发来的数据
+    { &quot;+QIURC: \&quot;dnsgip\&quot;,&quot;, ec20_domain_data_process},     //处理域名解析结果，暂时不管
+};
+</code></pre>
+<p>事件处理回调函数自己编写，主要作用是提取模组上报的scoketid、数据长度、数据内容，然后将数据内容写入到对应socket id 的channel中。</p>
+<blockquote>
+<p>需要注意，AT框架一旦读取解析到固定的IP头，则停止解析，拉起对应的回调函数，所以在回调函数中可以继续从缓冲区中一边读取一边解析。</p>
+</blockquote>
+<p>解析示例如下：</p>
+<pre><code class="language-c">__STATIC__ void ec20_incoming_data_process(void)
+{
+    uint8_t data;
+    int channel_id = 0, data_len = 0, read_len;
+    uint8_t buffer[128];
+
+    /*
+        模组上报的数据格式：
+        +QIURC: &quot;recv&quot;,&lt;sockid&gt;,&lt;datalen&gt;
+        &lt;data content&gt;
+    */
+
+    /* 注册的ip头是：[+QIURC: &quot;recv&quot;,]回调函数被拉起执行后，接着处理后边的数据即可 */
+
+    /* 读取解析socket id */
+    while (1)
+    {
+        if (tos_at_uart_read(&amp;data, 1) != 1)
+        {
+            return;
+        }
+
+        if (data == ',')
+        {
+            break;
+        }
+        channel_id = channel_id * 10 + (data - '0');
+    }
+
+    /* 读取解析数据长度 */
+    while (1)
+    {
+        if (tos_at_uart_read(&amp;data, 1) != 1)
+        {
+            return;
+        }
+
+        if (data == '\r')
+        {
+            break;
+        }
+        data_len = data_len * 10 + (data - '0');
+    }
+
+    /* 读取'\r'之后的'\n'，不作任何处理 */
+    if (tos_at_uart_read(&amp;data, 1) != 1)
+    {
+        return;
+    }
+
+    /* 根据解析出的数据长度和缓冲区的长度，循环读取数据内容，写入到对应 socket id 的channel中 */
+    do {
+#define MIN(a, b)   ((a) &lt; (b) ? (a) : (b))
+        read_len = MIN(data_len, sizeof(buffer));
+
+        /* 读取数据 */
+        if (tos_at_uart_read(buffer, read_len) != read_len) {
+            return;
+        }
+
+        /* 写入到对应的channel中 */
+        if (tos_at_channel_write(channel_id, buffer, read_len) &lt;= 0) {
+            return;
+        }
+
+        data_len -= read_len;
+    } while (data_len &gt; 0);
+
+    return;
+}
+</code></pre>
+<h2 id="step3">Step3. 整体适配流程</h2>
+<p>前两步都是细节性的处理，这一步从整体的角度讲述适配流程。</p>
+<p>① 模组初始化</p>
+<pre><code class="language-c">static int ec20_init(void)
+{
+    printf(&quot;Init ec20 ...\n&quot; );
+
+    /* 关闭回显 */
+
+    if (ec20_echo_close() != 0)
+    {
+        printf(&quot;echo close failed,please check your module\n&quot;);
+        return -1;
+    }
+
+    /* 检测SIM卡是否正常 */
+    if(ec20_sim_card_check() != 0)
+    {
+        printf(&quot;sim card check failed,please insert your card\n&quot;);
+        return -1;
+    }
+
+    /* 检测信号强度是否正常 */
+    if (ec20_signal_quality_check() != 0)
+    {
+        printf(&quot;signal quality check status failed\n&quot;);
+        return -1;
+    }
+
+    /* 检测是否注册到GSM网络 */
+    if(ec20_gsm_network_check() != 0)
+    {
+        printf(&quot;GSM network register status check fail\n&quot;);
+        return -1;
+    }
+
+    /* 检测是否注册到GPRS网络 */
+    if(ec20_gprs_network_check() != 0)
+    {
+        printf(&quot;GPRS network register status check fail\n&quot;);
+        return -1;
+    }
+
+    /* 关闭APN */
+    if(ec20_close_apn() != 0)
+    {
+        printf(&quot;close apn failed\n&quot;);
+        return -1;
+    }
+
+    /* 设置APN，激活移动场景 */
+    if (ec20_set_apn() != 0) {
+        printf(&quot;apn set FAILED\n&quot;);
+        return -1;
+    }
+
+    printf(&quot;Init ec20 ok\n&quot; );
+    return 0;
+}
+</code></pre>
+<p>② 将实现的函数映射到SAL框架上：</p>
+<pre><code class="language-c">sal_module_t sal_module_ec20 = {
+    .init             = ec20_init,
+    .connect          = ec20_connect,
+    .send             = ec20_send,
+    .recv_timeout     = ec20_recv_timeout,
+    .recv             = ec20_recv,
+    .sendto           = ec20_sendto,
+    .recvfrom         = ec20_recvfrom,
+    .recvfrom_timeout = ec20_recvfrom_timeout,
+    .close            = ec20_close,
+    .parse_domain     = ec20_parse_domain,
+};
+</code></pre>
+<p>③ 再次封装，留出一个外部调用接口，供上层应用程序调用：</p>
+<pre><code class="language-c">int ec20_sal_init(hal_uart_port_t uart_port)
+{
+    /* 初始化AT框架及其串口 */
+    if (tos_at_init(uart_port, ec20_at_event,
+                        sizeof(ec20_at_event) / sizeof(ec20_at_event[0])) != 0) {
+        return -1;
+    }
+
+    /* 将第②步中映射的函数关系，注册到SAL框架 */
+    if (tos_sal_module_register(&amp;sal_module_ec20) != 0) {
+        return -1;
+    }
+
+    /* 调用SAL初始化函数，因为接口和映射的存在，最终调用到ec20_init */
+    if (tos_sal_module_init() != 0) {
+        return -1;
+    }
+
+    return 0;
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../26.TencentOS_tiny_EVB_WL_Quick_Start/" class="btn btn-neutral float-left" title="26.TencentOS_tiny_EVB_WL_Quick_Start"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../28.BLE_Device_Quick_Start/" class="btn btn-neutral float-right" title="28.BLE_Device_Quick_Start">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../26.TencentOS_tiny_EVB_WL_Quick_Start/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../28.BLE_Device_Quick_Start/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

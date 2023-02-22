@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>10.Porting_Manual_for_KEIL - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "10.Porting_Manual_for_KEIL";
+        var mkdocs_page_input_path = "10.Porting_Manual_for_KEIL.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">10.Porting_Manual_for_KEIL</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">一、移植前的准备</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1">1. 准备目标硬件（开发板/芯片/模组）</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2">2.准备编译器环境</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3">3. 准备芯片对应的裸机工程</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-stm32cubemx">3.1 首先启动STM32CubeMX，新建工程</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-mcu">3.2 选择MCU型号</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#33-pin">3.3 Pin设置界面配置时钟源</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#34-pin">3.4 Pin设置界面配置串口</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#35-pingpio">3.5 Pin设置界面配置GPIO</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#36">3.6 配置总线时钟</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#37">3.7 工程生成参数配置</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#38">3.8 代码生成方式配置</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#39">3.9 生成工程</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#310-keil">3.10  keil下的裸机工程</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-tencentos-tiny">4. 准备TencentOS tiny的源码</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">二、内核移植</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1_1">1. 代码目录规划</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-arch">2. 添加arch平台代码</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3_1">3. 添加内核源码</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-cmsis-os">4. 添加cmsis os源码</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-tencentos-tiny">5. 添加TencentOS tiny头文件目录</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-tencentos-tiny-tos_configh">6. 新建TencentOS tiny系统配置文件 tos_config.h</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tencentos-tiny">三、创建TencentOS tiny任务，测试移植结果</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1_2">1. 修改部分代码</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#stm32l0xx_itcstm32l0xx_itc-tos_kh">修改stm32l0xx_it.c的中断函数,在stm32l0xx_it.c文件中包含 tos_k.h 头文件</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-tencentos-tiny">2.  编写TencentOS tiny 测试任务</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mianc-tencentos-tiny">在mian.c 中添加TencentOS tiny 头文件，编写任务函数</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-tencentos-tiny">3. 编译下载测试TencentOS tiny移植结果</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>10.Porting_Manual_for_KEIL</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tencentos-tiny-keil">TencentOS tiny 内核移植参考指南（Keil版）</h1>
+<h2 id="_1">一、移植前的准备</h2>
+<h3 id="1">1. 准备目标硬件（开发板/芯片/模组）</h3>
+<p>TencentOS tiny目前主要支持ARM Cortex M核芯片的移植，比如STM32 基于Cortex M核全系列、NXP 基于Cortex M核全系列等。本教程将使用STM32官方Demo开发板 NUCLEO-L073RZ进行示例移植，其他 ARM Cortex M系列开发板和芯片移植方法类似。</p>
+<p>调试ARM Cortex M核还需要仿真器， NUCLEO-L073RZ自带ST-Link调试器，如果您的开发板或者芯片模组没有板载仿真器，就需要连接外置的仿真器，如J-Link、U-Link之类的。</p>
+<h3 id="2">2.准备编译器环境</h3>
+<p>本移植指南针对的是Keil编译器，所以我们移植内核前需要先安装Keil编译器，能编译ARM Cortex M核的Keil编译器现在也叫MDK，最新版本5.28a,下载地址为：<a href="">https://www.keil.com/demo/eval/arm.htm</a>
+填写注册信息即可下载，下载完成在windows环境下按照提示安装即可，安装完成后需要自行购买软件License，避免32K Flash下载限制。
+由于新版本的MDK编译器和芯片支持包是分离的，所以MDK（Keil）安装完成后，还需要安装对应芯片的器件支持包（PACK包），比如本教程示例的NUCLEO-L037RZ开发板的芯片是STM32L073RZ，就需要安装<em>Keil.STM32L0xx_DFP.2.0.1.pack</em>系列器件支持包，MDK所有支持芯片的PACK包下载地址为：<a href="">http://www.keil.com/dd2/Pack/#/eula-container</a> ，您只需要根据您的芯片型号下载对应的PACK包即可，当然您也可以在MDK集成开发环境中在线下载安装。</p>
+<h3 id="3">3. 准备芯片对应的裸机工程</h3>
+<p>移植TencentOS tiny基础内核需要您提前准备一个芯片对应的裸机工程，裸机工程包含基本的芯片启动文件、基础配置（时钟、主频等）、以及串口、基本GPIO驱动用于RTOS测试。</p>
+<p>本教程使用ST官方的STM32CubeMX软件来自动化生成MDK裸机工程，STM32CubeMX的下载地址为：</p>
+<p><a href="">https://www.st.com/content/st_com/zh/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-configurators-and-code-generators/stm32cubemx.html</a></p>
+<p>安装STM32CubeMx还需要事先安装好JDK环境，您可以在互联网上查找如何安装和配置JDK环境，此处不再赘述。</p>
+<p>CubeMX安装完成后，我们就可以使用CubeMX来给NUCLEO-L073RZ开发板生成裸机工程了，如果您的芯片不是STM32，而是其他厂商的ARM Cortex M系列，您可以根据产商的指导准备裸机工程，后续的内核移植步骤是一致的。</p>
+<h4 id="31-stm32cubemx">3.1 首先启动STM32CubeMX，新建工程</h4>
+<p><img alt="" src="https://main.qcloudimg.com/raw/5c6a1eca65dbec90fe73402cc39a2fa4.png" /></p>
+<h4 id="32-mcu">3.2 选择MCU型号</h4>
+<p><img alt="" src="https://main.qcloudimg.com/raw/70d3cc4e69c36a9d9707efde2c0e2472.png" /></p>
+<p>如上图所示：通过MCU筛选来找到自己开发板对应的芯片型号，双击后弹出工程配置界面，如下图：</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/f8f05e6b8ef07fc9d30fa3c51a0c82fe.png" /></p>
+<h4 id="33-pin">3.3 Pin设置界面配置时钟源</h4>
+<p><img alt="" src="https://main.qcloudimg.com/raw/01dcc7684d340dca5d84b88e5b6b707b.png" /></p>
+<h4 id="34-pin">3.4 Pin设置界面配置串口</h4>
+<p><img alt="" src="https://main.qcloudimg.com/raw/ffd52f709fd148ba7e654c8ce320d0ad.png" /></p>
+<h4 id="35-pingpio">3.5 Pin设置界面配置GPIO</h4>
+<p><img alt="" src="https://main.qcloudimg.com/raw/278977b909359db187519b8d6a9125d4.png" /></p>
+<h4 id="36">3.6 配置总线时钟</h4>
+<p><img alt="" src="https://main.qcloudimg.com/raw/72f3f1ed823d1e57bac1eda0d0487b2f.png" /></p>
+<h4 id="37">3.7 工程生成参数配置</h4>
+<p><img alt="" src="https://main.qcloudimg.com/raw/ac35d9a0aaa1e0e8adcced561cac179b.png" /></p>
+<h4 id="38">3.8 代码生成方式配置</h4>
+<p><img alt="" src="https://main.qcloudimg.com/raw/d46ed81804cdb58e6af8c64df5a470ba.png" /></p>
+<h4 id="39">3.9 生成工程</h4>
+<p><img alt="" src="https://main.qcloudimg.com/raw/ecc132f84a548f8802abb7d8aefc8ba9.png" /></p>
+<h4 id="310-keil">3.10  keil下的裸机工程</h4>
+<p>点击生成代码后，生成的裸机工程效果如下：
+<img alt="" src="https://main.qcloudimg.com/raw/3d071b29139ba20bba78c5521838efc2.png" /></p>
+<p>这样NUCLEO-L073RZ裸机工程生成完成，该工程可直接编译并烧写在板子上运行。</p>
+<h3 id="4-tencentos-tiny">4. 准备TencentOS tiny的源码</h3>
+<p>TencentOS tiny的源码已经开源，github下载地址为：<a href="">https://github.com/Tencent/TencentOS-tiny.git</a></p>
+<table>
+<thead>
+<tr>
+<th>一级目录</th>
+<th>二级目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arch</td>
+<td>arm</td>
+<td>TencentOS tiny适配的IP核架构（含M核中断、调度、tick相关代码）</td>
+</tr>
+<tr>
+<td>board</td>
+<td>NUCLEO_L073RZ</td>
+<td>移植目标芯片的工程文件</td>
+</tr>
+<tr>
+<td>kernel</td>
+<td>core</td>
+<td>TencentOS tiny内核源码</td>
+</tr>
+<tr>
+<td></td>
+<td>pm</td>
+<td>TencentOS tiny低功耗模块源码</td>
+</tr>
+<tr>
+<td>osal</td>
+<td>cmsis_os</td>
+<td>TencentOS tiny提供的cmsis os 适配</td>
+</tr>
+</tbody>
+</table>
+<p>由于本教程只介绍TencentOS tiny的内核移植，所以这里只需要用到 arch、board、kernel、osal四个目录下的源码。</p>
+<h2 id="_2">二、内核移植</h2>
+<h3 id="1_1">1. 代码目录规划</h3>
+<p><img alt="" src="https://main.qcloudimg.com/raw/1d274de2237132c1136506d5e4ae9eea.png" /></p>
+<p>如图所示，新建TencentOS_tiny主目录，并在主目录下添加四个子目录，其中arch、kernel、osal从代码仓直接拷贝过来即可，而board目录下则放入我们前面生成的裸机工程代码，我们移植的开发板取名叫NUCLEO_L073RZ,裸机代码全部拷贝到下面即可，如下图所示：</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/b8bd75a9baec5d5f11a3505014f9ba46.png" /></p>
+<p>接下来进入TencentOS_tiny\board\NUCLEO_L073RZ\MDK-ARM目录，打开keil工程，我们开始添加TencentOS tiny的内核代码。</p>
+<h3 id="2-arch">2. 添加arch平台代码</h3>
+<p><img alt="" src="https://main.qcloudimg.com/raw/c75e3d6b6371ceeafa749e200b924c6c.png" /></p>
+<p>tos_cpu.c是TencentOS tiny 的CPU适配文件，包括堆栈初始化，中断适配等，如果您的芯片是ARM Cortex M核，该文件可以不做改动，M0、M3 、M4、M7是通用的，其他IP核需要重新适配；</p>
+<p>port_s.S 文件是TencentOS tiny的任务调度汇编代码，主要做弹栈压栈等处理的，port_c.c适配systick等，这两个文件 每个IP核和编译器都是不一样的，如果您的芯片是ARM Cortex M核，我们都已经适配好，比如现在我们移植的芯片是STM32L073RZ，是ARM Cortex M0+核，使用的编译器是KEIL，所以我们选择arch\arm\arm-v7m\cortex-m0+\armcc下的适配代码，如果你的开发板是STM32F429IG，M4核，编译器是GCC，则可以选择arch\arm\arm-v7m\cortex-m4\gcc目录下的适配文件。</p>
+<h3 id="3_1">3. 添加内核源码</h3>
+<p>内核源码kerne目录下包含core和pm两个目录，其中core下为基础内核，pm是内核中的低功耗组件；基础移植的时候可以不添加pm目录下的代码，如下图所示，添加全部基本内核源码：
+<img alt="" src="https://main.qcloudimg.com/raw/699d9d0d52d3b29e7fb9583fa0bea69c.png" /></p>
+<h3 id="4-cmsis-os">4. 添加cmsis os源码</h3>
+<p>cmsis os是TencentOS tiny为了兼容cmsis标准而适配的OS抽象层，可以简化大家将业务从其他RTOS迁移到TencentOS tiny的工作量。</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/bf6450c40da00ecabbd0ad1cd21fed87.png" /></p>
+<h3 id="5-tencentos-tiny">5. 添加TencentOS tiny头文件目录</h3>
+<p>添加头文件目录前，我们在要移植的工程目录下新增一个 TOS_CONFIG文件夹，用于存放TencentOS tiny的配置头文件，也就是接下来要新建的tos_config.h文件；</p>
+<p>TencentOS tiny所有要添加的头文件目录如下：</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/444e6326814b0e3d207fa031ef5268e8.png" /></p>
+<h3 id="6-tencentos-tiny-tos_configh">6. 新建TencentOS tiny系统配置文件 tos_config.h</h3>
+<pre><code>#ifndef _TOS_CONFIG_H_
+#define  _TOS_CONFIG_H_
+
+#include &quot;stm32l0xx.h&quot;  // 目标芯片头文件，用户需要根据情况更改
+
+#define TOS_CFG_TASK_PRIO_MAX           10u     // 配置TencentOS tiny默认支持的最大优先级数量
+
+#define TOS_CFG_ROUND_ROBIN_EN          0u      // 配置TencentOS tiny的内核是否开启时间片轮转
+
+#define TOS_CFG_OBJECT_VERIFY_EN           1u   // 配置TencentOS tiny是否校验指针合法
+
+#define TOS_CFG_TASK_DYNAMIC_CREATE_EN  1u      // TencentOS tiny 动态任务创建功能宏
+
+#define TOS_CFG_EVENT_EN                1u      // TencentOS tiny 事件模块功能宏
+
+#define TOS_CFG_MMBLK_EN                1u      //配置TencentOS tiny是否开启内存块管理模块
+
+#define TOS_CFG_MMHEAP_EN               1u      //配置TencentOS tiny是否开启动态内存模块
+
+#define TOS_CFG_MMHEAP_DEFAULT_POOL_EN  1u      // TencentOS tiny 默认动态内存池功能宏
+
+#define TOS_CFG_MMHEAP_DEFAULT_POOL_SIZE        0x100   // 配置TencentOS tiny默认动态内存池大小
+
+#define TOS_CFG_MUTEX_EN                1u      // 配置TencentOS tiny是否开启互斥锁模块
+
+#define TOS_CFG_MESSAGE_QUEUE_EN        1u      // 配置TencentOS tiny是否开启消息队列模块
+
+#define TOS_CFG_MAIL_QUEUE_EN           1u      // 配置TencentOS tiny是否开启消息邮箱模块
+
+#define TOS_CFG_PRIORITY_MESSAGE_QUEUE_EN   1u  // 配置TencentOS tiny是否开启优先级消息队列模块
+
+#define TOS_CFG_PRIORITY_MAIL_QUEUE_EN  1u      // 配置TencentOS tiny是否开启优先级消息邮箱模块
+
+#define TOS_CFG_TIMER_EN                1u      // 配置TencentOS tiny是否开启软件定时器模块
+
+#define TOS_CFG_PWR_MGR_EN              0u      // 配置TencentOS tiny是否开启外设电源管理模块
+
+#define TOS_CFG_TICKLESS_EN             0u      // 配置Tickless 低功耗模块开关
+
+#define TOS_CFG_SEM_EN                  1u      // 配置TencentOS tiny是否开启信号量模块
+
+#define TOS_CFG_TASK_STACK_DRAUGHT_DEPTH_DETACT_EN      1u  // 配置TencentOS tiny是否开启任务栈深度检测
+
+#define TOS_CFG_FAULT_BACKTRACE_EN      0u      // 配置TencentOS tiny是否开启异常栈回溯功能
+
+#define TOS_CFG_IDLE_TASK_STK_SIZE      128u    // 配置TencentOS tiny空闲任务栈大小
+
+#define TOS_CFG_CPU_TICK_PER_SECOND     1000u   // 配置TencentOS tiny的tick频率
+
+#define TOS_CFG_CPU_CLOCK               (SystemCoreClock)   // 配置TencentOS tiny CPU频率
+
+#define TOS_CFG_TIMER_AS_PROC           1u      // 配置是否将TIMER配置成函数模式
+
+#endif
+
+</code></pre>
+<p>按照上面的模板配置好TencentOS tiny的各项功能后，将tos_config.h 文件放入要移植的board工程目录下即可，例如本教程是放到board\NUCLEO_L073RZ\TOS_CONFIG目录下。</p>
+<p>这样，TencentOS tiny的源码就全部添加完毕了。</p>
+<h2 id="tencentos-tiny">三、创建TencentOS tiny任务，测试移植结果</h2>
+<h3 id="1_2">1. 修改部分代码</h3>
+<h4 id="stm32l0xx_itcstm32l0xx_itc-tos_kh">修改stm32l0xx_it.c的中断函数,在stm32l0xx_it.c文件中包含 tos_k.h 头文件</h4>
+<p><img alt="" src="https://s1.ax1x.com/2020/10/20/BpTL60.png" /></p>
+<p>在stm32l0xx_it.c文件中的PendSV_Handler函数前添加___weak关键字，因为该函数在TencentOS tiny的调度汇编中已经重新实现；同时在SysTick_Handler函数中添加TencentOS tiny的调度处理函数，如下图所示：</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/855bba41b18a8d7892f7e1771738c76f.png" /></p>
+<h3 id="2-tencentos-tiny">2.  编写TencentOS tiny 测试任务</h3>
+<h4 id="mianc-tencentos-tiny">在mian.c 中添加TencentOS tiny 头文件，编写任务函数</h4>
+<pre><code>   #include &quot;cmsis_os.h&quot;
+   //task1
+   #define TASK1_STK_SIZE       256
+   void task1(void *pdata);
+   osThreadDef(task1, osPriorityNormal, 1, TASK1_STK_SIZE);
+
+   //task2
+   #define TASK2_STK_SIZE       256
+   void task2(void *pdata);
+   osThreadDef(task2, osPriorityNormal, 1, TASK2_STK_SIZE);
+
+   void task1(void *pdata)
+   {
+       int count = 1;
+       while(1)
+       {
+           printf(&quot;\r\nHello world!\r\n###This is task1 ,count is %d \r\n&quot;, count++);
+           HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
+           osDelay(2000);
+       }
+   }
+   void task2(void *pdata)
+   {
+       int count = 1;
+       while(1)
+       {
+           printf(&quot;\r\nHello TencentOS !\r\n***This is task2 ,count is %d \r\n&quot;, count++);
+           osDelay(1000);
+       }
+   }
+
+   int fputc(int ch, FILE *f)
+   {
+     if (ch == '\n') 
+     {
+       HAL_UART_Transmit(&amp;huart2, (void *)&quot;\r&quot;, 1,30000);
+     }
+     HAL_UART_Transmit(&amp;huart2, (uint8_t *)&amp;ch, 1, 0xFFFF);
+     return ch;
+   }
+
+</code></pre>
+<p>如图：</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/cf4d435f8701d54114255f603a5dcb3d.png" /></p>
+<p>继续在main.c 的mian函数中硬件外设初始化代码后添加TencentOS tiny的初始化代码：</p>
+<pre><code>     osKernelInitialize(); //TOS Tiny kernel initialize
+     osThreadCreate(osThread(task1), NULL);// Create task1
+     osThreadCreate(osThread(task2), NULL);// Create task2
+     osKernelStart();//Start TOS Tiny
+</code></pre>
+<p>如图：</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/6fcf8b45b7eb23c179c69f3deaf9ac79.png" /></p>
+<h3 id="3-tencentos-tiny">3. 编译下载测试TencentOS tiny移植结果</h3>
+<p><img alt="" src="https://main.qcloudimg.com/raw/3ce4c79796f4261fd45d26caa64e1e24.png" /></p>
+<p>按照上图指示，进行编译下载到开发板即可完成TencentOS tiny的测试，如下图所示，可以看到串口交替打印信息，表示两个任务正在进行调度，切换运行：</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/b0f9d16064c4aeffa5f8c3dfbfbc0dbd.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../09.Code_Directories/" class="btn btn-neutral float-left" title="09.Code_Directories"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../11.Porting_Manual_for_IAR/" class="btn btn-neutral float-right" title="11.Porting_Manual_for_IAR">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../09.Code_Directories/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../11.Porting_Manual_for_IAR/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

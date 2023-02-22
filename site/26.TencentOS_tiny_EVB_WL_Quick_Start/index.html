@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>26.TencentOS_tiny_EVB_WL_Quick_Start - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "26.TencentOS_tiny_EVB_WL_Quick_Start";
+        var mkdocs_page_input_path = "26.TencentOS_tiny_EVB_WL_Quick_Start.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-evb_wl">1. 定制开发板EVB_WL硬件简介</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#11">1.1 开发板简介</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#12">1.2 开发板特性</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#13">1.3 开发板硬件详解</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#131">1.3.1 电源电路</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#132-cpu">1.3.2  CPU最小系统电路</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#133-usb">1.3.3  USB电平转换电路</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#134-e53">1.3.4 E53 传感器扩展接口</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#135">1.3.5 开发板调试烧录口</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#136-micor-usb">1.3.6  连接Micor USB线</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#137-st-link">1.3.7  连接ST-Link程序下载器</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-evb_wl">2. 定制开发板EVB_WL软件开发环境准备</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-mdk">2.1 MDK软件介绍</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-mdk">2.2 MDK安装</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#23-mdk">2.3 MDK安装</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#24-st-link">2.4 ST-Link驱动安装</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#25-mdk">2.5  编程软件(MDK)配置</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#26-ch340">2.6  CH340串口驱动安装</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#27">2.7 串口调试助手的安装与使用</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-tencentos-tinystm32wl-lorawan-iot-explorer">3. 基于TencentOS tiny的STM32WL LoRaWAN 接入腾讯云IoT Explorer指引</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#31-iot-explorer">3.1  腾讯云IoT explorer上创建项目、产品、设备</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_1">创建项目和产品</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_2">新建产品</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_3">创建数据模板</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#lorawan">配置 LoRaWAN 参数</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_4">设备数据解析</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_7">创建测试设备</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_8">查看设备状态</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_9">查看设备通信日志</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#32-tencentos-tiny-evb_wllorawan">3.2 基于TencentOS Tiny EVB_WL开发板完成LoRaWAN应用开发</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#_10">下载源码</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#lorawan_1">编译lorawan工程</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_11">下载运行</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_12">查看运行结果</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>26.TencentOS_tiny_EVB_WL_Quick_Start</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tencentos-tinyevb_wl">TencentOS tiny定制开发板EVB_WL快速入门指南</h1>
+<table>
+<thead>
+<tr>
+<th>Revision</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2020-7-28</td>
+<td>文档初版</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>2020-9-6</td>
+<td>添加芯片解锁章节</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-evb_wl">1. 定制开发板EVB_WL硬件简介</h2>
+<h3 id="11">1.1 开发板简介</h3>
+<p>EVB_WL是腾讯物联网操作系统TencentOS tiny 团队联合意法半导体、瑞兴恒方、智芯云技术设计的一款loRaWAN OpenCPU评估板，用于TencentOS tiny 基础内核和LoRaWAN物联网组件功能体验和评估。
+开发板功能图如下所示：
+<img alt="" src="../image/EVB_WL_guide/EVB_WL.png" /></p>
+<h3 id="12">1.2 开发板特性</h3>
+<p><strong>CPU</strong> ：使用瑞兴恒方的RHF0M0E5模组，模组内部集成意法半导体STM32WLE5芯片，单芯片集成ARM® Cortex®-M4 48MHz内核和SX126x IP；采用LoRa®扩频调制技术，LoRa®接收灵敏度高达-148dBm，通信距离达1KM～10KM；内置高效率PA，功耗更低，最大支持+22dBm输出，并在0-22dBm范围内可配置。</p>
+<p><strong>电源特性</strong> ：Micro USB接口，5V供电，内部有5V转3.3V的DCDC，MCU供电电压为3.3V，系统IO电压也为3.3V</p>
+<p><strong>按键</strong> ：一个复位按键</p>
+<p><strong>LED指示灯</strong> ：上电指示 LED，红色；</p>
+<p><strong>调试接口</strong> ：SWD外接ST-Link，UART1串口连接PC/LUART串口</p>
+<p><strong>传感器扩展接口E53 Interface</strong> ：支持E53传感器案例扩展板（支持UART、SPI、IIC、GPIO、ADC、DAC等）</p>
+<p><strong>操作系统支持</strong> ：TencentOS tiny</p>
+<h3 id="13">1.3 开发板硬件详解</h3>
+<h4 id="131">1.3.1 电源电路</h4>
+<p>Micro USB 提供5V电源，由于MCU供电电压是3.3V，所以这里采用AMS1117进行DC-DC电压转换，输出调节至3.3V，让开发板正常工作。
+<img alt="" src="../image/EVB_WL_guide/power_sch.png" /></p>
+<h4 id="132-cpu">1.3.2  CPU最小系统电路</h4>
+<p>单片机最小系统或者叫最小硬件单元电路，指用最少元器件组成的单片机可以正常工作的系统。最小系统基本由电源、单片机、晶振、复位电路、程序烧录接口组成，电源使用3.3V直接供电，但是EVB_WL的晶振电路封装在瑞兴恒方模组内部了，所以这里只能看到模组引脚连接和复位电路，原理图如下：
+<img alt="" src="../image/EVB_WL_guide/mcu_sch.png" /></p>
+<h4 id="133-usb">1.3.3  USB电平转换电路</h4>
+<p>USB电平转换电路是用于MCU和PC通信的场景中。PC机上的通信接口使用USB接口，相应的电平逻辑需要遵照USB电平规则，而MCU的串行通信接口是串口，相应电平需要遵循TTL原则。为了使两者可以互相通信，就需要一个电平转换器，EVB_WL上使用了CH340芯片作为转换器，CH340外围只需要接很少的元器件即可以实现USB总线转接，使用非常方便也广泛运用在USB转TTL工具上，电路如下：</p>
+<p><img alt="" src="../image/EVB_WL_guide/uart_sch.png" /></p>
+<h4 id="134-e53">1.3.4 E53 传感器扩展接口</h4>
+<p>开发板设计有E53接口的传感器扩展板接口，该接口可兼容所有E53接口的传感器扩展板，实现不同物联网案例场景的快速搭建。该接口可接入UART、SPI、I2C、ADC等通信协议的传感器，其原理图如下图所示。
+<img alt="" src="../image/EVB_WL_guide/e53_interface.png" /></p>
+<p>传感器扩展板有E53_SC1智慧城市灯光模块、E53_SF1智慧消防烟感模块、E53_IA1智慧农业模块等，如需要更多传感扩展板可自行找合作供应商（物联网俱乐部）购买）。
+如下图：
+<img alt="" src="../image/EVB_WL_guide/sensor_install.png" /></p>
+<h4 id="135">1.3.5 开发板调试烧录口</h4>
+<p>开发板预留了SWD程序下载调试口，还有UART1和低功耗串口LP_UART，方便用户下载调试程序，使用串口。
+<img alt="" src="../image/EVB_WL_guide/debug_sch.png" /></p>
+<h4 id="136-micor-usb">1.3.6  连接Micor USB线</h4>
+<p>Micro USB线的功能是供电及调试，将线一头与开发板的Micro接口连接，另一头接到电脑的USB口上。
+<img alt="" src="../image/EVB_WL_guide/usb_connect.png" /></p>
+<h4 id="137-st-link">1.3.7  连接ST-Link程序下载器</h4>
+<p>把开发板内提供的配套下载线接在开发板的程序下载接口（SWD口），另一端与ST-Link程序下载器对应引脚相连，注意连接紧密，防止接触不良，红色为VCC，一定参考下图进行连接，不要接错。
+<img alt="" src="../image/EVB_WL_guide/stlink-connect.png" /></p>
+<h2 id="2-evb_wl">2. 定制开发板EVB_WL软件开发环境准备</h2>
+<h3 id="21-mdk">2.1 MDK软件介绍</h3>
+<p>MDK 即RealView MDK 或MDK-ARM（Microcontroller Development kit），是 ARM 公司收购Keil公司以后，基于uVision界面推出的针对ARM7、ARM9、Cortex-M0、Cortex-M1、Cortex-M2、Cortex-M3、Cortex-R4等ARM处理器的嵌入式软件开发工具。MDK-ARM 集成了业内最领先的技术，包括 uVision4 集成开发环境与 RealView 编译器RVCT。支持 ARM7、ARM9 和最新的Cortex-M3/M1/M0 核处理器，自动配置启动代码，集成 Flash 烧写模块，强大的 Simulation 设备模拟，性能分析等功能，与 ARM 之前的工具包 ADS 等相比，RealView 编译器的最新版本可将性能改善超过 20%。
+Keil公司开发的ARM开发工具MDK，是用来开发基于ARM核的系列微控制器的嵌入式应用程序。它适合不同层次的开发者使用，包括专业的应用程序开发工程师和嵌入式软件开发的入门者。MDK包含了工业标准的Keil C编译器、宏汇编器、调试器、实时内核等组件，支持所有基于ARM的设备，能帮助工程师按照计划完成项目。</p>
+<h3 id="22-mdk">2.2 MDK安装</h3>
+<p>登录MDK官网，下载MDK5软件，下载地址：
+http://www2.keil.com/mdk5  或者 https://www.keil.com/download/product/
+下载的版本最好在5.24以上，本开发教程以5.24版本为例，双击MDK524应用程序文件，点击next&gt;&gt;。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk01.png" /></p>
+<p>打上 I agree前面的勾勾，即是同意一些安装协议。点击next&gt;&gt;。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk02.png" /></p>
+<p>选择安装路径，可以默认也可以安装在我们自己建立的文件夹下。点击next&gt;&gt;。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk03.png" /></p>
+<p>这里填写的是我们的一些信息，填写完整后，继续next&gt;&gt;。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk04.png" /></p>
+<p>然后等待安装完成即可。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk05.png" /></p>
+<p>安装完成，点击Finish。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk06.png" /></p>
+<p>然后会跳出来这个界面，这个我们后面再讲，先点OK，把弹框都叉掉。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk07.png" /></p>
+<p>激活MDK，导入License,激活MDK后便可使用了。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk08.png" />
+<img alt="" src="../image/EVB_WL_guide/mdk09.png" /></p>
+<p>特别提示：一定要输入License激活MDK软件，建议购买正版License。</p>
+<h3 id="23-mdk">2.3 MDK安装</h3>
+<p>安装完MDK后，我们需要安装开发套件中单片机型号对应的Pack。
+<strong>安装方式一</strong>  登录官网：http://www.keil.com/dd2/pack/ 
+下载Keil.STM32WLxx_DFP.1.0.0.pack 后安装，如下图</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk_pack01.png" /></p>
+<p><strong>安装方式二</strong>  MDK软件上在线安装</p>
+<p>打开软件，在导航栏打开Pack安装界面，然后选择ok选项。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk_pack02.png" />
+<img alt="" src="../image/EVB_WL_guide/mdk_pack03.png" /></p>
+<p>进入在线安装界面，选着STM32WLXX Pack,点击Install进行安装。</p>
+<p><img alt="" src="../image/EVB_WL_guide/mdk_pack04.png" /></p>
+<p>至此，我们开发板的单片机程序开发环境已经搭建完毕，重启MDK软件就可以使用了。</p>
+<h3 id="24-st-link">2.4 ST-Link驱动安装</h3>
+<p>前面讲了开发板单片机程序的开发环境的搭建，但是为了将程序烧录到开发板中我们还需要使用仿真器。我们这套开发板选用ST公司的ST-Link V2仿真器进行开发板程序的烧写和仿真，下面介绍ST-Link驱动的安装及环境搭建。
+在ST官网下载ST-Link驱动，
+https://www.st.com/content/st_com/zh/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html</p>
+<p>（驱动有2种： 32位电脑系统安装“dpinst_x86”、64位电脑系统安装“dpinst_amd64”）。 </p>
+<p><img alt="" src="../image/EVB_WL_guide/development_env_stlink_driver_file.png" /></p>
+<p>运行对应的驱动，安装ST-Link V2驱动程序。安装路径尽量保持默认路径。</p>
+<p><img alt="" src="../image/EVB_WL_guide/development_env_stlink_driver_install.png" /></p>
+<p>安装完成后, 将ST-Link通过USB接口连入电脑。打开“设备管理器”。若看到如下图所示，表示驱动安装成功。</p>
+<p><img alt="" src="../image/EVB_WL_guide/development_env_stlink_driver_ok.png" /></p>
+<p>这里提醒 2 点:
+1，  各种 windows 版本设备名称和所在设备管理器栏目可能不一样，例如 WIN10 插上STLINK 后显示的是 STM32 STLINK。
+2，  如果设备名称旁边显示的是黄色的叹号，请直接点击设备名称，然后在弹出的界面点击更新设备驱动
+至此， ST-Link 驱动已经安装完成。接下来大家只需要在 MDK工程里面配置一下 ST-Link即可。</p>
+<h3 id="25-mdk">2.5  编程软件(MDK)配置</h3>
+<p>安装驱动成功后，打开MDK软件，配置程序烧写和仿真的环境。
+点击进入工程配置界面按纽，进入工程配置界面。</p>
+<p><img alt="" src="../image/EVB_WL_guide/development_env_mdk_config_click.png" /></p>
+<p>选择Debug选项，进入仿真器设置界面。</p>
+<p><img alt="" src="../image/EVB_WL_guide/development_env_mdk_config_debug.png" /></p>
+<p>下拉仿真器选择列表，选着ST-Link Debugger并勾选右侧Use,点击Settings进入ST-Link V2仿真器配置界面。</p>
+<p><img alt="" src="../image/EVB_WL_guide/development_env_mdk_config_debugger.png" /></p>
+<p>开发板设计的程序烧录方式为SW，此处Unit选择ST-Link/V2,且Port选择SW,并确认右侧框内是否检测出SW设备，点击&lt;确认&gt;保存配置。</p>
+<p><img alt="" src="../image/EVB_WL_guide/development_env_mdk_config_debugger_setting.png" /></p>
+<h3 id="26-ch340">2.6  CH340串口驱动安装</h3>
+<p>互联网搜索下载CH340 串口芯片的驱动
+安装方法：打开驱动安装程序点击安装即可。</p>
+<p><img alt="" src="../image/EVB_WL_guide/ch340_file.png" />
+<img alt="" src="../image/EVB_WL_guide/ch340_driver_install.png" /></p>
+<p>注：若安装失败，请先点击卸载，后点击安装。</p>
+<h3 id="27">2.7 串口调试助手的安装与使用</h3>
+<p>工具下载： http://www.daxia.com/download/sscom.rar</p>
+<p>安装方法：串口调试助手sscom5.13.1是免安装的，解压出压缩包即可直接使用。</p>
+<p><img alt="" src="../image/EVB_WL_guide/development_env_sscom.png" /></p>
+<p>根据PC和终端之间的连接，选择正确的串行端口。
+打开电脑的设备管理器，在端口列表可以看到PC与开发板连接的端口号。</p>
+<p><img alt="" src="../image/EVB_WL_guide/development_env_sscom_port.png" /></p>
+<p>我这里显示的是COM6，所以要在sscom工具中选择COM6，开发板程序波特率设置为115200，所以我在sscom串口工具中选择115200波特率。</p>
+<h2 id="3-tencentos-tinystm32wl-lorawan-iot-explorer">3. 基于TencentOS tiny的STM32WL LoRaWAN 接入腾讯云IoT Explorer指引</h2>
+<p>基于TencentOS Tiny EVB WL要完成腾讯云IoT Explorer对接，需要完成两个部分的工作。
+一是：腾讯云IoT explorer 上完成项目、产品、设备创建、参数配置
+二是：基于TencentOS Tiny完成LoRaWAN应用开发，向腾讯云上报业务数据。</p>
+<h3 id="31-iot-explorer">3.1  腾讯云IoT explorer上创建项目、产品、设备</h3>
+<h4 id="_1">创建项目和产品</h4>
+<ol>
+<li>登录 <a href="https://console.cloud.tencent.com/iotexplorer">物联网开发平台控制台</a>，选择【新建项目】。</li>
+<li>在新建项目页面，填写项目基本信息后，单击【保存】<ul>
+<li>项目名称：输入“LoRa 温湿度演示”或其他名称。</li>
+<li>项目描述：按照实际需求填写项目描述。</li>
+</ul>
+</li>
+<li>项目新建成功后，即可新建产品。
+<img alt="" src="../image/EVB_WL_guide/IoT_Explorer_new_project.png" /></li>
+</ol>
+<h4 id="_2">新建产品</h4>
+<ol>
+<li>进入该项目的产品列表页面，单击【新建产品】。</li>
+<li>在新建产品页面，填写产品基本信息。<ul>
+<li>产品名称：输入“LoRa温湿度监测仪”或其他产品名称。</li>
+<li>产品类型：选择“用户自定义”。</li>
+<li>设备类型：选择“设备”。    </li>
+<li>认证方式：选择“密钥认证”。</li>
+<li>通信方式：选择“LoRaWAN”。</li>
+<li>数据协议：选择“自定义透传”。
+<img alt="" src="../image/EVB_WL_guide/IoT_Explorer_new_product.png" /></li>
+</ul>
+</li>
+<li>产品新建成功后，您可在产品列表页查看“LoRa温湿度监测仪”。</li>
+</ol>
+<h4 id="_3">创建数据模板</h4>
+<p>单击产品名称，进入产品配置页，在【自定义功能】配置项下，单击【新建功能】，自定义产品功能。</p>
+<p>这里我们就不一一定义数据模板了，直接导入下面的json代码:</p>
+<pre><code>{
+  &quot;version&quot;: &quot;1.0&quot;,
+  &quot;profile&quot;: {
+    &quot;ProductId&quot;: &quot;F2G256SY2G&quot;,
+    &quot;CategoryId&quot;: &quot;1&quot;
+  },
+  &quot;properties&quot;: [
+    {
+      &quot;id&quot;: &quot;temperature&quot;,
+      &quot;name&quot;: &quot;温度&quot;,
+      &quot;desc&quot;: &quot;&quot;,
+      &quot;mode&quot;: &quot;r&quot;,
+      &quot;define&quot;: {
+        &quot;type&quot;: &quot;int&quot;,
+        &quot;min&quot;: &quot;-100&quot;,
+        &quot;max&quot;: &quot;155&quot;,
+        &quot;start&quot;: &quot;0&quot;,
+        &quot;step&quot;: &quot;1&quot;,
+        &quot;unit&quot;: &quot;摄氏度&quot;
+      },
+      &quot;required&quot;: false
+    },
+    {
+      &quot;id&quot;: &quot;humidity&quot;,
+      &quot;name&quot;: &quot;湿度&quot;,
+      &quot;desc&quot;: &quot;&quot;,
+      &quot;mode&quot;: &quot;rw&quot;,
+      &quot;define&quot;: {
+        &quot;type&quot;: &quot;int&quot;,
+        &quot;min&quot;: &quot;0&quot;,
+        &quot;max&quot;: &quot;100&quot;,
+        &quot;start&quot;: &quot;0&quot;,
+        &quot;step&quot;: &quot;1&quot;,
+        &quot;unit&quot;: &quot;%&quot;
+      },
+      &quot;required&quot;: false
+    },
+    {
+      &quot;id&quot;: &quot;period&quot;,
+      &quot;name&quot;: &quot;上报周期&quot;,
+      &quot;desc&quot;: &quot;&quot;,
+      &quot;mode&quot;: &quot;rw&quot;,
+      &quot;define&quot;: {
+        &quot;type&quot;: &quot;int&quot;,
+        &quot;min&quot;: &quot;0&quot;,
+        &quot;max&quot;: &quot;3600&quot;,
+        &quot;start&quot;: &quot;0&quot;,
+        &quot;step&quot;: &quot;1&quot;,
+        &quot;unit&quot;: &quot;秒&quot;
+      },
+      &quot;required&quot;: false
+    }
+  ],
+  &quot;events&quot;: [],
+  &quot;actions&quot;: []
+}
+</code></pre>
+<p><img alt="" src="../image/EVB_WL_guide/IoT_Explorer_new_data_template.png" /></p>
+<p>导入完成后，如下图所示：
+<img alt="" src="../image/EVB_WL_guide/IoT_Explorer_new_data_template01.png" /></p>
+<h4 id="lorawan">配置 LoRaWAN 参数</h4>
+<p>在设备开发页面中，按需调整 LoRaWAN 参数配置。本示例中使用默认的 OTAA 配置。
+<img alt="" src="../image/EVB_WL_guide/IoT_Explorer_product_LoRa_PramSet.png" /></p>
+<h4 id="_4">设备数据解析</h4>
+<p>在设备开发页面中，按需调整设备数据解析。由于 LoRa 类资源有限设备不适合直接传输 JSON 格式数据，使用“设备数据解析”可以将设备原始数据转化为产品 JSON 数据。</p>
+<h5 id="_5">设备数据协议</h5>
+<p>在本示例中，设备上行数据共有3个，包括温度、湿度、上报周期3个属性数据</p>
+<h5 id="_6">数据解析脚本</h5>
+<p>上行数据解析的脚本主函数为 RawToProtocol，其带有 fPort、bytes 两个入参：
+- fPort：设备上报的 LoRaWAN 协议数据的 FPort 字段。
+- bytes：设备上报的 LoRaWAN 协议数据的 FRMPayload 字段。</p>
+<p>脚本主函数的出参为产品数据模版协议格式的对象。</p>
+<p>在上行数据解析部分，javascript 示例代码如下：</p>
+<pre><code class="language-javascript">function RawToProtocol(fPort, bytes) {
+    var data = {
+        &quot;method&quot;: &quot;report&quot;,
+        &quot;clientToken&quot; : new Date(),
+        &quot;params&quot; : {}
+    };
+    data.params.temperature = bytes[0];
+    data.params.humidity = bytes[1];
+    data.params.period = bytes[2] | (bytes[3] &lt;&lt; 8);
+    return data;
+}
+</code></pre>
+<p>下行数据解析的脚本主函数为 ProtocolToRaw，其入参为产品数据模版协议格式的对象。</p>
+<p>在下行数据解析部分，javascript 示例代码如下：</p>
+<pre><code class="language-javascript">function ProtocolToRaw(obj) {
+    var data = new Array();
+    data[0] = 5;// fport=5
+    data[1] = 0;// unconfirmed mode
+    data[2] = obj.params.period &amp; 0x00FF;
+    data[3] = (obj.params.period &gt;&gt; 8) &amp; 0x00FF;
+    return data;
+}
+</code></pre>
+<p><img alt="" src="../image/EVB_WL_guide/IoT_Explorer_new_product_script.png" /></p>
+<h4 id="_7">创建测试设备</h4>
+<p>在设备调试页面中，单击【新建设备】，设备名为 WL_DEV_001。</p>
+<p>DevEUI、APPKEY等信息可从 WL 开发板 终端设备获取或者设置，云平台和终端要保持一致。</p>
+<p><img alt="" src="../image/EVB_WL_guide/IoT_Explorer_new_dev.png" /></p>
+<h4 id="_8">查看设备状态</h4>
+<ol>
+<li>保持 LoRa 节点和 LoRa 网关 为运行状态。</li>
+<li>进入【控制台】&gt;【产品开发】&gt;【设备调试】，可查看到设备 "WL_DEV_001" 。</li>
+<li>单击【调试】，可进入设备详情页。
+<img alt="" src="../image/EVB_WL_guide/IoT_Explorer_dev_status.png" /></li>
+<li>单击【设备属性】，可查询设备上报到开发平台的最新数据及历史数据。</li>
+<li>设备属性的最新值：会显示设备上报的最新数据。</li>
+<li>设备属性的更新时间：显示数据的更新时间。
+<img alt="" src="../image/EVB_WL_guide/IoT_Explorer_dev_data.png" /></li>
+<li>单击【查看】，可查看某个属性的历史上报数据。</li>
+</ol>
+<h4 id="_9">查看设备通信日志</h4>
+<p>单击【设备日志】，可查询该设备某段时间范围的所有上下行数据。
+ - 上行：上行指设备端上报到开发平台的数据。
+ - 下行：下行指从开发平台下发到设备的数据。
+<img alt="" src="../image/EVB_WL_guide/IoT_Explorer_dev_data_log.png" /></p>
+<h3 id="32-tencentos-tiny-evb_wllorawan">3.2 基于TencentOS Tiny EVB_WL开发板完成LoRaWAN应用开发</h3>
+<h4 id="_10">下载源码</h4>
+<p>TencentOS tiny官方开源仓下载源码，地址为：
+https://github.com/Tencent/TencentOS-tiny</p>
+<p>进入 &lt; TencentOS-tiny\board\RHF0M0E5_STM32WLE5xx\KEIL\lorawan&gt; 目录，打开TencentOS_tiny.uvprojx工程：</p>
+<p><img alt="" src="../image/EVB_WL_guide/MDK_LoRa_Project_open.png" /></p>
+<h4 id="lorawan_1">编译lorawan工程</h4>
+<p>打开工程后，我们在左侧的工程文件导航页面可以看到WL的LoRaWAN相关源码，这里创建了两个TencentOS tiny的任务，一个负责处理LoRaWAN MAC层协议，一个处理业务。开发者在编译前需要配置设备相关信息。
+打开commissioning.h头文件，在文件中输入与前文IoT Explorer平台对应的device EUI和APP KEY，按如下图所示的格式：
+<img alt="" src="../image/EVB_WL_guide/LORA_EUI_KEY.png" /></p>
+<p>基于TencentOS Tiny的WL开发板的业务流程如下：
+1. main函数中完成 板级初始化，主要是 board_init函数中初始化好基础外设和LoRa射频及LoRa协议栈；其中MX_LoRaWAN_Init函数会完成LoRaWAN协议的基础配置，比如选择CLASS、配置通道、配置ADR等；
+2. main函数中，完成内核初始化、创建主线程入口application_entry，启动内核；
+3. application_entry函数中再创建lora_mac_process_task；
+4. application_entry函数中调用lw_send函数向LoRa网关和云端上报终端数据。示例中是模拟了3个元数据发送，开发者可以修改发送自己想发送的数据，配合腾讯云IoT平台设计好对应的数据模板即可。</p>
+<p>修改设备信息后，开发者按照下图指示，点击编译按钮即可编译工程，如图：</p>
+<p><img alt="" src="../image/EVB_WL_guide/MDK_Complie.png" /></p>
+<h4 id="_11">下载运行</h4>
+<p>首先需要配置下载环境</p>
+<p><img alt="" src="../image/EVB_WL_guide/MDK_settings.png" /></p>
+<p>按下图所示配置下载参数</p>
+<p><img alt="" src="../image/EVB_WL_guide/download_debug.png" /></p>
+<p><img alt="" src="../image/EVB_WL_guide/download_flash.png" /></p>
+<p>编译完成后点击如图所示”LOAD”按钮下载程序即可。</p>
+<p><img alt="" src="../image/EVB_WL_guide/download_go.png" /></p>
+<blockquote>
+<p>如果出现无法下载问题，则芯片处于写保护状态，请查看本文第 4 小节的内容，去除写保护。</p>
+</blockquote>
+<h4 id="_12">查看运行结果</h4>
+<p>连接好串口，在PC的串口助手中可以看到TencentOS Tiny EVB_WL开发板打印LoRa业务运行的相关日志，如下图所示：</p>
+<p><img alt="" src="../image/EVB_WL_guide/lorawan_ok.png" /></p>
+<p>同时需要查询腾讯云IoT Explore上的设备状态和上报的数据项，如图所示：</p>
+<p><img alt="" src="../image/EVB_WL_guide/WL_LoRa_Data.png" /></p>
+<h1 id="4">4. 去除芯片写保护</h1>
+<h3 id="41-st-link">4.1. 使用ST-Link连接开发板</h3>
+<p>确保ST-Link与开发板正常连接，并且在 MDK 中可以正常读取到信息，如图：</p>
+<p><img alt="" src="../image/EVB_WL_guide/stlink_mdk.png" /></p>
+<h2 id="42-stm32cubeprog">4.2. 使用STM32CubeProg解锁</h2>
+<p>关闭MDK，打开STM32CubeProg软件，点击右上角的 Connect，连接成功后显示Connected：</p>
+<p><img alt="" src="../image/EVB_WL_guide/cubemx_prog_step1.png" /></p>
+<p>点击选择 OB 图标按钮，按照图中流程进行解锁：</p>
+<p><img alt="" src="../image/EVB_WL_guide/cubemx_prog_step2.png" /></p>
+<p>成功之后点击 dicconnnect 断开连接：</p>
+<p><img alt="" src="../image/EVB_WL_guide/cubemx_prog_step3.png" /></p>
+<p>芯片解锁成功，此时即可使用MDK正常下载。</p>
+<p>写在结尾的话：感谢大家使用TencentOS Tiny，本文难免有描述不清晰的地方，如果有任何问题，欢迎加入TencentOS Tiny 的官网QQ技术群进行交流，基于TencentOS Tiny相关的项目合作请邮件联系 supowang@tencent.com</p>
+<p><img alt="" src="../image/EVB_WL_guide/TencentOS_Tiny_qq.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/" class="btn btn-neutral float-left" title="25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/" class="btn btn-neutral float-right" title="27.AT_Firmware_and_SAL_Firmware_User_Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

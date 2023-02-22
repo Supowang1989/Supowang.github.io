@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>17.Mini_Program_Quick_Start - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "17.Mini_Program_Quick_Start";
+        var mkdocs_page_input_path = "17.Mini_Program_Quick_Start.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">17.Mini_Program_Quick_Start</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#11">1.1. 开发环境准备</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#111">1.1.1. 申请小程序账号</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#112">1.1.2. 小程序管理后台</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#113">1.1.3. 安装开发工具</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12-demo">1.2. 智能灯小程序Demo</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#121">1.2.1. 概述</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#122">1.2.2. 前置工作</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#123-sdk">1.2.3. 普通开发方式（SDK）</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1231">1.2.3.1. 导入工程</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#1232">1.2.3.2. 修改配置</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#1233">1.2.3.3. 功能扩展</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#124">1.2.4. 云开发方式（云函数）</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1241">1.2.4.1. 导入工程</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#1242">1.2.4.2. 开通云开发，创建环境</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#1243">1.2.4.3. 部署云函数</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#1244">1.2.4.4. 修改配置</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#1245-api-30-explorer">1.2.4.5. 功能扩展：结合API 3.0 Explorer工具快速实现云函数</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#125">1.2.5. 调试和发布</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#126">1.2.6. 配置信息说明</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13-faq">1.3. FAQ</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#131-reqeustfail-url-not-in-domain-list">1.3.1. 网络请求报错: reqeust:fail url not in domain list</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#132-cloud-init-error">1.3.2. 云开发: 初始化错误 cloud init error</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#133-env-not-exists">1.3.3. 云开发：云环境不存在 env not exists</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#134-function-not-found">1.3.4. 云开发：云函数不存在 Function not found</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#135">1.3.5. 可以接入第三方服务吗？</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>17.Mini_Program_Quick_Start</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="1">1. 小程序开发快速指引</h1>
+<!-- TOC -->
+
+<ul>
+<li><a href="#1-小程序开发快速指引">1. 小程序开发快速指引</a><ul>
+<li><a href="#11-开发环境准备">1.1. 开发环境准备</a><ul>
+<li><a href="#111-申请小程序账号">1.1.1. 申请小程序账号</a></li>
+<li><a href="#112-小程序管理后台">1.1.2. 小程序管理后台</a></li>
+<li><a href="#113-安装开发工具">1.1.3. 安装开发工具</a></li>
+</ul>
+</li>
+<li><a href="#12-智能灯小程序demo">1.2. 智能灯小程序Demo</a><ul>
+<li><a href="#121-概述">1.2.1. 概述</a></li>
+<li><a href="#122-前置工作">1.2.2. 前置工作</a></li>
+<li><a href="#123-普通开发方式sdk">1.2.3. 普通开发方式（SDK）</a><ul>
+<li><a href="#1231-导入工程">1.2.3.1. 导入工程</a></li>
+<li><a href="#1232-修改配置">1.2.3.2. 修改配置</a></li>
+<li><a href="#1233-功能扩展">1.2.3.3. 功能扩展</a></li>
+</ul>
+</li>
+<li><a href="#124-云开发方式云函数">1.2.4. 云开发方式（云函数）</a><ul>
+<li><a href="#1241-导入工程">1.2.4.1. 导入工程</a></li>
+<li><a href="#1242-开通云开发创建环境">1.2.4.2. 开通云开发，创建环境</a></li>
+<li><a href="#1243-部署云函数">1.2.4.3. 部署云函数</a></li>
+<li><a href="#1244-修改配置">1.2.4.4. 修改配置</a></li>
+<li><a href="#1245-功能扩展结合api-30-explorer工具快速实现云函数">1.2.4.5. 功能扩展：结合API 3.0 Explorer工具快速实现云函数</a></li>
+</ul>
+</li>
+<li><a href="#125-调试和发布">1.2.5. 调试和发布</a></li>
+<li><a href="#126-配置信息说明">1.2.6. 配置信息说明</a></li>
+</ul>
+</li>
+<li><a href="#13-faq">1.3. FAQ</a><ul>
+<li><a href="#131-网络请求报错-reqeustfail-url-not-in-domain-list">1.3.1. 网络请求报错: reqeust:fail url not in domain list</a></li>
+<li><a href="#132-云开发-初始化错误-cloud-init-error">1.3.2. 云开发: 初始化错误 cloud init error</a></li>
+<li><a href="#133-云开发云环境不存在-env-not-exists">1.3.3. 云开发：云环境不存在 env not exists</a></li>
+<li><a href="#134-云开发云函数不存在-function-not-found">1.3.4. 云开发：云函数不存在 Function not found</a></li>
+<li><a href="#135-可以接入第三方服务吗">1.3.5. 可以接入第三方服务吗？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h2 id="11">1.1. 开发环境准备</h2>
+<blockquote>
+<p>更详细小程序开发指南，请参见：<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/getstart.html">官方小程序开发指南</a></p>
+</blockquote>
+<h3 id="111">1.1.1. 申请小程序账号</h3>
+<p>进入 <a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1&amp;token=&amp;lang=zh_CN">小程序注册页</a> <code>https://mp.weixin.qq.com/</code> 根据指引填写信息和提交相应的资料，就可以拥有自己的小程序帐号</p>
+<h3 id="112">1.1.2. 小程序管理后台</h3>
+<p>申请小程序成功后，登录<a href="https://mp.weixin.qq.com/">小程序管理后台</a> 。在小程序管理平台，你可以管理你的小程序的权限，查看数据报表，发布小程序等操作。</p>
+<p>AppID：在菜单 “设置”-“开发设置” 可以看到小程序的 AppID，小程序的 AppID 相当于小程序平台的一个身份证，在小程序项目的基本信息中需要配置AppID。</p>
+<p><img alt="小程序后台" src="../image/mini_program/mp_appid.png" /></p>
+<h3 id="113">1.1.3. 安装开发工具</h3>
+<p>前往 <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">开发者工具下载页面</a> ，根据自己的操作系统下载对应的安装包进行安装。安装成功后，打开小程序开发者工具，用微信扫码登录开发者工具</p>
+<h2 id="12-demo">1.2. 智能灯小程序Demo</h2>
+<h3 id="121">1.2.1. 概述</h3>
+<p><img alt="小程序开发方式" src="../image/mini_program/mp_diagram.png" /></p>
+<p>基于腾讯云开发物联网小程序应用，关键是如何在小程序上方便的调用腾讯云物联网平台的API（如图所示的红框部分）。</p>
+<p>TencentOS tiny 提供了两种开发方式的小程序Demo案例，帮助开发者的小程序更快接入腾讯云：</p>
+<ol>
+<li>普通开发方式，使用SDK调用腾讯云API</li>
+<li>云开发方式，在云函数中调用腾讯云API</li>
+</ol>
+<h3 id="122">1.2.2. 前置工作</h3>
+<p>Demo案例以开发智能灯应用为例子，在小程序开发之前，应该先完成以下工作：</p>
+<ul>
+<li>在腾讯云物联网开发平台IotExplorer创建智能灯产品和设备</li>
+</ul>
+<p>参考<a href="https://cloud.tencent.com/document/product/1081/41155">腾讯云智能灯接入指引</a>。只需要关注控制台操作部分：创建项目和产品, 新建产品, 创建数据模板, 创建测试设备</p>
+<ul>
+<li>基于TencentOS tiny完成设备和IotExplorer对接</li>
+</ul>
+<p>参考智能灯数据模案例：TencentOS_tiny/examples/qcloud_iot_explorer_sdk_data_template</p>
+<h3 id="123-sdk">1.2.3. 普通开发方式（SDK）</h3>
+<h4 id="1231">1.2.3.1. 导入工程</h4>
+<p>在小程序开发工具中，导入项目：
+TencentOS_tiny\tools\Mini_Program\iotexplorer_mp_demo</p>
+<p><img alt="导入普通开发Demo项目" src="../image/mini_program/mp_normaldev_import_project.png" /></p>
+<blockquote>
+<p>注：AppID可在小程序管理后台获取，本地调试可以先使用测试号</p>
+</blockquote>
+<h4 id="1232">1.2.3.2. 修改配置</h4>
+<p>在miniprogram/app.js里更新配置信息，参考<a href="#配置信息说明">配置信息说明</a>
+<img alt="更新配置" src="../image/mini_program/mp_normaldev_update_config.png" /></p>
+<h4 id="1233">1.2.3.3. 功能扩展</h4>
+<p>SDK支持的api参见iotclient.js，开发者可以基于案例进行功能扩展：TencentOS_tiny\tools\Mini_Program\iotexplorer_mp_demo\iotclient_for_miniprogram\iotclient.js</p>
+<blockquote>
+<p>注：腾讯云暂时没有提供小程序端的API SDK，本案例的小程序SDK(iotclient_for_miniprogram)是基于<a href="https://github.com/TencentCloud/tencentcloud-sdk-nodejs/tree/master/tencentcloud/iotexplorer">腾讯云的NodeJS SDK</a>移植过来的</p>
+</blockquote>
+<h3 id="124">1.2.4. 云开发方式（云函数）</h3>
+<blockquote>
+<p>更详细的云开发指南，请参见<a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/quickstart.html">官方的云开发快速指引</a></p>
+</blockquote>
+<h4 id="1241">1.2.4.1. 导入工程</h4>
+<p>在小程序开发工具中，导入云开发Demo项目：
+TencentOS_tiny\tools\Mini_Program\iotexplorer_mp_cloudfunctions_demo</p>
+<p><img alt="导入云开发Demo项目" src="../image/mini_program/mp_clouddev_demo_import_project.png" /></p>
+<blockquote>
+<p>注：AppID可在小程序管理后台获取；测试号不支持云开发，必须申请小程序账号</p>
+</blockquote>
+<h4 id="1242">1.2.4.2. 开通云开发，创建环境</h4>
+<p>在使用云开发能力之前需要先开通云开发。在开发者工具工具栏左侧，点击 “云开发” 按钮即可打开云控制台、根据提示开通云开发、创建云环境。</p>
+<p><img alt="开通云开发" src="../image/mini_program/mp_clouddev_demo_enable.png" /></p>
+<p><img alt="创建云环境" src="../image/mini_program/mp_clouddev_demo_create_env.png" /></p>
+<blockquote>
+<p>例如：填入环境名称为tos-demo, 环境ID为tos-demo。</p>
+</blockquote>
+<h4 id="1243">1.2.4.3. 部署云函数</h4>
+<p>云函数需要部署到云环境中才能生效。在云函数目录上，点击右键，选择"创建并部署：云端安装依赖（不上传node_modules）"</p>
+<p><img alt="部署云函数" src="../image/mini_program/mp_clouddev_demo_upload_function.png" /></p>
+<p>案例的cloudfunctions目录提供了两个云函数query和control，通过调用Iotexplorer的查询和控制接口，实现了对设备的查询和控制。</p>
+<p>分别将control和query云函数部署到云环境中。部署成功后，可以在云开发控制台里看到对应的云函数。</p>
+<p><img alt="云开发控制台的云函数" src="../image/mini_program/mp_clouddev_demo_cloudfunctions.png" /></p>
+<h4 id="1244">1.2.4.4. 修改配置</h4>
+<p>在miniprogram/app.js里更新配置信息，参考<a href="#配置信息说明">配置信息说明</a>
+<img alt="更新项目配置" src="../image/mini_program/mp_clouddev_demo_update_config.png" /></p>
+<h4 id="1245-api-30-explorer">1.2.4.5. 功能扩展：结合API 3.0 Explorer工具快速实现云函数</h4>
+<p>腾讯云提供的<a href="https://cloud.tencent.com/document/api">API 3.0 Explorer</a>，可以非常方便的生成 API SDK代码。只需要稍微修改，就可以直接在云函数中使用。</p>
+<ul>
+<li>自动生成API SDK代码</li>
+<li>进入<a href="https://console.cloud.tencent.com/api/explorer">API 3.0 Explorer工具</a></li>
+<li>左侧选择对应服务，如：“物联网开发平台”</li>
+<li>继续选择对应接口，如：“数据查询相关接口”-“获取设备属性数据”</li>
+<li>填写个人密钥和输入参数。参见<a href="#配置信息说明">配置信息说明</a></li>
+<li>使用在线调用，测试接口是否调用成功</li>
+<li>测试完成后，选择生成NodeJS代码。将代码拷贝，后续用于云函数中</li>
+</ul>
+<p><img alt="api 3.0 explorer" src="../image/mini_program/mp_api_explorer.png" /></p>
+<ul>
+<li>创建并实现云函数</li>
+<li>
+<p>创建云函数query，将自动生成的NodeJS代码拷贝到云函数，并稍作修改即可使用。参考：<a href="https://github.com/Tencent/TencentOS-tiny/blob/master/tools/Mini_Program/iotexplorer_mp_cloudfunctions_demo/cloudfunctions/query/index.js">TencentOS-tiny\tools\Mini_Program\iotexplorer_mp_cloudfunctions_demo\cloudfunctions\query\index.js</a></p>
+</li>
+<li>
+<p>记得上传部署修改后的云函数</p>
+</li>
+<li>
+<p>调用云函数</p>
+</li>
+<li>调用云函数的代码也很简单。参考：<a href="https://github.com/Tencent/TencentOS-tiny/blob/master/tools/Mini_Program/iotexplorer_mp_cloudfunctions_demo/miniprogram/pages/index/index.js">TencentOS-tiny\tools\Mini_Program\iotexplorer_mp_cloudfunctions_demo\miniprogram\pages\index\index.js#queryDeviceData()</a></li>
+</ul>
+<pre><code class="language-javascript">    // 调用云函数query
+    wx.cloud.callFunction({
+      name: 'query',
+      data: queryData,
+      success: res =&gt; {
+        try {
+          let deviceData = JSON.parse(res.result.Data)
+          this.setData({
+            deviceData: deviceData
+          })
+          console.log(&quot;result:&quot;, deviceData)
+          wx.showToast({
+            title: '调用成功',
+          })
+        } catch (e) {
+          wx.showToast({
+            icon: 'none',
+            title: '调用失败',
+          })
+          console.log(res.result.Data, e)
+        }
+      },
+      fail: err =&gt; {
+        wx.showToast({
+          icon: 'none',
+          title: '调用失败',
+        })
+        console.error('[云函数] [iotexplorer] 调用失败：', err)
+      }
+    })  
+</code></pre>
+<h3 id="125">1.2.5. 调试和发布</h3>
+<p>上文的步骤完成后，就可以对基本功能进行调试，如：查询和控制设备。</p>
+<ul>
+<li>
+<p>本地调试。点击菜单栏的"编译"按钮进行编译，左侧模拟器中点击查询和发送按钮，下侧调试器中查看调试信息
+<img alt="本地调试" src="../image/mini_program/mp_local_debug.png" /></p>
+</li>
+<li>
+<p>真机调试。点击菜单栏"真机调试"，手机微信扫描弹出的二维码，进入真机调试。可在手机小程序页面点击按钮进行调试。
+<img alt="真机调试" src="../image/mini_program/mp_remote_debug.png" />
+<img alt="真机调试" src="../image/mini_program/mp_remote_debug_mobile.jpg" /></p>
+</li>
+</ul>
+<p>调试OK后，就可以发布小程序了
++ 上传代码。点击菜单栏“上传”，填写版本信息，上传开发版本到小程序管理后台
+<img alt="上传开发版本" src="../image/mini_program/mp_publish_upload.png" /></p>
+<ul>
+<li>发布版本。登录小程序管理后台，进入“管理”-“版本管理”。将开发版本提交审核，等待审核通过后，点击发布版本。</li>
+</ul>
+<h3 id="126">1.2.6. 配置信息说明</h3>
+<ul>
+<li>productId, deviceName</li>
+</ul>
+<p>产品ID和设备名称。用于IotExplorer API接口调用的参数。在腾讯云控制台-物联网开发平台-产品开发-设备调试中，获取产品ID和设备名称</p>
+<p><img alt="获取产品和设备信息" src="../image/mini_program/mp_get_device_info.png" /></p>
+<ul>
+<li>secretId, secretKey</li>
+</ul>
+<p>腾讯云API密钥信息，用于IotExplorer API 接口调用的鉴权。在腾讯云控制台-访问管理-访问密钥-API密钥管理中，获取 secretId, secretKey</p>
+<p><img alt="获取API密钥" src="../image/mini_program/mp_get_secret_key.png" /></p>
+<ul>
+<li>region</li>
+</ul>
+<p>Region字段，接口服务的地域，填写"ap-guangzhou"即可</p>
+<ul>
+<li>env</li>
+</ul>
+<p>云开发的环境ID。填入云开发创建的环境ID</p>
+<h2 id="13-faq">1.3. FAQ</h2>
+<h3 id="131-reqeustfail-url-not-in-domain-list">1.3.1. 网络请求报错: reqeust:fail url not in domain list</h3>
+<p>报错信息:</p>
+<pre><code>https://iotexplorer.tencentcloudapi.com 不在以下 request 合法域名列表中，请参考文档：https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html
+
+{errMsg: &quot;request:fail url not in domain list&quot;}
+</code></pre>
+<p>解决方式：</p>
+<ul>
+<li>
+<p>如果是本地调试，可以在本地设置中勾选<code>不校验合法域名</code>
+<img alt="不校验合法域名" src="../image/mini_program/mp_local_domain_noncheck.png" /></p>
+</li>
+<li>
+<p>如果是真机调试或发布小程序，则需要在小程序管理后台进行服务器域名配置：进入微信公众平台小程序后台 - 开发 - 开发设置 - 服务器域名 - 输入域名。参见<a href="https://jingyan.baidu.com/article/ce09321bb6e9c12bff858f92.html">微信小程序添加服务器端接口域名</a></p>
+</li>
+<li>如果使用物联网开发平台 IoT Explorer，输入域名: <code>iotexplorer.tencentcloudapi.com</code></li>
+<li>如果使用物联网通信平台 IoT Hub，输入域名：<code>iotcloud.tencentcloudapi.com</code>
+<img alt="服务器端域名配置" src="../image/mini_program/mp_setting_domain.png" /></li>
+</ul>
+<h3 id="132-cloud-init-error">1.3.2. 云开发: 初始化错误 cloud init error</h3>
+<p>报错信息</p>
+<pre><code>cloud init error：{ errMsg: &quot;invalid scope&quot; }
+</code></pre>
+<p>首次开通云环境后，需等待大约 10 分钟方可正常使用云 API，在此期间官方后台服务正在做准备服务，如尝试在小程序中调用云 API 则会报 cloud init error：{ errMsg: "invalid scope" } 的错误</p>
+<h3 id="133-env-not-exists">1.3.3. 云开发：云环境不存在 env not exists</h3>
+<p>报错信息：</p>
+<pre><code>Error: errCode: -404011 cloud function execution error | errMsg: cloud.callFunction:fail requestID , cloud function service error code -501000, error message [100004] env not exists;
+</code></pre>
+<ul>
+<li>确定是否开通云开发并创建环境</li>
+<li>确定配置文件app.js中env字段是否和云开发中创建的云环境ID一致</li>
+</ul>
+<h3 id="134-function-not-found">1.3.4. 云开发：云函数不存在 Function not found</h3>
+<pre><code>Error: errCode: -404011 cloud function execution error | errMsg: cloud.callFunction:fail requestID , cloud function service error code -504002, error message Function not found [query]; at cloud.callFunction api
+</code></pre>
+<ul>
+<li>确认云函数是否部署到对应云环境</li>
+</ul>
+<h3 id="135">1.3.5. 可以接入第三方服务吗？</h3>
+<p>可以。只要是符合要求的服务，小程序都能访问。简单来说，有以下几个要求：必须使用https/wss请求，请求域名需要做备案，并带有可信任的SSL证书。详细参见<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html">小程序网络能力使用说明</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/" class="btn btn-neutral float-left" title="16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/" class="btn btn-neutral float-right" title="18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

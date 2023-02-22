@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>28.BLE_Device_Quick_Start - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "28.BLE_Device_Quick_Start";
+        var mkdocs_page_input_path = "28.BLE_Device_Quick_Start.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">28.BLE_Device_Quick_Start</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>28.BLE_Device_Quick_Start</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="1">1 操作场景</h1>
+<p>使用BLE蓝牙模拟一款智能灯，配合“腾讯连连”小程序实现设备接入，物联网开发平台可以远程控制灯的亮度、颜色、开关，并实时获取智能灯上报到开发平台的数据。</p>
+<p>本文档主要指导您如何使用NRF52832模组在物联网开发平台创建智能灯产品并通过手机接入。</p>
+<h1 id="2">2 前提条件</h1>
+<p>为了通过下面的步骤快速理解该业务流程，需要做好以下准备工作：
+- 申请物联网开发平台服务。
+- 准备一块NRF52832开发板。
+- 下载最新版本代码。
+- 安装python、JLink驱动程序。</p>
+<h1 id="3">3 操作步骤</h1>
+<h2 id="31">3.1 控制台操作</h2>
+<h3 id="311">3.1.1 新建项目</h3>
+<ol>
+<li>登录 <a href="https://console.cloud.tencent.com/iotexplorer">物联网开发平台控制台</a>，选择【新建项目】。</li>
+<li>在新建项目页面，填写项目基本信息，完成后点击保存。</li>
+<li>项目名称：输入“智能灯演示”或其他名称。</li>
+<li>项目描述：按照实际需求填写项目描述。<br />
+<img alt="" src="../image/BLE/new_project.png" /></li>
+</ol>
+<h3 id="312">3.1.2 新建产品</h3>
+<ol>
+<li>进入该项目的产品列表页面，单击【新建产品】。</li>
+<li>在新建产品页面，填写产品基本信息，完成后点击保存。</li>
+<li>产品名称：输入“蓝牙智能灯”或其他产品名称。</li>
+<li>产品类型：选择“智慧生活—电工照明—灯”。 </li>
+<li>设备类型：选择“设备”。</li>
+<li>认证方式：选择“密钥认证”。</li>
+<li>通信方式：选择“BLE”。</li>
+<li>其他选项保持默认。<br />
+<img alt="" src="../image/BLE/new_product.png" /></li>
+</ol>
+<h3 id="313">3.1.3 创建数据模板</h3>
+<ol>
+<li>
+<p>打开刚刚创建的【蓝牙智能灯】产品。<br />
+<img alt="" src="../image/BLE/ble_product.png" /></p>
+</li>
+<li>
+<p>选择【数据模板】，点击【导入JSON】。<br />
+<img alt="" src="../image/BLE/data_template.png" /></p>
+</li>
+<li>
+<p>打开代码中的<code>examples\nimble_llsync\date_templatenrf52832.json</code>，如果出现乱码请将您的编辑器修改为utf8编码，将文件中的代码粘贴进来，点击【导入】。<br />
+<img alt="" src="../image/BLE/import_json.png" /></p>
+</li>
+</ol>
+<h3 id="314">3.1.4 交互开发配置</h3>
+<p>配置产品在小程序端的控制面板、配网引导、快捷入口，若不配置则使用系统默认配置。<br />
+<img alt="" src="../image/BLE/llsync_gui.png" /></p>
+<h3 id="315">3.1.5 新建设备</h3>
+<p>在设备调试页面中，单击【新建设备】，输入设备名“ble_device_01”或其他设备名称，点击【保存】。<br />
+<img alt="" src="../image/BLE/new_device.png" /></p>
+<h2 id="32">3.2 设备端操作</h2>
+<h3 id="321">3.2.1 硬件简介与连接</h3>
+<p>开发板实物如下：<br />
+<img alt="" src="../image/BLE/nrf52832_board.jpg" /></p>
+<p>指示灯作用如下
+- LED1: 开关
+- LED2: action
+- LED3: replay
+- LED4: 未使用</p>
+<ol>
+<li>使用USB线连接开发板左上角串口。</li>
+<li>使用JLink连接开发板右下角下载线接口。</li>
+<li>打开左上角电源开关。</li>
+<li>打开设备管理器，确保串口和JLink能够正常识别，若不能识别请重新安装驱动。<br />
+<img alt="" src="../image/BLE/jlink_driver.png" /></li>
+</ol>
+<h3 id="322">3.2.2 准备软件环境</h3>
+<ol>
+<li>新买到的nrf52832开发板可能已经烧写了 NORDIC 官方蓝牙协议栈，需要进行擦除，否则会导致下载失败、程序异常或其他问题</li>
+<li>启动 JFlash.exe，选择 File -&gt; New project<br />
+<img alt="" src="../image/BLE/jflash1.png" /></li>
+<li>点击省略号添加设备<br />
+<img alt="" src="../image/BLE/jflash2.png" /></li>
+<li>在“Device”中输入nrf52832，选择具体芯片型号，例程中使用的为nRF52832_xxAA<br />
+<img alt="" src="../image/BLE/jflash3.png" /></li>
+<li>选择 Target -&gt; Manual Programming -&gt; Erase Chip 擦除芯片<br />
+<img alt="" src="../image/BLE/jflash4.png" /></li>
+<li>擦除完成后即可继续进行之后的开发</li>
+</ol>
+<h3 id="323">3.2.3 代码修改与烧录</h3>
+<ol>
+<li>打开工程<code>board\Nordic_NRF52832\KEIL\llsync\TencentOS_tiny.uvprojx</code>。</li>
+<li>打开文件<code>ble_qiot_import.c</code>，找到以下三个宏并修改为你自己的设备信息。<br />
+<img alt="" src="../image/BLE/edit_device_info.png" /></li>
+<li>在【设备调试】页面中选择【设备信息】子页面，将【设备名称】、【设备密钥】、【产品ID】分别填入<code>DEVICE_NAME</code>,<code>SECRET_KEY</code>,<code>PRODUCT_ID</code>。<br />
+<img alt="" src="../image/BLE/device_info.png" /></li>
+<li>在<code>ble_qiot_ret_status_t ble_qiot_explorer_init(void)</code>中或其他合适的地方修改日志等级<code>ble_qiot_set_log_level(BLE_QIOT_LOG_LEVEL_DEBUG);</code>，以便开发调试。</li>
+<li>编译下载并运行。</li>
+</ol>
+<h2 id="33">3.3 腾讯连连小程序调试</h2>
+<ol>
+<li>微信主页面下拉并搜索【腾讯连连】小程序。<br />
+<img alt="" src="../image/BLE/llsync1.jpg" /></li>
+<li>点击下方的【加号】添加设备。<br />
+<img alt="" src="../image/BLE/llsync2.jpg" />
+   <img alt="" src="../image/BLE/llsync3.jpg" /></li>
+<li>待扫描到蓝牙设备后点击右侧的【连接】。<br />
+<img alt="" src="../image/BLE/llsync4.jpg" /></li>
+<li>在【我的设备】中打开刚刚添加的蓝牙设备。<br />
+<img alt="" src="../image/BLE/llsync5.jpg" /></li>
+<li>点击右侧的【立即连接】连接设备。<br />
+<img alt="" src="../image/BLE/llsync6.jpg" /></li>
+<li>连接成功后点击【电灯开关】，可以看到开发版上【LED1】随之变化。<br />
+<img alt="" src="../image/BLE/llsync7.jpg" /></li>
+<li>点击【亮度】或【颜色】按钮进行设置  </li>
+<li>查看串口打印，可以看到亮度、颜色设置成功<br />
+<img alt="" src="../image/BLE/com_debug.png" /></li>
+</ol>
+<h1 id="4-qa">4 Q&amp;A</h1>
+<p>Q: 实际产品中如何处理设备信息？<br />
+A: 例程中 <code>DEVICE_NAME</code>, <code>SECRET_KEY</code>, <code>PRODUCT_ID</code> 直接写在代码中，产品中应保存在Flash中，同时修改<code>ble_qiot_import.c</code>中<code>ble_get_product_id()</code>,<code>ble_get_device_name()</code>,<code>ble_get_psk()</code>三个函数。  </p>
+<p>Q: LLSync SDK 需要多大的 Flash 来保存配置信息？<br />
+A: 目前只需要不到32字节。  </p>
+<p>Q: 如果开发其他 BLE 芯片，有什么注意事项？<br />
+A: <code>components\connectivity\qcloud_iot_explorer_ble\inc\ble_qiot_import.h</code> 为用户需要移植适配的接口，与蓝牙协议栈相关的接口在<code>ble_qiot_import.c</code>中已经完成了适配，用户仅需根据实际产品要开发<code>ble_write_flash()</code>,<code>ble_read_flash()</code>等接口。  </p>
+<h1 id="5">5 参考资料</h1>
+<p><a href="https://github.com/tencentyun/qcloud-iot-explorer-BLE-sdk-embedded">LLSync SDK</a> 内相关文档<br />
+<a href="https://cloud.tencent.com/document/product/1081/48398">LLSync SDK 接入指引</a><br />
+<a href="https://cloud.tencent.com/document/product/1081/48399">LLSync SDK 使用参考</a>  </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/" class="btn btn-neutral float-left" title="27.AT_Firmware_and_SAL_Firmware_User_Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../29.TencentOS_Tiny_EVB_G0_QuickStart/" class="btn btn-neutral float-right" title="29.TencentOS_Tiny_EVB_G0_QuickStart">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../29.TencentOS_Tiny_EVB_G0_QuickStart/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

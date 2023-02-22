@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>14.RISC-V_Eclipse_Environment_Quick_Start - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "14.RISC-V_Eclipse_Environment_Quick_Start";
+        var mkdocs_page_input_path = "14.RISC-V_Eclipse_Environment_Quick_Start.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">软件列表</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#eclipse">eclipse</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#riscv-toolchain">riscv toolchain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#riscv-openocd">riscv openocd</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#eclipse_1">配置eclipse</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">调试设置</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gd-link">如果用gd-link调试</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sipeed-riscv-debugger">如果用sipeed riscv debugger调试</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>14.RISC-V_Eclipse_Environment_Quick_Start</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="risc-v-eclipse">RISC-V eclipse 开发环境搭建</h1>
+<h2 id="_1">软件列表</h2>
+<ul>
+<li>eclipse</li>
+<li>riscv toolchain</li>
+<li>riscv openocd</li>
+</ul>
+<h2 id="eclipse">eclipse</h2>
+<p>下载安装过程略</p>
+<h2 id="riscv-toolchain">riscv toolchain</h2>
+<p>在下载页<code>https://github.com/gnu-mcu-eclipse/riscv-none-gcc/releases</code>选择相应平台下载。并解压，放到合适的目录。</p>
+<h2 id="riscv-openocd">riscv openocd</h2>
+<p>签出代码<code>git clone https://github.com/riscv-mcu/riscv-openocd</code></p>
+<p>编译</p>
+<pre><code>./configure --enable-cmsis-dap --enable-ftdi --prefix=安装目录路径
+
+make
+
+make install
+</code></pre>
+<h2 id="eclipse_1">配置eclipse</h2>
+<p><img alt="" src="../image/riscv/properties.png" /></p>
+<p>配置toolchain路径</p>
+<p><img alt="" src="../image/riscv/toolchain.png" /></p>
+<p>配置openocd路径</p>
+<p><img alt="" src="../image/riscv/openocd.png" /></p>
+<h2 id="_2">调试设置</h2>
+<p>添加如下两行</p>
+<pre><code>set arch riscv:rv32
+set remotetimeout 250
+</code></pre>
+<p><img alt="" src="../image/riscv/debug.png" /></p>
+<h2 id="gd-link">如果用gd-link调试</h2>
+<p>配置文件</p>
+<pre><code>adapter_khz     1000
+reset_config srst_only
+adapter_nsrst_assert_width 100
+
+
+
+interface cmsis-dap
+
+transport select jtag
+
+#autoexit true
+
+set _CHIPNAME riscv
+jtag newtap $_CHIPNAME cpu -irlen 5 -expected-id 0x1000563d
+
+set _TARGETNAME $_CHIPNAME.cpu
+target create $_TARGETNAME riscv -chain-position $_TARGETNAME
+$_TARGETNAME configure -work-area-phys 0x20000000 -work-area-size 20480 -work-area-backup 0
+
+
+# Work-area is a space in RAM used for flash programming
+if { [info exists WORKAREASIZE] } {
+   set _WORKAREASIZE $WORKAREASIZE
+} else {
+   set _WORKAREASIZE 0x5000
+}
+
+# Allow overriding the Flash bank size
+if { [info exists FLASH_SIZE] } {
+    set _FLASH_SIZE $FLASH_SIZE
+} else {
+    # autodetect size
+    set _FLASH_SIZE 0
+}
+
+# flash size will be probed
+set _FLASHNAME $_CHIPNAME.flash
+
+flash bank $_FLASHNAME gd32vf103 0x08000000 0 0 0 $_TARGETNAME
+riscv set_reset_timeout_sec 1
+init
+
+halt
+</code></pre>
+<h2 id="sipeed-riscv-debugger">如果用sipeed riscv debugger调试</h2>
+<p>配置文件</p>
+<pre><code>adapter_khz     1000
+
+interface ftdi
+ftdi_device_desc &quot;Dual RS232&quot;
+ftdi_vid_pid 0x0403 0x6010
+
+transport select jtag
+ftdi_layout_init 0x0008 0x001b
+ftdi_layout_signal nSRST -oe 0x0020 -data 0x0020
+
+set _CHIPNAME riscv
+jtag newtap $_CHIPNAME cpu -irlen 5 -expected-id 0x1e200a6d
+
+set _TARGETNAME $_CHIPNAME.cpu
+target create $_TARGETNAME riscv -chain-position $_TARGETNAME
+$_TARGETNAME configure -work-area-phys 0x20000000 -work-area-size 10000 -work-area-backup 1
+
+set _FLASHNAME $_CHIPNAME.flash
+flash bank $_FLASHNAME gd32vf103 0x08000000 0 0 0 $_TARGETNAME
+
+riscv expose_csrs 3040-3071
+
+init
+
+halt
+# We must turn on this because otherwise the IDE version debug cannot download the program into flash
+#flash protect 0 0 last off
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/" class="btn btn-neutral float-left" title="13.Porting_Manual_for_MacOS_STM32CubeIDE"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/" class="btn btn-neutral float-right" title="15.TencentOS_tiny_EVB_MX_Plus_Quick_Start">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
