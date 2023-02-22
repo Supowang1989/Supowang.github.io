@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Supowang" /><link rel="canonical" href="https://supowang1989.github.io/mymkdocs/13.Porting_Manual_for_MacOS_STM32CubeIDE/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>13.Porting_Manual_for_MacOS_STM32CubeIDE - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "13.Porting_Manual_for_MacOS_STM32CubeIDE";
+        var mkdocs_page_input_path = "13.Porting_Manual_for_MacOS_STM32CubeIDE.md";
+        var mkdocs_page_url = "/mymkdocs/13.Porting_Manual_for_MacOS_STM32CubeIDE/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">一、工程创建</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tencentos-tiny">二、TencentOS tiny代码准备</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">三、移植工作</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1">附1 清理代码目录命令</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>13.Porting_Manual_for_MacOS_STM32CubeIDE</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tencentos-tinymacosstm32cubeide">TencentOS tiny内核移植指南(MacOS+STM32CubeIDE版)</h1>
+<h2 id="_1">一、工程创建</h2>
+<p>具体的工程创建方法和初始参数设置方法略去。</p>
+<p>需要强调的是本文是以<code>STM32L431</code>芯片为基础的，如果是其它芯片，后面的步骤请做相应的调整。</p>
+<p>最后生成的工程目录如下:
+<img alt="" src="https://main.qcloudimg.com/raw/d692d86434c953c178010acfcbecf7e7.png" /></p>
+<h2 id="tencentos-tiny">二、TencentOS tiny代码准备</h2>
+<p>只需要保留TencentOS这些目录下的代码，其它目录皆可删除。</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/25043ac8b3b6944670867960c4230abb.png" /></p>
+<p>在<code>arch</code>目录里需要删除的所有代码目录列表</p>
+<pre><code>arch/arm/arm-v7m/cortex-m0+/
+arch/arm/arm-v7m/cortex-m3/
+arch/arm/arm-v7m/cortex-m4/armcc/
+arch/arm/arm-v7m/cortex-m4/iccarm/
+arch/arm/arm-v7m/cortex-m7/
+</code></pre>
+<p><strong>注: STM32L431是Cortex-M4内核，所以如果是其它芯片，例如STM32F103就应该删除<code>arch/arm/arm-v7m/cortex-m4/</code>目录，保留<code>arch/arm/arm-v7m/cortex-m3/gcc</code>目录。</strong></p>
+<p>重命名代码顶层目录</p>
+<pre><code>$ mv TencentOS_tiny tiny
+</code></pre>
+<h2 id="_2">三、移植工作</h2>
+<ol>
+<li>把代码<code>tiny</code>拷贝到第一步创建的工程目录里</li>
+</ol>
+<p><img alt="" src="https://main.qcloudimg.com/raw/c0cd1bc6d8e58f52939e19a3a13db74a.png" /></p>
+<p>刷新工程</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/14a6bf4775db3a9bc7162a8eebeddbfd.png" /></p>
+<p>把代码添加到工程里</p>
+<p><img alt="" src="https://main.qcloudimg.com/raw/1315cce3621fa7f2ff20a135d4d7bf3a.png" /></p>
+<ol>
+<li>把下列头文件目录添加到工程里</li>
+</ol>
+<p><code>tiny/arch/arm/arm-v7m/common/include/
+ tiny/arch/arm/arm-v7m/cortex-m4/gcc/   # 如上所述，这个目录视特定芯片而定
+ tiny/kernel/core/include/
+ tiny/kernel/pm/include/
+ tiny/osal/cmsis_os/</code></p>
+<p><img alt="" src="./image/porting/porting_cubeide_006.png" /></p>
+<ol>
+<li>在Inc目录下新建一个头文件<code>tos_config.h</code></li>
+</ol>
+<p>```
+ #ifndef <em>TOS_CONFIG_H</em>
+ #define <em>TOS_CONFIG_H</em></p>
+<p>#include "stm32l431xx.h" // 目标芯片头文件，视特定芯片而定</p>
+<p>#include "stddef.h"</p>
+<p>#define TOS_CFG_TASK_PRIO_MAX 10u // 配置TencentOS tiny默认支持的最大优先级数量</p>
+<p>#define TOS_CFG_ROUND_ROBIN_EN 1u // 配置TencentOS tiny的内核是否开启时间片轮转</p>
+<p>#define TOS_CFG_OBJECT_VERIFY 0u // 配置TencentOS tiny是否校验指针合法</p>
+<p>#define TOS_CFG_EVENT_EN 1u // TencentOS tiny 事件模块功能宏</p>
+<p>#define TOS_CFG_MMHEAP_EN 1u // 配置TencentOS tiny是否开启动态内存模块</p>
+<p>#define TOS_CFG_MMHEAP_POOL_SIZE 0x100 // 配置TencentOS tiny动态内存池大小</p>
+<p>#define TOS_CFG_MUTEX_EN 1u // 配置TencentOS tiny是否开启互斥锁模块</p>
+<p>#define TOS_CFG_QUEUE_EN 1u // 配置TencentOS tiny是否开启队列模块</p>
+<p>#define TOS_CFG_TIMER_EN 1u // 配置TencentOS tiny是否开启软件定时器模块</p>
+<p>#define TOS_CFG_SEM_EN 1u // 配置TencentOS tiny是否开启信号量模块</p>
+<p>#if (TOS_CFG_QUEUE_EN &gt; 0u)
+ #define TOS_CFG_MSG_EN 1u
+ #else
+ #define TOS_CFG_MSG_EN 0u
+ #endif</p>
+<p>#define TOS_CFG_MSG_POOL_SIZE 10u // 配置TencentOS tiny消息队列大小</p>
+<p>#define TOS_CFG_IDLE_TASK_STK_SIZE 256u // 配置TencentOS tiny空闲任务栈大小</p>
+<p>#define TOS_CFG_CPU_TICK_PER_SECOND 1000u // 配置TencentOS tiny的tick频率</p>
+<p>#define TOS_CFG_CPU_CLOCK (SystemCoreClock) // 配置TencentOS tiny CPU频率</p>
+<p>#define TOS_CFG_TIMER_AS_PROC 1u // 配置是否将TIMER配置成函数模式</p>
+<p>#endif</p>
+<p>```</p>
+<ol>
+<li>
+<p>修改<code>Src/stm32l4xx_it.c</code>里的代码:</p>
+</li>
+<li>
+<p>将<code>void PendSV_Handler(void)</code>修改为<code>__weak void PendSV_Handler(void)</code></p>
+</li>
+<li>在<code>SysTick_Handler</code>函数中<code>HAL_IncTick();</code>之后添加代码</li>
+</ol>
+<p><code>if(tos_knl_is_running()) {
+      tos_knl_irq_enter();
+      tos_tick_handler();
+      tos_knl_irq_leave();
+  }</code></p>
+<ol>
+<li>修改<code>Src/main.c</code></li>
+</ol>
+<p>添加代码 </p>
+<p>```
+ #include "cmsis_os.h"</p>
+<p>//task1
+ #define TASK1_STK_SIZE 512
+ void task1(void *pdata);
+ osThreadDef(task1, osPriorityNormal, 1, TASK1_STK_SIZE);</p>
+<p>//task2
+ #define TASK2_STK_SIZE 512
+ void task2(void *pdata);
+ osThreadDef(task2, osPriorityNormal, 1, TASK2_STK_SIZE);</p>
+<p>void task1(void *pdata)
+ {
+    while(1)
+    {
+        HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+        osDelay(200);
+    }
+ }</p>
+<p>void task2(void *pdata) {
+    while(1) {
+        osDelay(1000);
+    }
+ } </p>
+<p>```</p>
+<p><strong>注：代码中的LED是在创建工程的GPIO选项里指定的，是<code>PC13</code>引脚，这个是依据TencentOS tiny EVB_MX开发板而决定的，相应的开发板请做相应调整。</strong></p>
+<p>主函数代码</p>
+<p>```
+ int main(void)
+ {
+    /<em> USER CODE BEGIN 1 </em>/</p>
+<pre><code>/* USER CODE END 1 */
+
+
+/* MCU Configuration--------------------------------------------------------*/
+
+/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+HAL_Init();
+
+/* USER CODE BEGIN Init */
+
+/* USER CODE END Init */
+
+/* Configure the system clock */
+SystemClock_Config();
+
+/* USER CODE BEGIN SysInit */
+
+/* USER CODE END SysInit */
+
+/* Initialize all configured peripherals */
+MX_GPIO_Init();
+/* USER CODE BEGIN 2 */
+
+osKernelInitialize(); //TOS Tiny kernel initialize
+osThreadCreate(osThread(task1), NULL); // Create task1
+osThreadCreate(osThread(task2), NULL); // Create task2
+osKernelStart(); //Start TOS Tiny
+
+/* USER CODE END 2 */
+
+/* Infinite loop */
+/* USER CODE BEGIN WHILE */
+while (1)
+{
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+}
+/* USER CODE END 3 */
+</code></pre>
+<p>}</p>
+<p>```</p>
+<h2 id="1">附1 清理代码目录命令</h2>
+<pre><code>ls | egrep -v &quot;arch|kernel|osal&quot; | xargs rm -rf
+rm -rf arch/arm/arm-v7m/cortex-m0+/
+rm -rf arch/arm/arm-v7m/cortex-m3/
+rm -rf arch/arm/arm-v7m/cortex-m4/armcc/
+rm -rf arch/arm/arm-v7m/cortex-m4/iccarm/
+rm -rf arch/arm/arm-v7m/cortex-m7/
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../12.Porting_Manual_for_GCC/" class="btn btn-neutral float-left" title="12.Porting_Manual_for_GCC"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../14.RISC-V_Eclipse_Environment_Quick_Start/" class="btn btn-neutral float-right" title="14.RISC-V_Eclipse_Environment_Quick_Start">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../12.Porting_Manual_for_GCC/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../14.RISC-V_Eclipse_Environment_Quick_Start/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Supowang" /><link rel="canonical" href="https://supowang1989.github.io/mymkdocs/25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub";
+        var mkdocs_page_input_path = "25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub.md";
+        var mkdocs_page_url = "/mymkdocs/25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="1-esp8266">1. 腾讯云ESP8266定制固件说明及烧录</h1>
+<p>腾讯云IoT AT指令是一套针对使用通讯模组（2G/4G/NB/WIFI）接入腾讯云物联平台的定制AT指令集，如果通讯模组实现了该指令集，则设备接入和通讯更为简单，所需代码量更少。 ESP8266作为IoT领域使用最广泛的一款WiFi芯片/模组，我们在其通用AT指令基础上，增加了腾讯云IoT AT指令集，形成一个定制的模组固件QCloud_IoT_AT_ESP8266，腾讯云IoT定制的AT模组固件QCloud_IoT_AT_ESP8266，适用于所有FLASH大小为2MB或者2MB以上的ESP8266模组。</p>
+<p>固件烧录方法请阅读文档：<a href="https://github.com/tencentyun/qcloud-iot-esp-wifi">腾讯云 IoT AT ESP8266 定制固件及说明</a>。</p>
+<h1 id="2">2. 云端配置</h1>
+<p>登录腾讯云, 搜索"云产品"下的"物联网通信"产品, 或直接访问：</p>
+<p><a href="https://console.cloud.tencent.com/iotcloud">https://console.cloud.tencent.com/iotcloud</a></p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429102431699.png" /></p>
+<h2 id="21">2.1. 创建新产品</h2>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429102653754.png" /></p>
+<blockquote>
+<p>对于认证方式, 指定了设备通过何种方式和云端进行双向认证. 默认的证书方式相对于密钥认证安全性高一点, 但是问题在于证书方式需要在嵌入式设备端存储证书同时实现证书的相关处理, 对设备的RAM和ROM要求较高, 相对而言, 密钥认证的方式资源占用量就小点, 由于我们主要支持的设备都是小型嵌入式设备, 因此选用密钥认证。</p>
+<p>数据格式指的是设备和云端进行数据交互时候使用的格式, json格式为文本字符串, 可读性高, 并且便于解析, 对于功能复杂的设备交互而已比较理想, 但是对于小型设备或是定制设备, 数据单一, 或是有自定义的格式(二进制或是文本), 这种时候, 用自定义的数据格式, 一方面节约流量, 另一方面比较灵活.。</p>
+</blockquote>
+<p>创建成功后，获取到产品ID：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429102823259.png" /></p>
+<h2 id="22">2.2. 创建新设备</h2>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429102907605.png" /></p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429102953589.png" /></p>
+<p>添加完设备后, 会告知设备对应的密钥. 该密钥将会用于之后设备与平台通信时的认证：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429103051336.png" /></p>
+<p>为了实现设备间的通信, 我们还需要创建第二个设备, 操作同上, 将其命名为"dev2"：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429103317496.png" /></p>
+<h2 id="23-topic">2.3. 设置Topic</h2>
+<p>可以在"权限列表"中看到Topic对应的操作权限：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429103449969.png" /></p>
+<p>平台默认配置了三类的Topic, 用于执行发布和订阅.，这里之所以<strong>是三类而不是三个</strong>, 是因为Topic里使用了变量.。</p>
+<ul>
+<li><code>WDRRDCF1TE</code>实际上是productID；</li>
+<li><code>${deviceName}</code>为平台设置的变量, 即设备名；</li>
+<li><code>control</code>和<code>data</code>以及<code>event</code>为Topic名字.；</li>
+</ul>
+<p>所以, 在我们创建了2个设备dev1和dev2的情况下, 在 BearPiTest 产品下, 即存在6个Topic, 分别为:</p>
+<ul>
+<li>WDRRDCF1T/dev1/control 订阅权限</li>
+<li>WDRRDCF1T/dev1/data   发布和订阅权限</li>
+<li>WDRRDCF1T/dev1/event 发布权限</li>
+<li>WDRRDCF1T/dev2/control 订阅权限</li>
+<li>WDRRDCF1T/dev2/data   发布和订阅权限</li>
+<li>WDRRDCF1T/dev2/event 发布权限</li>
+</ul>
+<p>这里默认的Topic已经足够我们使用, 不需要额外添加Topic和权限了。</p>
+<h2 id="24">2.4. 设置规则引擎</h2>
+<p>规则引擎本身不属于MQTT协议的范畴, 但是平台侧出于安全角度考虑添加了规则引擎, 实现了Topic之间的转发操作, 我们需要合理的设置规则引擎才能实现多个设备之间的数据收发, 由于理解起来比较复杂, 我们这里简要讲解下为什么需要规则引擎, 规则引擎的作用, 如何设置规则引擎.</p>
+<ol>
+<li>为什么需要规则引擎</li>
+</ol>
+<p>在上节的Topic中, 我们知道, 在平台侧, 对于不同的Topic, 规定了不同的权限, 例如, 对于<code>WDRRDCF1T/dev1/event</code>这个Topic, 只具有发布权限, 而对于<code>WDRRDCF1T/dev1/control</code>这个Topic, 只具有订阅权限. 对于设备dev1, 很自然的, 会朝<code>WDRRDCF1T/dev1/event</code>这个Topic发送数据, 并且订阅<code>WDRRDCF1T/dev1/control</code>这个Topic的消息. 但是这里就会涉及到, event的数据最后到哪去, control的数据从哪里来的问题.</p>
+<p>在本文的例子中, 我们希望dev1和dev2发生交互, 即相互收发消息. 由于MQTT是基于Topic的发布订阅机制, 因此, dev1想要获得dev2的数据, 直觉上, 需要订阅dev2发布消息的那个Topic. 假定dev2朝<code>25KCIUIR1G/dev2/event</code>Topic上发送数据, 那么dev1想要获得dev2发布的消息, 最直接的办法是订阅同样的Topic, 即<code>25KCIUIR1G/dev2/event</code>, 但是这里存在几个问题, 首先, event Topic只具有发布权限, 没有订阅权限, 其次, <strong>在平台侧, 规定了, 不允许跨设备发布或是订阅Topic</strong>, 也就是说, 对于dev1, 只能看到或只允许访问<code>WDRRDCF1T/dev1</code>这个Topic以及其下属的Topic, 不能访问<code>WDRRDCF1T/dev2</code>及其下属Topic.</p>
+<blockquote>
+<p>平台侧添加不允许跨设备访问Topic的规则虽然不直观, 但却是合理的. 如果不添加这条限制, 那么一个设备可以不加限制的订阅同一个产品下所有其他设备的Topic, 获取其上报的消息, 这存在潜在的安全漏洞.</p>
+</blockquote>
+<ol>
+<li>规则引擎的作用</li>
+</ol>
+<p>因为不允许直接跨设备访问Topic, 所以需要依靠"规则引擎"来手动添加规则, 将指定的Topic消息转发到另一个Topic上, 实现不同设备之间的通信.</p>
+<p><img alt="在这里插入图片描述" src="https://img-blog.csdnimg.cn/20200429104602991.png" /></p>
+<p>上图介绍了规则引擎的主要作用"republish", 即将一个Topic下的消息republish到另一个Topic下. 从图中我们可以看到, 规则引擎将<code>WDRRDCF1TE/dev2/event</code>的消息republish到了<code>WDRRDCF1TE/dev1/control</code>下. 将<code>WDRRDCF1TE/dev1/event</code>的消息republish到了<code>WDRRDCF1TE/dev2/control</code>下。</p>
+<p>这样, 对于dev1而言, 只需要订阅<code>WDRRDCF1TE/dev1/control</code>就可以接收来自<code>25KCIUIR1G/dev2/event</code>的消息了，dev2同理。</p>
+<ol>
+<li>设置规则引擎</li>
+</ol>
+<p>在物联网通信界面选择"规则引擎"--"新建规则", 随意指定一个规则名称, 我们这里不妨设置为"1to2"：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429104807225.png" /></p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429105026730.png" /></p>
+<p>这里, 我们看到规则的详细设置信息, 主要包括"筛选数据"和"行为操作"。</p>
+<p>"筛选数据"针对指定Topic接收到的消息内容进行进一步的筛选, 比如匹配消息中的字段来决定是否执行之后的设置的"行为操作".，而"行为操作"则是指定对通过匹配的消息进行何种操作, 主要的操作有"数据转发到另一个Topic(Republish)", "转发到第三方服务(Forward)"以及转发到腾讯云各个对应组件中。</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429105329607.png" /></p>
+<p>上图是设置好的规则, 这里, 我们将"筛选数据"部分的筛选字段设置为<code>*</code>, 筛选的Topic为<code>WDRRDCF1T/dev1/event</code>, 条件设置为空, 即不筛选数据, 全部匹配，然后, 执行的操作是将数据转发到<code>WDRRDCF1T/dev2/control</code>, 设置完这条规则, 就实现了dev2通过订阅control就能收到dev1发送到event的数据。</p>
+<blockquote>
+<p>关于"筛选数据"的设定：</p>
+<p>由于我们在新建产品, 设置数据格式的时候选择了自定义数据格式, 在自定义数据格式的情况下, 当前平台将其当做二进制流来处理, 也就无法通过匹配字段进行数据筛选.</p>
+<p>如果在进行产品的时候, 使用数据格式是json, 那么此处就可以根据json中的字段进行SQL的匹配和筛选.</p>
+</blockquote>
+<p>同理, 我们再设置新的一个规则"2to1", 实现<code>WDRRDCF1T/dev2/event</code>到<code>WDRRDCF1T/dev1/control</code>的转发：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429105534974.png" /></p>
+<p>规则引擎都设置好后，记得点启用按钮，这样, 在平台侧dev1到dev2的双向数据通路就打通了：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429105607794.png" /></p>
+<h2 id="25">2.5. 云日志</h2>
+<p>在平台侧都设置好后, 我们在之后的测试过程或是通信过程中, 往往还需要查看平台是否收到了设备发送上来的消息, 对消息执行了哪些操作, 消息的具体内容(payload)是什么. 腾讯云提供了物联网通信产品的"云日志"功能和腾讯云组件"消息队列CMQ"。</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429110038897.png" /></p>
+<p>日志中可以看到日志记录了设备的连接, 连接断开, 发布, 订阅等行为, 也记录了规则引擎的操作, 还有CMQ队列的一些行为日志.。</p>
+<h2 id="26-cmq">2.6. 消息队列CMQ</h2>
+<p>可以在产品列表中找到"消息队列"选项, 设置队列所想要接收的消息类型后保存配置, 即可将平台侧收到的设备消息额外发送到腾讯云消息队列CMQ组件中：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200429110458586.png" /></p>
+<blockquote>
+<p>在密钥认证下, 消息的内容(payload)是经过base64编码的, 所以在平台侧看到的数据类似乱码实际上是经过编码后的结果, 想要查看具体的内容, 可以在linux下, <code>echo &lt;payload&gt; | base64 --decode</code>.</p>
+</blockquote>
+<h1 id="3">3. 设备端对接测试</h1>
+<p>使用USB转串口将烧录好腾讯云定制固件的ESP8266连接到PC，使用串口助手打开串口开始调试。</p>
+<h2 id="31">3.1. 入网</h2>
+<p>测试AT指令是否正常：</p>
+<pre><code>AT
+
+OK
+</code></pre>
+<p>设置ESP8266工作模式为AP和STA并存：</p>
+<pre><code>AT+CWMODE=3
+
+OK
+</code></pre>
+<p>设置传输模式为普通传输模式：</p>
+<pre><code>AT+CIPMODE=0
+
+OK
+</code></pre>
+<p>开启多路模式：</p>
+<pre><code>AT+CIPMUX=1
+
+OK
+</code></pre>
+<p>入网：</p>
+<pre><code>AT+CWJAP=&quot;Mculover666&quot;,&quot;mculover666&quot;
+WIFI CONNECTED
+WIFI GOT IP
+
+OK
+</code></pre>
+<h2 id="32">3.2. 设置腾讯云对接信息</h2>
+<p>示例：</p>
+<pre><code>AT+TCDEVINFOSET=1,&quot;WDRRDCF1TE&quot;,&quot;dev1&quot;,&quot;ULtbpSxXtSQyaFyeaax6pw==&quot;
+OK
++TCDEVINFOSET:OK
+</code></pre>
+<p>此信息会保存到Flash中，可以使用下面的命令查看：</p>
+<pre><code>AT+TCDEVINFOSET?
++TCDEVINFOSET:1,&quot;WDRRDCF1TE&quot;,&quot;dev1&quot;,113
+
+OK
+</code></pre>
+<h2 id="33">3.3. 连接腾讯云</h2>
+<p>示例：</p>
+<pre><code>AT+TCMQTTCONN=1,5000,240,1,1
+OK
++TCMQTTCONN:OK
+</code></pre>
+<p>连接成功，此时在腾讯云IoThub平台即可看到设备在线：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200628144637468.png" /></p>
+<h2 id="34">3.4. 订阅主题</h2>
+<p>示例：</p>
+<pre><code>AT+TCMQTTSUB=&quot;WDRRDCF1TE/dev1/data&quot;,0
+OK
++TCMQTTSUB:OK
+</code></pre>
+<p>订阅成功之后，在云端进入设备在线调试，发送测试数据：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200628144823680.png" /></p>
+<p>在串口助手中可以看到ESP8266模组通过URC方式上报的数据：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/2020062814492996.png" /></p>
+<h2 id="35">3.5. 发布消息</h2>
+<p>示例：</p>
+<pre><code>AT+TCMQTTPUB=&quot;WDRRDCF1TE/dev1/data&quot;,0,&quot;helloworld&quot;
+</code></pre>
+<p>返回结果为：</p>
+<pre><code>OK
++TCMQTTPUB:OK
+</code></pre>
+<p>在云端可以看到设备上报的消息：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200628145141534.png" /></p>
+<h1 id="4-ota">4. OTA升级</h1>
+<p>腾讯云定制固件中内置了与IoThub平台OTA固件升级对接的AT指令，整个升级流程如下：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200630101118644.png" /></p>
+<p>在模组连接IoThub平台成功之后进行如下的操作。</p>
+<h2 id="41-ota">4.1. 使能OTA功能</h2>
+<pre><code class="language-c">AT+TCOTASET=1,&quot;0.1&quot;
+</code></pre>
+<p>返回结果如下：</p>
+<pre><code>OK
++TCOTASET:OK
+</code></pre>
+<p>指令成功，此时模组已经处于监听升级命令状态。</p>
+<h2 id="42">4.2. 云端下发固件</h2>
+<p>将待升级的固件上传到云平台：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/2020063010145471.png" /></p>
+<p>选择下发0.2版本的固件：</p>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200630101554408.png" /></p>
+<p>在串口助手中可以看到模组上报的URC数据：</p>
+<pre><code>+TCOTASTATUS:ENTERUPDATE
++TCOTASTATUS:UPDATESUCCESS
+</code></pre>
+<h2 id="43">4.3. 读取模组缓存的固件信息</h2>
+<pre><code class="language-c">AT+TCFWINFO?
+</code></pre>
+<p>返回结果为：</p>
+<pre><code class="language-c">OK
++TCFWINFO:&quot;0.2&quot;,6892,&quot;1eb6c5f8622f5b005bc3ff8f01575df8&quot;,716800
+</code></pre>
+<p>从中得到缓存的固件信息如下：</p>
+<ul>
+<li>固件版本：0.2</li>
+<li>固件大小：6892字节</li>
+<li>固件MD5</li>
+<li>用户待升级的OTA固件的最大字节数，700KB</li>
+</ul>
+<h2 id="44">4.4. 读取模组缓存的固件数据</h2>
+<p>每次读取512字节：</p>
+<pre><code class="language-c">AT+TCREADFWDATA=512
+</code></pre>
+<p><img alt="" src="https://img-blog.csdnimg.cn/20200630102539496.png" /></p>
+<p>当最后一次读取的时候，模组实际返回读取大小为236字节，小于512字节，表示读取结束。</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/" class="btn btn-neutral float-left" title="24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../26.TencentOS_tiny_EVB_WL_Quick_Start/" class="btn btn-neutral float-right" title="26.TencentOS_tiny_EVB_WL_Quick_Start">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../26.TencentOS_tiny_EVB_WL_Quick_Start/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

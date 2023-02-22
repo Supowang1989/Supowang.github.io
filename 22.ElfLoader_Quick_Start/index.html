@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Supowang" /><link rel="canonical" href="https://supowang1989.github.io/mymkdocs/22.ElfLoader_Quick_Start/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>22.ElfLoader_Quick_Start - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "22.ElfLoader_Quick_Start";
+        var mkdocs_page_input_path = "22.ElfLoader_Quick_Start.md";
+        var mkdocs_page_url = "/mymkdocs/22.ElfLoader_Quick_Start/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05.SDK_Manual/">05.SDK_Manual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">22.ElfLoader_Quick_Start</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-elfloader">1. 什么是elfLoader</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-elfloader">2. elfLoader组件的基本使用范式</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-elfloaderobject">3. elfLoader组件的具体使用实例（object）</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#31">3.1 编写一个模块的源码</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#32-object">3.2 将模块编译成object文件</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#33">3.3 将模块拷贝至文件系统</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#34">3.4 运行示例工程</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#35">3.5 注意</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-elfloadershared-object">4. elfLoader组件的具体使用实例（shared-object）</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#41">4.1 编写一个模块的源码</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#42-shared-object">4.2 将模块编译成shared-object文件</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#43">4.3 将模块拷贝至文件系统</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#44">4.4 运行示例代码</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-elfloader">5. elfLoader组件的文件访问扩展</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>22.ElfLoader_Quick_Start</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tencentos-tiny-elfloader">TencentOS tiny elfLoader组件</h1>
+<h2 id="1-elfloader">1. 什么是elfLoader</h2>
+<p>elfLoader是TencentOS tiny提供的对elf格式文件进行加载并执行的组件，TencentOS tiny目前的elfLoader组件，提供目标文件（object）及共享目标文件（shared object）的动态加载支持。</p>
+<h2 id="2-elfloader">2. elfLoader组件的基本使用范式</h2>
+<p>对于elfLoader来说，使用的基本范式流程为：</p>
+<ul>
+<li>将源代码编译成object或shared-object文件。</li>
+<li>将object或shared-object文件拷贝到开发板可以访问的文件系统中。</li>
+<li>调用elfLoader组件提供的tos_elfloader_load接口加载文件系统中的object或shared-object文件。</li>
+<li>调用elfLoader组件提供的tos_elfloader_find_symbol查找已加载的模块中某个符号的加载地址（一般来说是一个函数），执行之。</li>
+<li>如果后续业务不再需要这个模块，执行tos_elfloader_unload将模块卸载。</li>
+</ul>
+<h2 id="3-elfloaderobject">3. elfLoader组件的具体使用实例（object）</h2>
+<h3 id="31">3.1 编写一个模块的源码</h3>
+<pre><code> extern int d_e_a;
+
+ int d_g_a = 3;
+
+ static int d_s_a = 5;
+
+ extern int f_e_a(int);
+
+ static int f_s_a(void) {
+     d_s_a += 7; // d_s_a = 12
+ }
+
+ int f_g_a(void) {
+     f_s_a();
+
+     d_g_a += d_s_a; // d_g_a = 15
+
+     d_e_a += d_g_a; // + 15
+
+     f_e_a(d_e_a);
+ }
+</code></pre>
+<p>源码1.c如上，改模块中：</p>
+<ul>
+<li>引用了一个外部的符号d_e_a（变量，这是一个应该在模块外定义的符号）</li>
+<li>定义了一个全局符号d_g_a（变量）</li>
+<li>定义了一个模块内的静态符号d_s_a（变量）</li>
+<li>引用了一个外部的符号f_e_a（函数，这是一个应该在模块外定义的符号）</li>
+<li>定义了一个模块内的静态符号f_s_a（函数）</li>
+<li>定义了一个全局符号f_g_a（函数）</li>
+</ul>
+<h3 id="32-object">3.2 将模块编译成object文件</h3>
+<pre><code>arm-linux-gnueabihf-gcc -fno-builtin -nostdlib -mthumb -mthumb-interwork -mcpu=cortex-m4 -c 1.c -o 1.o
+</code></pre>
+<p>我这里假设读者已经在本地安装好arm交叉编译器，且本实例是基于TencentOS tiny官方开发板（mcu是arm cortex-m4核心），按照以上编译选项将1.c编译为1.o</p>
+<h3 id="33">3.3 将模块拷贝至文件系统</h3>
+<p>将模块（1.o）拷贝至已进行FAT32格式化后的sd卡，将sd卡插入TencentOS tiny官方开发板上的sd卡槽。</p>
+<h3 id="34">3.4 运行示例工程</h3>
+<pre><code>TencentOS-tiny\board\TencentOS_tiny_EVB_MX_Plus\KEIL\elfloader_relocatable_object
+</code></pre>
+<p>用keil打开以上路径中的示例工程：</p>
+<ul>
+<li>添加d_e_a及f_e_a实现</li>
+</ul>
+<p>因为1.o依赖此两个外部符号，因而需要在内核中定义这两个符号</p>
+<pre><code>int d_e_a = 9;
+
+int f_e_a(int a)
+{
+    /* a = d_e_a + d_g_a = d_e_a + 15 = 24 */
+    printf(&quot;f_e_a:  %d\n&quot;, a);
+    return 0;
+}
+</code></pre>
+<ul>
+<li>添加系统符号表</li>
+</ul>
+<pre><code>const el_symbol_t el_symbols[] = {
+    { &quot;d_e_a&quot;, &amp;d_e_a },
+    { &quot;f_e_a&quot;, f_e_a },
+    { K_NULL, K_NULL },
+};
+</code></pre>
+<p>按照以上格式，定义el_symbols符号表，符号表中包含1.o中依赖的两个外部符号地址。</p>
+<ul>
+<li>编写elfLoader使用案例代码</li>
+</ul>
+<pre><code>void application_entry(void *arg)
+{
+    int fd;
+    el_module_t module;
+
+    extern vfs_blkdev_ops_t sd_dev;
+    extern vfs_fs_ops_t fatfs_ops;
+
+    if (tos_vfs_block_device_register(&quot;/dev/sd&quot;, &amp;sd_dev) != VFS_ERR_NONE) {
+        return;
+    }
+
+    if (tos_vfs_fs_register(&quot;fatfs_sd&quot;, &amp;fatfs_ops) != VFS_ERR_NONE) {
+        return;
+    }
+
+    if (tos_vfs_fs_mount(&quot;/dev/sd&quot;, &quot;/fs/fatfs_sd&quot;, &quot;fatfs_sd&quot;) != VFS_ERR_NONE) {
+        printf(&quot;mount failed!\n&quot;);
+        return;
+    }
+
+    fd = tos_vfs_open(&quot;/fs/fatfs_sd/1.o&quot;, VFS_OFLAG_READ | VFS_OFLAG_EXISTING);
+    if (fd &lt; 0) {
+        return;
+    }
+
+    if (tos_elfloader_load(&amp;module, fd) != ELFLOADER_ERR_NONE) {
+        return;
+    }
+
+    void *addr = tos_elfloader_find_symbol(&amp;module, &quot;f_g_a&quot;);
+    if (!addr) {
+        printf(&quot;symbol NOT FOUND: %s\n&quot;, &quot;f_g_a&quot;);
+        return;
+    }
+
+    printf(&quot;addr: %x\n&quot;, addr);
+
+    typedef int (*fp_t)(void);
+    /* call f_g_a in 1.o */
+    ((fp_t)addr)();
+
+    tos_elfloader_unload(&amp;module);
+
+    tos_vfs_close(fd);
+}
+</code></pre>
+<p>以上代码：使用TencentOS tiny的vfs组件挂载sd卡上的FAT32文件系统，并打开文件系统上的1.o获取文件描述符fd，将fd作为tos_elfloader_load的入参，加载这个模块并获取模块的句柄module，使用tos_elfloader_find_symbol接口在module中查找f_g_a符号（函数）的加载地址，并执行之。</p>
+<p>根据1.c中f_g_a的逻辑，最终会调用f_e_a将d_e_a最终的值打印出来，根据运算逻辑，d_e_a的最终值应该为24。</p>
+<ul>
+<li>调用tos_elfloader_unload卸载该模块，调用tos_vfs_close接口关闭文件描述符fd。</li>
+</ul>
+<h3 id="35">3.5 注意</h3>
+<p>对于一般的mcu来说，可执行代码位于FLASH上，而模块的可执行代码及数据皆被加载至RAM上。而一般来说FLASH和RAM之间的地址相隔甚远，这会导致加载object文件的重定位阶段，某些重定位类型无法顺利完成重定位操作，进而导致object文件加载失败。</p>
+<h2 id="4-elfloadershared-object">4. elfLoader组件的具体使用实例（shared-object）</h2>
+<p>共享目标文件(shared-object)的装载及运行与object文件类似</p>
+<h3 id="41">4.1 编写一个模块的源码</h3>
+<p>参考3.1节</p>
+<h3 id="42-shared-object">4.2 将模块编译成shared-object文件</h3>
+<pre><code>arm-linux-gnueabihf-gcc -fno-builtin -nostdlib -mthumb -mthumb-interwork -fPIC -mcpu=cortex-m4 -c 1.c -o 1.o
+
+arm-linux-gnueabihf-ld -fno-builtin -nostdlib -fPIC -shared -z max-page-size=0x4 1.o -o 1.so
+</code></pre>
+<p>我这里假设读者已经在本地安装好arm交叉编译器，且本实例是基于TencentOS tiny官方开发板（mcu是arm cortex-m4核心），按照以上编译选项将1.c编译为1.so</p>
+<h3 id="43">4.3 将模块拷贝至文件系统</h3>
+<p>参考3.3节</p>
+<h3 id="44">4.4 运行示例代码</h3>
+<pre><code>TencentOS-tiny\board\TencentOS_tiny_EVB_MX_Plus\KEIL\elfloader_shared_object
+</code></pre>
+<p>用keil打开以上路径中的示例工程，工程中的具体代码与object工程类似，参考3.4节，不再赘述。</p>
+<h2 id="5-elfloader">5. elfLoader组件的文件访问扩展</h2>
+<p>elfLoader的组件实现，对于模块文件的访问，是通过elfloader_fd_read接口来进行的：</p>
+<pre><code>__KNL__ __WEAK__ el_err_t elfloader_fd_read(int fd, uint32_t offset, void *buf, size_t len)
+{
+    if (tos_vfs_lseek(fd, (vfs_off_t)offset, VFS_SEEK_SET) &lt; 0) {
+        return ELFLOADER_ERR_FD_READ_FAILED;
+    }
+
+    if (tos_vfs_read(fd, buf, len) &lt; 0) {
+        return ELFLOADER_ERR_FD_READ_FAILED;
+    }
+
+    return ELFLOADER_ERR_NONE;
+}
+</code></pre>
+<p>此接口接收四个参数：</p>
+<ul>
+<li>fd</li>
+</ul>
+<p>文件的描述符fd。此fd可以不用拘泥于文件系统的fd，fd只是一个文件的抽象。</p>
+<ul>
+<li>offset</li>
+</ul>
+<p>对文件的offset偏移处进行读取。</p>
+<ul>
+<li>buf</li>
+</ul>
+<p>文件读取的数据缓冲</p>
+<ul>
+<li>len</li>
+</ul>
+<p>文件读取的长度</p>
+<p>elfloader_fd_read的实现位于tos_elfloader_fd_read-vfs.c中，默认实现是基于TencentOS tiny的vfs接口进行文件访问。</p>
+<p>现在假设有这样的场景：用户在使用elfLoader时，不希望通过vfs框架来进行文件访问（用户的场景可能根本就没有文件系统，或者压根不希望通过文件系统来访问模块），比如用户将编译好的模块烧写进裸FLASH的固定偏移处，假设有这种场景：</p>
+<pre><code>uint32_t offset_of_modules[] = {
+    0x8000 0000,
+    0x8000 2000,
+    0x8000 4000,
+};
+</code></pre>
+<p>用户分别在FLASH的0x8000 0000、0x8000 2000、0x8000 4000偏移处烧写了三个shared-object文件，用户如何不通过文件系统框架来实现模块的加载运行呢？</p>
+<p>业务代码中，希望通过fd为0时，加载0x8000 0000处的模块，通过fd为1时，加载0x8000 2000处的模块，通过fd为2时，加载0x8000 4000处的模块。代码如下：</p>
+<pre><code>void application_entry(void *arg)
+{
+    el_module_t module0, module1, module2;
+
+    if (tos_elfloader_load(&amp;module0, 0) != ELFLOADER_ERR_NONE) {
+        return;
+    }
+
+    void *addr = tos_elfloader_find_symbol(&amp;module0, &quot;f_g_a&quot;);
+    if (!addr) {
+        printf(&quot;symbol NOT FOUND: %s\n&quot;, &quot;f_g_a&quot;);
+        return;
+    }
+
+    if (tos_elfloader_load(&amp;module1, 1) != ELFLOADER_ERR_NONE) {
+        return;
+    }
+
+    if (tos_elfloader_load(&amp;module2, 2) != ELFLOADER_ERR_NONE) {
+        return;
+    }
+
+    tos_elfloader_unload(&amp;module0);
+    tos_elfloader_unload(&amp;module1);
+    tos_elfloader_unload(&amp;module2);
+}
+</code></pre>
+<p>业务代码里，并不需要依赖文件系统，fd本质上只是只是一种抽象，它可以与文件系统无关。</p>
+<p>现在假设用户已经实现了FLASH的读驱动接口flash_read，要做到上述诉求，只需要重新实现elfloader_fd_read即可：</p>
+<pre><code>el_err_t elfloader_fd_read(int fd, uint32_t offset, void *buf, size_t len)
+{
+    uint32_t offset = offset_of_modules[fd];
+
+    if (flash_read(offset, buf, len) &lt; 0) {
+        return ELFLOADER_ERR_FD_READ_FAILED;
+    }
+
+    return ELFLOADER_ERR_NONE;
+}
+</code></pre>
+<p>可以看出来，TencentOS tiny的组件实现，依赖一定程度的抽象，但此抽象又并不与某个特定框架强耦合。对于elfLoader组件来说，用户即可以基于文件系统实现对模块的访问，经过少量的适配工作，也完全可以基于裸FLASH驱动来进行模块的访问。</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../21.OTA_Quick_Start_based_EVB_MX_Plus/" class="btn btn-neutral float-left" title="21.OTA_Quick_Start_based_EVB_MX_Plus"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../23.CMSIS_RTOS_API_Use_Guide/" class="btn btn-neutral float-right" title="23.CMSIS_RTOS_API_Use_Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../21.OTA_Quick_Start_based_EVB_MX_Plus/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../23.CMSIS_RTOS_API_Use_Guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

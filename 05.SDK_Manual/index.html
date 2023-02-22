@@ -1,0 +1,8836 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Supowang" /><link rel="canonical" href="https://supowang1989.github.io/mymkdocs/05.SDK_Manual/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>05.SDK_Manual - TencentOS Tiny 用户文档中心</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "05.SDK_Manual";
+        var mkdocs_page_input_path = "05.SDK_Manual.md";
+        var mkdocs_page_url = "/mymkdocs/05.SDK_Manual/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TencentOS Tiny 用户文档中心
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01.Introduction/">01.Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02.Help/">02.Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03.Summary/">03.Summary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04.Development_Manual/">04.Development_Manual</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">05.SDK_Manual</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06.FAQ/">06.FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07.Glossary/">07.Glossary</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08.QCloud_IoTHub_Quick_Start/">08.QCloud_IoTHub_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../09.Code_Directories/">09.Code_Directories</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../10.Porting_Manual_for_KEIL/">10.Porting_Manual_for_KEIL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../11.Porting_Manual_for_IAR/">11.Porting_Manual_for_IAR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../12.Porting_Manual_for_GCC/">12.Porting_Manual_for_GCC</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../13.Porting_Manual_for_MacOS_STM32CubeIDE/">13.Porting_Manual_for_MacOS_STM32CubeIDE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../14.RISC-V_Eclipse_Environment_Quick_Start/">14.RISC-V_Eclipse_Environment_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../15.TencentOS_tiny_EVB_MX_Plus_Quick_Start/">15.TencentOS_tiny_EVB_MX_Plus_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide/">16.TencentOS_tiny_LoRaWAN_Getting_Started_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../17.Mini_Program_Quick_Start/">17.Mini_Program_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start/">18.TencentOS_tiny_EVB_LX_RISC-V_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../19.TencentOS_Tiny_Simulator_Use_MDK/">19.TencentOS_Tiny_Simulator_Use_MDK</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../20.In_Application_Programming_based_EVB_MX_Plus/">20.In_Application_Programming_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../21.OTA_Quick_Start_based_EVB_MX_Plus/">21.OTA_Quick_Start_based_EVB_MX_Plus</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../22.ElfLoader_Quick_Start/">22.ElfLoader_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../23.CMSIS_RTOS_API_Use_Guide/">23.CMSIS_RTOS_API_Use_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer/">24.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Explorer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub/">25.How_To_Use_Esp8266_Tencent_Firmware_Connect_Iot_Hub</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../26.TencentOS_tiny_EVB_WL_Quick_Start/">26.TencentOS_tiny_EVB_WL_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../27.AT_Firmware_and_SAL_Firmware_User_Guide/">27.AT_Firmware_and_SAL_Firmware_User_Guide</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../28.BLE_Device_Quick_Start/">28.BLE_Device_Quick_Start</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../29.TencentOS_Tiny_EVB_G0_QuickStart/">29.TencentOS_Tiny_EVB_G0_QuickStart</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TencentOS Tiny 用户文档中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>05.SDK_Manual</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tencentos-tiny-sdk">*TencentOS Tiny SDK文档</h1>
+<div class="toc">
+<ul>
+<li><a href="#tencentos-tiny-sdk">*TencentOS Tiny SDK文档</a></li>
+<li><a href="#api">内核API</a><ul>
+<li><a href="#_1">系统管理</a><ul>
+<li><a href="#tos_knl_init">tos_knl_init</a></li>
+<li><a href="#tos_knl_start">tos_knl_start</a></li>
+<li><a href="#tos_knl_is_running">tos_knl_is_running</a></li>
+<li><a href="#tos_knl_irq_enter">tos_knl_irq_enter</a></li>
+<li><a href="#tos_knl_irq_leave">tos_knl_irq_leave</a></li>
+<li><a href="#tos_knl_sched_lock">tos_knl_sched_lock</a></li>
+<li><a href="#tos_knl_sched_unlock">tos_knl_sched_unlock</a></li>
+</ul>
+</li>
+<li><a href="#_2">任务管理</a><ul>
+<li><a href="#tos_task_create">tos_task_create</a></li>
+<li><a href="#tos_task_create_dyn">tos_task_create_dyn</a></li>
+<li><a href="#tos_task_destroy">tos_task_destroy</a></li>
+<li><a href="#tos_task_destroy_dyn">tos_task_destroy_dyn</a></li>
+<li><a href="#tos_task_delay">tos_task_delay</a></li>
+<li><a href="#tos_task_delay_abort">tos_task_delay_abort</a></li>
+<li><a href="#tos_task_suspend">tos_task_suspend</a></li>
+<li><a href="#tos_task_resume">tos_task_resume</a></li>
+<li><a href="#tos_task_prio_change">tos_task_prio_change</a></li>
+<li><a href="#tos_task_yield">tos_task_yield</a></li>
+<li><a href="#tos_task_stack_draught_depth">tos_task_stack_draught_depth</a></li>
+<li><a href="#tos_task_curr_task_get">tos_task_curr_task_get</a></li>
+<li><a href="#tos_task_walkthru">tos_task_walkthru</a></li>
+</ul>
+</li>
+<li><a href="#_3">堆内存管理</a><ul>
+<li><a href="#tos_mmheap_pool_add">tos_mmheap_pool_add</a></li>
+<li><a href="#tos_mmheap_pool_rmv">tos_mmheap_pool_rmv</a></li>
+<li><a href="#tos_mmheap_alloc">tos_mmheap_alloc</a></li>
+<li><a href="#tos_mmheap_aligned_alloc">tos_mmheap_aligned_alloc</a></li>
+<li><a href="#tos_mmheap_realloc">tos_mmheap_realloc</a></li>
+<li><a href="#tos_mmheap_free">tos_mmheap_free</a></li>
+<li><a href="#tos_mmheap_pool_check">tos_mmheap_pool_check</a></li>
+<li><a href="#tos_mmheap_check">tos_mmheap_check</a></li>
+</ul>
+</li>
+<li><a href="#_4">块内存管理</a><ul>
+<li><a href="#tos_mmblk_pool_create">tos_mmblk_pool_create</a></li>
+<li><a href="#tos_mmblk_alloc">tos_mmblk_alloc</a></li>
+<li><a href="#tos_mmblk_free">tos_mmblk_free</a></li>
+</ul>
+</li>
+<li><a href="#mutex">互斥量mutex</a><ul>
+<li><a href="#tos_mutex_create">tos_mutex_create</a></li>
+<li><a href="#tos_mutex_destroy">tos_mutex_destroy</a></li>
+<li><a href="#tos_mutex_pend">tos_mutex_pend</a></li>
+<li><a href="#tos_mutex_pend_timed">tos_mutex_pend_timed</a></li>
+<li><a href="#tos_mutex_post">tos_mutex_post</a></li>
+</ul>
+</li>
+<li><a href="#semaphore">信号量semaphore</a><ul>
+<li><a href="#tos_sem_create">tos_sem_create</a></li>
+<li><a href="#tos_sem_create_max">tos_sem_create_max</a></li>
+<li><a href="#tos_sem_destroy">tos_sem_destroy</a></li>
+<li><a href="#tos_sem_pend">tos_sem_pend</a></li>
+<li><a href="#tos_sem_post">tos_sem_post</a></li>
+<li><a href="#tos_sem_post_all">tos_sem_post_all</a></li>
+</ul>
+</li>
+<li><a href="#event">事件event</a><ul>
+<li><a href="#tos_event_create">tos_event_create</a></li>
+<li><a href="#tos_event_destroy">tos_event_destroy</a></li>
+<li><a href="#tos_event_pend">tos_event_pend</a></li>
+<li><a href="#tos_event_post">tos_event_post</a></li>
+<li><a href="#tos_event_post_keep">tos_event_post_keep</a></li>
+</ul>
+</li>
+<li><a href="#completion">完成量completion</a><ul>
+<li><a href="#tos_completion_create">tos_completion_create</a></li>
+<li><a href="#tos_completion_destroy">tos_completion_destroy</a></li>
+<li><a href="#tos_completion_pend">tos_completion_pend</a></li>
+<li><a href="#tos_completion_pend_timed">tos_completion_pend_timed</a></li>
+<li><a href="#tos_completion_post">tos_completion_post</a></li>
+<li><a href="#tos_completion_post_all">tos_completion_post_all</a></li>
+<li><a href="#tos_completion_reset">tos_completion_reset</a></li>
+<li><a href="#tos_completion_is_done">tos_completion_is_done</a></li>
+</ul>
+</li>
+<li><a href="#countdown-latch">计数锁countdown latch</a><ul>
+<li><a href="#tos_countdownlatch_create">tos_countdownlatch_create</a></li>
+<li><a href="#tos_countdownlatch_destroy">tos_countdownlatch_destroy</a></li>
+<li><a href="#tos_countdownlatch_pend">tos_countdownlatch_pend</a></li>
+<li><a href="#tos_countdownlatch_pend_timed">tos_countdownlatch_pend_timed</a></li>
+<li><a href="#tos_countdownlatch_post">tos_countdownlatch_post</a></li>
+<li><a href="#tos_countdownlatch_reset">tos_countdownlatch_reset</a></li>
+</ul>
+</li>
+<li><a href="#barrier">栅栏barrier</a><ul>
+<li><a href="#tos_barrier_create">tos_barrier_create</a></li>
+<li><a href="#tos_barrier_destroy">tos_barrier_destroy</a></li>
+<li><a href="#tos_barrier_pend">tos_barrier_pend</a></li>
+<li><a href="#tos_barrier_reset">tos_barrier_reset</a></li>
+</ul>
+</li>
+<li><a href="#rwlock">读写锁rwlock</a><ul>
+<li><a href="#tos_rwlock_create">tos_rwlock_create</a></li>
+<li><a href="#tos_rwlock_destroy">tos_rwlock_destroy</a></li>
+<li><a href="#tos_rwlock_rpend_timed">tos_rwlock_rpend_timed</a></li>
+<li><a href="#tos_rwlock_rpend">tos_rwlock_rpend</a></li>
+<li><a href="#tos_rwlock_rpend_try">tos_rwlock_rpend_try</a></li>
+<li><a href="#tos_rwlock_wpend_timed">tos_rwlock_wpend_timed</a></li>
+<li><a href="#tos_rwlock_wpend">tos_rwlock_wpend</a></li>
+<li><a href="#tos_rwlock_wpend_try">tos_rwlock_wpend_try</a></li>
+<li><a href="#tos_rwlock_rpost">tos_rwlock_rpost</a></li>
+<li><a href="#tos_rwlock_wpost">tos_rwlock_wpost</a></li>
+<li><a href="#tos_rwlock_post">tos_rwlock_post</a></li>
+</ul>
+</li>
+<li><a href="#message-queue">消息队列message queue</a><ul>
+<li><a href="#tos_msg_q_create">tos_msg_q_create</a></li>
+<li><a href="#tos_msg_q_create_dyn">tos_msg_q_create_dyn</a></li>
+<li><a href="#tos_msg_q_destroy">tos_msg_q_destroy</a></li>
+<li><a href="#tos_msg_q_destroy_dyn">tos_msg_q_destroy_dyn</a></li>
+<li><a href="#tos_msg_q_flush">tos_msg_q_flush</a></li>
+<li><a href="#tos_msg_q_pend">tos_msg_q_pend</a></li>
+<li><a href="#tos_msg_q_post">tos_msg_q_post</a></li>
+<li><a href="#tos_msg_q_post_all">tos_msg_q_post_all</a></li>
+</ul>
+</li>
+<li><a href="#mail-queue">邮箱队列mail queue</a><ul>
+<li><a href="#tos_mail_q_create">tos_mail_q_create</a></li>
+<li><a href="#tos_mail_q_create_dyn">tos_mail_q_create_dyn</a></li>
+<li><a href="#tos_mail_q_destroy">tos_mail_q_destroy</a></li>
+<li><a href="#tos_mail_q_destroy_dyn">tos_mail_q_destroy_dyn</a></li>
+<li><a href="#tos_mail_q_flush">tos_mail_q_flush</a></li>
+<li><a href="#tos_mail_q_pend">tos_mail_q_pend</a></li>
+<li><a href="#tos_mail_q_post">tos_mail_q_post</a></li>
+<li><a href="#tos_mail_q_post_all">tos_mail_q_post_all</a></li>
+</ul>
+</li>
+<li><a href="#priority-message-queue">优先级消息队列priority message queue</a><ul>
+<li><a href="#tos_prio_msg_q_create">tos_prio_msg_q_create</a></li>
+<li><a href="#tos_prio_msg_q_create_dyn">tos_prio_msg_q_create_dyn</a></li>
+<li><a href="#tos_prio_msg_q_destroy">tos_prio_msg_q_destroy</a></li>
+<li><a href="#tos_prio_msg_q_destroy_dyn">tos_prio_msg_q_destroy_dyn</a></li>
+<li><a href="#tos_prio_msg_q_flush">tos_prio_msg_q_flush</a></li>
+<li><a href="#tos_prio_msg_q_pend">tos_prio_msg_q_pend</a></li>
+<li><a href="#tos_prio_msg_q_post">tos_prio_msg_q_post</a></li>
+<li><a href="#tos_prio_msg_q_post_all">tos_prio_msg_q_post_all</a></li>
+</ul>
+</li>
+<li><a href="#priority-mail-queue">优先级邮箱队列priority mail queue</a><ul>
+<li><a href="#tos_prio_mail_q_create">tos_prio_mail_q_create</a></li>
+<li><a href="#tos_prio_mail_q_create_dyn">tos_prio_mail_q_create_dyn</a></li>
+<li><a href="#tos_prio_mail_q_destroy">tos_prio_mail_q_destroy</a></li>
+<li><a href="#tos_prio_mail_q_destroy_dyn">tos_prio_mail_q_destroy_dyn</a></li>
+<li><a href="#tos_prio_mail_q_flush">tos_prio_mail_q_flush</a></li>
+<li><a href="#tos_prio_mail_q_pend">tos_prio_mail_q_pend</a></li>
+<li><a href="#tos_prio_mail_q_post">tos_prio_mail_q_post</a></li>
+<li><a href="#tos_prio_mail_q_post_all">tos_prio_mail_q_post_all</a></li>
+</ul>
+</li>
+<li><a href="#ring-queue">环形队列ring queue</a><ul>
+<li><a href="#tos_ring_q_create">tos_ring_q_create</a></li>
+<li><a href="#tos_ring_q_create_dyn">tos_ring_q_create_dyn</a></li>
+<li><a href="#tos_ring_q_destroy">tos_ring_q_destroy</a></li>
+<li><a href="#tos_ring_q_destroy_dyn">tos_ring_q_destroy_dyn</a></li>
+<li><a href="#tos_ring_q_enqueue">tos_ring_q_enqueue</a></li>
+<li><a href="#tos_ring_q_dequeue">tos_ring_q_dequeue</a></li>
+<li><a href="#tos_ring_q_flush">tos_ring_q_flush</a></li>
+<li><a href="#tos_ring_q_is_empty">tos_ring_q_is_empty</a></li>
+<li><a href="#tos_ring_q_is_full">tos_ring_q_is_full</a></li>
+</ul>
+</li>
+<li><a href="#fifo">字符流先入先出队列fifo</a><ul>
+<li><a href="#tos_chr_fifo_create">tos_chr_fifo_create</a></li>
+<li><a href="#tos_chr_fifo_create_dyn">tos_chr_fifo_create_dyn</a></li>
+<li><a href="#tos_chr_fifo_destroy">tos_chr_fifo_destroy</a></li>
+<li><a href="#tos_chr_fifo_destroy_dyn">tos_chr_fifo_destroy_dyn</a></li>
+<li><a href="#tos_chr_fifo_push">tos_chr_fifo_push</a></li>
+<li><a href="#tos_chr_fifo_push_stream">tos_chr_fifo_push_stream</a></li>
+<li><a href="#tos_chr_fifo_pop">tos_chr_fifo_pop</a></li>
+<li><a href="#tos_chr_fifo_pop_stream">tos_chr_fifo_pop_stream</a></li>
+<li><a href="#tos_chr_fifo_flush">tos_chr_fifo_flush</a></li>
+<li><a href="#tos_chr_fifo_is_empty">tos_chr_fifo_is_empty</a></li>
+<li><a href="#tos_chr_fifo_is_full">tos_chr_fifo_is_full</a></li>
+</ul>
+</li>
+<li><a href="#binary-heap">二项堆binary heap</a><ul>
+<li><a href="#tos_bin_heap_create">tos_bin_heap_create</a></li>
+<li><a href="#tos_bin_heap_create_dyn">tos_bin_heap_create_dyn</a></li>
+<li><a href="#tos_bin_heap_destroy">tos_bin_heap_destroy</a></li>
+<li><a href="#tos_bin_heap_destroy_dyn">tos_bin_heap_destroy_dyn</a></li>
+<li><a href="#tos_bin_heap_push">tos_bin_heap_push</a></li>
+<li><a href="#tos_bin_heap_pop">tos_bin_heap_pop</a></li>
+<li><a href="#tos_bin_heap_flush">tos_bin_heap_flush</a></li>
+<li><a href="#tos_bin_heap_is_empty">tos_bin_heap_is_empty</a></li>
+<li><a href="#tos_bin_heap_is_full">tos_bin_heap_is_full</a></li>
+</ul>
+</li>
+<li><a href="#priority-queue">优先级队列priority queue</a><ul>
+<li><a href="#tos_prio_q_create">tos_prio_q_create</a></li>
+<li><a href="#tos_prio_q_create_dyn">tos_prio_q_create_dyn</a></li>
+<li><a href="#tos_prio_q_destroy">tos_prio_q_destroy</a></li>
+<li><a href="#tos_prio_q_destroy_dyn">tos_prio_q_destroy_dyn</a></li>
+<li><a href="#tos_prio_q_enqueue">tos_prio_q_enqueue</a></li>
+<li><a href="#tos_prio_q_dequeue">tos_prio_q_dequeue</a></li>
+<li><a href="#tos_prio_q_flush">tos_prio_q_flush</a></li>
+<li><a href="#tos_prio_q_is_empty">tos_prio_q_is_empty</a></li>
+<li><a href="#tos_prio_q_is_full">tos_prio_q_is_full</a></li>
+</ul>
+</li>
+<li><a href="#timer">定时器timer</a><ul>
+<li><a href="#tos_timer_create">tos_timer_create</a></li>
+<li><a href="#tos_timer_destroy">tos_timer_destroy</a></li>
+<li><a href="#tos_timer_start">tos_timer_start</a></li>
+<li><a href="#tos_timer_stop">tos_timer_stop</a></li>
+<li><a href="#tos_timer_delay_change">tos_timer_delay_change</a></li>
+<li><a href="#tos_timer_period_change">tos_timer_period_change</a></li>
+</ul>
+</li>
+<li><a href="#stopwatch">计时表stopwatch</a><ul>
+<li><a href="#tos_stopwatch_create">tos_stopwatch_create</a></li>
+<li><a href="#tos_stopwatch_destroy">tos_stopwatch_destroy</a></li>
+<li><a href="#tos_stopwatch_countdown">tos_stopwatch_countdown</a></li>
+<li><a href="#tos_stopwatch_countdown_ms">tos_stopwatch_countdown_ms</a></li>
+<li><a href="#tos_stopwatch_delay">tos_stopwatch_delay</a></li>
+<li><a href="#tos_stopwatch_delay_ms">tos_stopwatch_delay_ms</a></li>
+<li><a href="#tos_stopwatch_remain">tos_stopwatch_remain</a></li>
+<li><a href="#tos_stopwatch_remain_ms">tos_stopwatch_remain_ms</a></li>
+<li><a href="#tos_stopwatch_is_expired">tos_stopwatch_is_expired</a></li>
+</ul>
+</li>
+<li><a href="#bitmap">位图bitmap</a><ul>
+<li><a href="#tos_bitmap_create_empty">tos_bitmap_create_empty</a></li>
+<li><a href="#tos_bitmap_create_full">tos_bitmap_create_full</a></li>
+<li><a href="#tos_bitmap_destroy">tos_bitmap_destroy</a></li>
+<li><a href="#tos_bitmap_set">tos_bitmap_set</a></li>
+<li><a href="#tos_bitmap_reset">tos_bitmap_reset</a></li>
+<li><a href="#tos_bitmap_is_set">tos_bitmap_is_set</a></li>
+<li><a href="#tos_bitmap_is_reset">tos_bitmap_is_reset</a></li>
+<li><a href="#tos_bitmap_lsb">tos_bitmap_lsb</a></li>
+</ul>
+</li>
+<li><a href="#_5">时间管理</a><ul>
+<li><a href="#tos_systick_get">tos_systick_get</a></li>
+<li><a href="#tos_systick_set">tos_systick_set</a></li>
+<li><a href="#tos_tick2millisec">tos_tick2millisec</a></li>
+<li><a href="#tos_millisec2tick">tos_millisec2tick</a></li>
+<li><a href="#tos_sleep_ms">tos_sleep_ms</a></li>
+<li><a href="#tos_sleep_hmsm">tos_sleep_hmsm</a></li>
+</ul>
+</li>
+<li><a href="#_6">功耗管理</a><ul>
+<li><a href="#tos_pm_cpu_lpwr_mode_set">tos_pm_cpu_lpwr_mode_set</a></li>
+<li><a href="#tos_pm_device_register">tos_pm_device_register</a></li>
+<li><a href="#tos_tickless_wkup_alarm_install">tos_tickless_wkup_alarm_install</a></li>
+<li><a href="#tos_tickless_wkup_alarm_init">tos_tickless_wkup_alarm_init</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#api_1">组件API</a><ul>
+<li><a href="#mqtt">MQTT端云对接</a><ul>
+<li><a href="#tos_mqtt_connect">tos_mqtt_connect</a></li>
+<li><a href="#tos_mqtt_publish">tos_mqtt_publish</a></li>
+<li><a href="#tos_mqtt_subscribe">tos_mqtt_subscribe</a></li>
+<li><a href="#tos_mqtt_receive">tos_mqtt_receive</a></li>
+</ul>
+</li>
+<li><a href="#cmsis">CMSIS适配层</a><ul>
+<li><a href="#oskernelstart">osKernelStart</a></li>
+<li><a href="#oskernelinitialize">osKernelInitialize</a></li>
+<li><a href="#oskernelrunning">osKernelRunning</a></li>
+<li><a href="#oskernelsystick">osKernelSysTick</a></li>
+<li><a href="#osthreadcreate">osThreadCreate</a></li>
+<li><a href="#osthreadgetid">osThreadGetId</a></li>
+<li><a href="#osthreadterminate">osThreadTerminate</a></li>
+<li><a href="#osthreadsetpriority">osThreadSetPriority</a></li>
+<li><a href="#osthreadgetpriority">osThreadGetPriority</a></li>
+<li><a href="#osdelay">osDelay</a></li>
+<li><a href="#ostimercreate">osTimerCreate</a></li>
+<li><a href="#ostimerstart">osTimerStart</a></li>
+<li><a href="#ostimerstop">osTimerStop</a></li>
+<li><a href="#ostimerdelete">osTimerDelete</a></li>
+<li><a href="#osmutexcreate">osMutexCreate</a></li>
+<li><a href="#osmutexwait">osMutexWait</a></li>
+<li><a href="#osmutexrelease">osMutexRelease</a></li>
+<li><a href="#osmutexdelete">osMutexDelete</a></li>
+<li><a href="#ossemaphorecreate">osSemaphoreCreate</a></li>
+<li><a href="#ossemaphorewait">osSemaphoreWait</a></li>
+<li><a href="#ossemaphorerelease">osSemaphoreRelease</a></li>
+<li><a href="#ossemaphoredelete">osSemaphoreDelete</a></li>
+<li><a href="#ospoolcreate">osPoolCreate</a></li>
+<li><a href="#ospoolalloc">osPoolAlloc</a></li>
+<li><a href="#ospoolcalloc">osPoolCAlloc</a></li>
+<li><a href="#ospoolfree">osPoolFree</a></li>
+<li><a href="#osmessagecreate">osMessageCreate</a></li>
+<li><a href="#osmessageput">osMessagePut</a></li>
+<li><a href="#osmessageget">osMessageGet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#api_2">网络API</a><ul>
+<li><a href="#sal">sal模组联网接口</a><ul>
+<li><a href="#tos_sal_module_register">tos_sal_module_register</a></li>
+<li><a href="#tos_sal_module_init">tos_sal_module_init</a></li>
+<li><a href="#tos_sal_module_parse_domain">tos_sal_module_parse_domain</a></li>
+<li><a href="#tos_sal_module_connect">tos_sal_module_connect</a></li>
+<li><a href="#tos_sal_module_send">tos_sal_module_send</a></li>
+<li><a href="#tos_sal_module_recv">tos_sal_module_recv</a></li>
+<li><a href="#tos_sal_module_recv_timeout">tos_sal_module_recv_timeout</a></li>
+<li><a href="#tos_sal_module_sendto">tos_sal_module_sendto</a></li>
+<li><a href="#tos_sal_module_recvfrom">tos_sal_module_recvfrom</a></li>
+<li><a href="#tos_sal_module_close">tos_sal_module_close</a></li>
+</ul>
+</li>
+<li><a href="#lora">lora模组联网接口</a><ul>
+<li><a href="#tos_lora_module_register">tos_lora_module_register</a></li>
+<li><a href="#tos_lora_module_init">tos_lora_module_init</a></li>
+<li><a href="#tos_lora_module_join">tos_lora_module_join</a></li>
+<li><a href="#tos_lora_module_send">tos_lora_module_send</a></li>
+<li><a href="#tos_lora_module_recv">tos_lora_module_recv</a></li>
+<li><a href="#tos_lora_module_recv_timeout">tos_lora_module_recv_timeout</a></li>
+<li><a href="#tos_lora_module_close">tos_lora_module_close</a></li>
+</ul>
+</li>
+<li><a href="#_7">腾讯定制固件模组联网接口</a><ul>
+<li><a href="#tos_tf_module_register">tos_tf_module_register</a></li>
+<li><a href="#tos_tf_module_init">tos_tf_module_init</a></li>
+<li><a href="#tos_tf_module_info_set">tos_tf_module_info_set</a></li>
+<li><a href="#tos_tf_module_mqtt_conn">tos_tf_module_mqtt_conn</a></li>
+<li><a href="#tos_tf_module_mqtt_discon">tos_tf_module_mqtt_discon</a></li>
+<li><a href="#tos_tf_module_mqtt_pub">tos_tf_module_mqtt_pub</a></li>
+<li><a href="#tos_tf_module_mqtt_publ">tos_tf_module_mqtt_publ</a></li>
+<li><a href="#tos_tf_module_mqtt_sub">tos_tf_module_mqtt_sub</a></li>
+<li><a href="#tos_tf_module_mqtt_unsub">tos_tf_module_mqtt_unsub</a></li>
+<li><a href="#tos_tf_module_mqtt_state">tos_tf_module_mqtt_state</a></li>
+<li><a href="#tos_tf_module_debug_level_set">tos_tf_module_debug_level_set</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="api">内核API</h1>
+<h2 id="_1">系统管理</h2>
+<h3 id="tos_knl_init">tos_knl_init</h3>
+<pre><code class="language-c">k_err_t tos_knl_init(void);
+</code></pre>
+<ul>
+<li>功能描述</li>
+</ul>
+<p>初始化内核。</p>
+<ul>
+<li>参数解释</li>
+</ul>
+<p>无</p>
+<ul>
+<li>返回值</li>
+</ul>
+<p>K_ERR_NONE 内核初始化成功。</p>
+<p>非K_ERR_NONE 内核初始化失败。</p>
+<h3 id="tos_knl_start">tos_knl_start</h3>
+<pre><code class="language-c">k_err_t tos_knl_start(void);
+</code></pre>
+<ul>
+<li>功能描述</li>
+</ul>
+<p>启动内核。</p>
+<ul>
+<li>参数解释</li>
+</ul>
+<p>无</p>
+<ul>
+<li>返回值</li>
+</ul>
+<p>K_ERR_NONE 内核启动成功。</p>
+<p>非K_ERR_NONE 内核启动失败。</p>
+<h3 id="tos_knl_is_running">tos_knl_is_running</h3>
+<pre><code class="language-c">int tos_knl_is_running(void);
+</code></pre>
+<ul>
+<li>功能描述</li>
+</ul>
+<p>判断内核是否正在运行。</p>
+<ul>
+<li>参数解释</li>
+</ul>
+<p>无</p>
+<ul>
+<li>返回值</li>
+</ul>
+<p>0 内核不在运行。</p>
+<p>非0 内核正在运行。</p>
+<h3 id="tos_knl_irq_enter">tos_knl_irq_enter</h3>
+<pre><code class="language-c">void tos_knl_irq_enter(void);
+</code></pre>
+<ul>
+<li>功能描述</li>
+</ul>
+<p>此函数应该在中断服务函数开始之前被调用。</p>
+<ul>
+<li>参数解释</li>
+</ul>
+<p>无</p>
+<ul>
+<li>返回值</li>
+</ul>
+<p>无</p>
+<h3 id="tos_knl_irq_leave">tos_knl_irq_leave</h3>
+<pre><code class="language-c">void tos_knl_irq_leave(void);
+</code></pre>
+<ul>
+<li>功能描述</li>
+</ul>
+<p>此函数应该在中断服务函数结束之前被调用。</p>
+<ul>
+<li>参数解释</li>
+</ul>
+<p>无</p>
+<ul>
+<li>返回值</li>
+</ul>
+<p>无</p>
+<h3 id="tos_knl_sched_lock">tos_knl_sched_lock</h3>
+<pre><code class="language-c">k_err_t tos_knl_sched_lock(void);
+</code></pre>
+<ul>
+<li>功能描述</li>
+</ul>
+<p>锁内核调度。</p>
+<ul>
+<li>参数解释</li>
+</ul>
+<p>无</p>
+<ul>
+<li>返回值</li>
+</ul>
+<p>K_ERR_NONE 内核调度锁定成功。</p>
+<p>K_ERR_KNL_NOT_RUNNING 内核并未处于运行状态。</p>
+<p>K_ERR_LOCK_NESTING_OVERFLOW 调度锁溢出。</p>
+<h3 id="tos_knl_sched_unlock">tos_knl_sched_unlock</h3>
+<pre><code class="language-c">k_err_t tos_knl_sched_unlock(void);
+</code></pre>
+<ul>
+<li>功能描述</li>
+</ul>
+<p>解锁内核调度。</p>
+<ul>
+<li>参数解释</li>
+</ul>
+<p>无</p>
+<ul>
+<li>返回值</li>
+</ul>
+<p>K_ERR_NONE 内核调度解锁成功。</p>
+<p>K_ERR_KNL_NOT_RUNNING 内核并未处于运行状态。</p>
+<p>K_ERR_SCHED_NOT_LOCKED 内核调度并未处于锁定状态。</p>
+<h2 id="_2">任务管理</h2>
+<h3 id="tos_task_create">tos_task_create</h3>
+<pre><code class="language-c">k_err_t tos_task_create(k_task_t *task,
+                        char *name,
+                        k_task_entry_t entry,
+                        void *arg,
+                        k_prio_t prio,
+                        k_stack_t *stk_base,
+                        size_t stk_size,
+                        k_timeslice_t timeslice);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th align="left"><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td align="left">task</td>
+<td>任务结构体描述符</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">name</td>
+<td>任务名称</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">entry</td>
+<td>任务入口函数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">arg</td>
+<td>任务入口函数参数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">prio</td>
+<td>任务优先级</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">stk_base</td>
+<td>任务栈空间首地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">stk_size</td>
+<td>任务栈空间的大小</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">timeslice</td>
+<td>时间片轮转调度侧策略中，时间片的大小设置，0表示设置为系统默认值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 任务创建成功。</p>
+<p>K_ERR_TASK_STK_SIZE_INVALID 非法的任务栈大小。</p>
+<p>K_ERR_TASK_PRIO_INVALID 非法的任务优先级。</p>
+<h3 id="tos_task_create_dyn">tos_task_create_dyn</h3>
+<pre><code class="language-c">k_err_t tos_task_create_dyn(k_task_t **task,
+                        char *name,
+                        k_task_entry_t entry,
+                        void *arg,
+                        k_prio_t prio,
+                        size_t stk_size,
+                        k_timeslice_t timeslice);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>动态创建任务，task句柄及task所需的栈皆为系统动态分配。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th align="left"><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[out]</td>
+<td align="left">task</td>
+<td>任务结构体描述符</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">name</td>
+<td>任务名称</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">entry</td>
+<td>任务入口函数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">arg</td>
+<td>任务入口函数参数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">prio</td>
+<td>任务优先级</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">stk_size</td>
+<td>任务栈空间的大小</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td align="left">timeslice</td>
+<td>时间片轮转调度侧策略中，时间片的大小设置，0表示设置为系统默认值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 任务创建成功。</p>
+<p>K_ERR_TASK_STK_SIZE_INVALID 非法的任务栈大小。</p>
+<p>K_ERR_TASK_PRIO_INVALID 非法的任务优先级。</p>
+<p>K_ERR_TASK_OUT_OF_MEMORY 系统堆内存不足。</p>
+<h3 id="tos_task_destroy">tos_task_destroy</h3>
+<pre><code class="language-c">k_err_t tos_task_destroy(k_task_t *task)
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>task</td>
+<td>任务结构体描述符</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 任务销毁成功。</p>
+<p>K_ERR_TASK_DESTROY_IDLE 试图销毁idle任务（非法）。</p>
+<h3 id="tos_task_destroy_dyn">tos_task_destroy_dyn</h3>
+<pre><code class="language-c">k_err_t tos_task_destroy_dyn(k_task_t *task)
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>static函数，非对外接口，销毁动态创建（tos_task_create_dyn）的任务，默认由tos_task_destroy()函数调用。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>task</td>
+<td>任务结构体描述符</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 任务销毁成功。</p>
+<p>K_ERR_TASK_DESTROY_IDLE 试图销毁idle任务（非法）。</p>
+<h3 id="tos_task_delay">tos_task_delay</h3>
+<pre><code class="language-c">k_err_t tos_task_delay(k_tick_t delay);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>睡眠当前任务，以系统时钟滴答数为单位。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>delay</td>
+<td>任务睡眠时间</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 任务延迟成功。</p>
+<p>K_ERR_DELAY_ZERO delay值为零（非法）。</p>
+<h3 id="tos_task_delay_abort">tos_task_delay_abort</h3>
+<pre><code class="language-c">k_err_t tos_task_delay_abort(k_task_t *task);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>取消一个任务的delay状态。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>task</td>
+<td>任务结构体描述符</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 取消delay成功。</p>
+<p>K_ERR_TASK_NOT_DELAY task并未处于delay状态。</p>
+<p>K_ERR_TASK_SUSPENDED task被挂起（suspend）。</p>
+<h3 id="tos_task_suspend">tos_task_suspend</h3>
+<pre><code class="language-c">k_err_t tos_task_suspend(k_task_t *task);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>挂起一个任务（剥夺一个任务的运行调度）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>task</td>
+<td>任务结构体描述符</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>TOS_ERR_NONE 挂起任务成功。</p>
+<p>K_ERR_TASK_SUSPEND_IDLE 试图挂起idle任务（非法）。</p>
+<h3 id="tos_task_resume">tos_task_resume</h3>
+<pre><code class="language-c">k_err_t tos_task_resume(k_task_t *task);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>恢复一个任务的调度运行。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>task</td>
+<td>任务结构体描述符</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>TOS_ERR_NONE 恢复任务运行成功。</p>
+<p>K_ERR_TASK_RESUME_SELF 试图恢复当前任务（非法）。</p>
+<h3 id="tos_task_prio_change">tos_task_prio_change</h3>
+<pre><code class="language-c">k_err_t tos_task_prio_change(k_task_t *task, k_prio_t prio_new);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>更改一个任务的优先级。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>task</td>
+<td>任务结构体描述符</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>prio_new</td>
+<td>新的优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 任务优先级更新成功。</p>
+<p>K_ERR_TASK_PRIO_INVALID 优先级非法。</p>
+<h3 id="tos_task_yield">tos_task_yield</h3>
+<pre><code class="language-c">void tos_task_yield(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>当前任务主动放弃cpu。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>无</p>
+<h3 id="tos_task_stack_draught_depth">tos_task_stack_draught_depth</h3>
+<pre><code class="language-c">k_err_t tos_task_stack_draught_depth(k_task_t *task, int *depth);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>获取一个任务栈的最大吃水深度。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>task</td>
+<td>任务结构体描述符</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>depth</td>
+<td>任务栈的吃水深度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 任务栈状态正常。</p>
+<p>K_ERR_TASK_STK_OVERFLOW 任务栈溢出。</p>
+<h3 id="tos_task_curr_task_get">tos_task_curr_task_get</h3>
+<pre><code class="language-c">k_task_t *tos_task_curr_task_get(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>获取当前正在运行的任务句柄。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_NULL 当前无正在运行任务（内核尚未启动）。</p>
+<p>非K_NULL 任务句柄。</p>
+<h3 id="tos_task_walkthru">tos_task_walkthru</h3>
+<pre><code class="language-c">void tos_task_walkthru(k_task_walker walker);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>遍历当前系统已创建的（不包括已删除的）任务，并允许用户传入一个回调，在遍历所有任务时，将任务句柄作为参数调用此回调。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>walker</td>
+<td>遍历所有任务时被调用的回调（walker为一个入参为k_task_t *的函数）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>无</p>
+<p>非K_NULL 任务句柄。</p>
+<h2 id="_3">堆内存管理</h2>
+<h3 id="tos_mmheap_pool_add">tos_mmheap_pool_add</h3>
+<pre><code class="language-c"> k_err_t tos_mmheap_pool_add(void *pool_start, size_t pool_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向堆内存中添加内存池。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>pool_start</td>
+<td>待添加内存池起始地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>pool_size</td>
+<td>待添加内存池大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 添加成功。</p>
+<p>K_ERR_MMHEAP_INVALID_POOL_ADDR 内存池起始地址非法。</p>
+<p>K_ERR_MMHEAP_INVALID_POOL_SIZE 内存池大小非法。</p>
+<h3 id="tos_mmheap_pool_rmv">tos_mmheap_pool_rmv</h3>
+<pre><code class="language-c"> k_err_t tos_mmheap_pool_rmv(void *pool_start);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从堆内存中删除内存池。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>pool_start</td>
+<td>待删除的内存池起始地址</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>无</p>
+<h3 id="tos_mmheap_alloc">tos_mmheap_alloc</h3>
+<pre><code class="language-c">void *tos_mmheap_alloc(size_t size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从堆内存中分配一块内存。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>size</td>
+<td>期望分配的内存大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>分配到的内存起始地址（返回K_NULL表示分配失败）。</p>
+<h3 id="tos_mmheap_aligned_alloc">tos_mmheap_aligned_alloc</h3>
+<pre><code class="language-c">void *tos_mmheap_aligned_alloc(size_t size, size_t align);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从堆内存中分配一块内存，此内存起始地址按align参数对齐。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>size</td>
+<td>期望分配的内存大小</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>align</td>
+<td>对齐参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>分配到的内存起始地址（返回K_NULL表示分配失败）。</p>
+<h3 id="tos_mmheap_realloc">tos_mmheap_realloc</h3>
+<pre><code class="language-c">void *tos_mmheap_realloc(void *ptr, size_t size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从堆内存中重新分配一块内存。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ptr</td>
+<td>原内存起始地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>size</td>
+<td>期望重新分配的内存大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>分配到的内存起始地址（返回K_NULL表示分配失败）。</p>
+<h3 id="tos_mmheap_free">tos_mmheap_free</h3>
+<pre><code class="language-c">void *tos_mmheap_free(void *ptr);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放一片从堆内存中分配到的内存。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ptr</td>
+<td>待释放的内存起始地址</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>无。</p>
+<h3 id="tos_mmheap_pool_check">tos_mmheap_pool_check</h3>
+<pre><code class="language-c">k_err_t tos_mmheap_pool_check(void *pool_start, k_mmheap_info_t *info);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>获取堆内存中某个池的使用情况。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>pool_start</td>
+<td>堆内存中某个池的起始地址</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>info</td>
+<td>该池的使用情况（使用量和剩余量信息）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 函数返回成功。</p>
+<p>K_ERR_OBJ_PTR_NULL pool_start或info为空指针。</p>
+<h3 id="tos_mmheap_check">tos_mmheap_check</h3>
+<pre><code class="language-c">k_err_t tos_mmheap_check(k_mmheap_info_t *info);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>获取堆内存的整体使用情况（包含了所有的池的信息）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[out]</td>
+<td>info</td>
+<td>堆内存的整体使用情况（使用量和剩余量信息）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 函数返回成功。</p>
+<p>K_ERR_OBJ_PTR_NULL info为空指针。</p>
+<h2 id="_4">块内存管理</h2>
+<h3 id="tos_mmblk_pool_create">tos_mmblk_pool_create</h3>
+<pre><code class="language-c">k_err_t tos_mmblk_pool_create(k_mmblk_pool_t *mbp, void *pool_start, size_t blk_num, size_t blk_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个块内存池。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mbp</td>
+<td>待创建的块内存句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>pool_start</td>
+<td>块内存池起始地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>blk_num</td>
+<td>内存块数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>blk_size</td>
+<td>单个内存块大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 块内存创建成功。</p>
+<p>K_ERR_MMBLK_INVALID_POOL_ADDR 块内存池起始地址非法。</p>
+<p>K_ERR_MMBLK_INVALID_BLK_SIZE 块内存大小非法。</p>
+<h3 id="tos_mmblk_alloc">tos_mmblk_alloc</h3>
+<pre><code class="language-c">k_err_t tos_mmblk_alloc(k_mmblk_pool_t *mbp, void **blk);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从内存池中分配一个内存块。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mbp</td>
+<td>块内存句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>blk</td>
+<td>返回的块内存起始地址</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 块内存分配成功，blk指向分配到的内存块起始地址。</p>
+<p>K_ERR_MMBLK_POOL_EMPTY 内存池是空的，blk为K_NULL。</p>
+<h3 id="tos_mmblk_free">tos_mmblk_free</h3>
+<pre><code class="language-c">k_err_t tos_mmblk_free(k_mmblk_pool_t *mbp, void *blk);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放一个内存块。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>IN/OUT</strong></th>
+<th><strong>参数名</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mbp</td>
+<td>块内存句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>blk</td>
+<td>待释放的块内存起始地址</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 块内存释放成功。</p>
+<p>K_ERR_MMBLK_POOL_FULL 内存池是满的。</p>
+<h2 id="mutex">互斥量mutex</h2>
+<h3 id="tos_mutex_create">tos_mutex_create</h3>
+<pre><code class="language-c">k_err_t tos_mutex_create(k_mutex_t *mutex);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个互斥量。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mutex</td>
+<td>互斥量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 互斥量创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL mutex为空指针。</p>
+<h3 id="tos_mutex_destroy">tos_mutex_destroy</h3>
+<pre><code class="language-c">k_err_t tos_mutex_destroy(k_mutex_t *mutex);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个互斥量。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mutex</td>
+<td>互斥量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE  互斥量销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL  mutex为空指针。</p>
+<p>K_ERR_OBJ_INVALID mutex指向的不是一个合法的互斥量。</p>
+<h3 id="tos_mutex_pend">tos_mutex_pend</h3>
+<pre><code class="language-c">k_err_t tos_mutex_pend(k_mutex_t *mutex);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试获取一个互斥量（永久阻塞式等待）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mutex</td>
+<td>互斥量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 获取互斥量成功。</p>
+<p>K_ERR_MUTEX_NESTING_OVERFLOW 互斥量拥有者嵌套获取溢出。</p>
+<p>K_ERR_MUTEX_NESTING 互斥量拥有者嵌套获取。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 此互斥量被其他任务持有，且系统调度处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY  当前任务试图获取的互斥量被销毁（tos_mutex_destroy）了。</p>
+<h3 id="tos_mutex_pend_timed">tos_mutex_pend_timed</h3>
+<pre><code class="language-c">k_err_t tos_mutex_pend(k_mutex_t *mutex, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试获取一个互斥量（有限时间内的阻塞等待）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mutex</td>
+<td>互斥量句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>等待超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 获取互斥量成功。</p>
+<p>K_ERR_MUTEX_NESTING_OVERFLOW 互斥量拥有者嵌套获取溢出。</p>
+<p>K_ERR_MUTEX_NESTING 互斥量拥有者嵌套获取。</p>
+<p>K_ERR_PEND_NOWAIT 此互斥量被其他任务持有，同时timeout参数为TOS_TIME_NOWAIT（表示获取不到互斥量时立即返回）</p>
+<p>K_ERR_PEND_SCHED_LOCKED 此互斥量被其他任务持有（获取失败），且系统调度处于锁定状态。</p>
+<p>K_ERR_PEND_TIMEOUT 在timeout时间范围内未获取到互斥量。</p>
+<p>K_ERR_PEND_DESTROY 当前任务试图获取的互斥量被销毁（tos_mutex_destroy）了。</p>
+<h3 id="tos_mutex_post">tos_mutex_post</h3>
+<pre><code class="language-c">k_err_t tos_mutex_post(k_mutex_t *mutex);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放互斥量。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mutex</td>
+<td>互斥量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 互斥量释放成功。</p>
+<p>K_ERR_MUTEX_NOT_OWNER 当前任务并非此互斥量的拥有者。</p>
+<p>K_ERR_MUTEX_NESTING_OVERFLOW 互斥量拥有者嵌套释放溢出。</p>
+<p>K_ERR_MUTEX_NESTING 互斥量拥有者嵌套释放。</p>
+<h2 id="semaphore">信号量semaphore</h2>
+<h3 id="tos_sem_create">tos_sem_create</h3>
+<pre><code class="language-c">k_err_t tos_sem_create(k_sem_t *sem, k_sem_cnt_t init_count);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个信号量。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sem</td>
+<td>信号量句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>init_count</td>
+<td>信号量初始量</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 信号量创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL sem指针为空。</p>
+<h3 id="tos_sem_create_max">tos_sem_create_max</h3>
+<pre><code class="language-c">k_err_t tos_sem_create_max(k_sem_t *sem, k_sem_cnt_t init_count, k_sem_cnt_t max_count);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个信号量并指定信号量的最大值。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sem</td>
+<td>信号量句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>init_count</td>
+<td>信号量初始量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>max_count</td>
+<td>信号量的最大值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 信号量创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL sem指针为空。</p>
+<h3 id="tos_sem_destroy">tos_sem_destroy</h3>
+<pre><code class="language-c">k_err_t tos_sem_destroy(k_sem_t *sem);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个信号量。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sem</td>
+<td>信号量数据结构指针</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 信号量销毁成功。</p>
+<p>K_ERR_OBJ_INVALID sem指向的不是一个合法的信号量。</p>
+<p>K_ERR_OBJ_PTR_NULL sem指针为空。</p>
+<h3 id="tos_sem_pend">tos_sem_pend</h3>
+<pre><code class="language-c">k_err_t tos_sem_pend(k_sem_t *sem, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试获取一个信号量。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sem</td>
+<td>信号量句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>等待超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 获取信号量成功。</p>
+<p>K_ERR_PEND_NOWAIT 获取信号量失败（信号量资源不足），同时timeout参数为TOS_TIME_NOWAIT（表示获取不到信号量时立即返回）</p>
+<p>K_ERR_PEND_SCHED_LOCKED 获取信号量失败，同时系统调度处于锁定状态。</p>
+<p>K_ERR_PEND_TIMEOUT 在timeout超时范围内未获取到信号量。</p>
+<p>K_ERR_PEND_DESTROY 试图获取的信号量被销毁了（tos_sem_destroy）</p>
+<h3 id="tos_sem_post">tos_sem_post</h3>
+<pre><code class="language-c">k_err_t tos_sem_post(k_sem_t *sem);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放信号量，并唤醒等待队列上的一个任务。如果有多个任务在此信号量的等待队列上，唤醒优先级最高的任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sem</td>
+<td>信号量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 信号量释放成功。</p>
+<p>K_ERR_SEM_OVERFLOW 信号量值溢出。</p>
+<h3 id="tos_sem_post_all">tos_sem_post_all</h3>
+<pre><code class="language-c">k_err_t tos_sem_post_all(k_sem_t *sem);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放信号量，并唤醒等待队列上的所有任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sem</td>
+<td>信号量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 信号量释放成功。</p>
+<p>K_ERR_SEM_OVERFLOW 信号量值溢出。</p>
+<h2 id="event">事件event</h2>
+<h3 id="tos_event_create">tos_event_create</h3>
+<pre><code class="language-c">k_err_t tos_event_create(k_event_t *event, k_event_flag_t init_flag);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个事件。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>event</td>
+<td>事件句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>init_flag</td>
+<td>事件初始旗标</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 事件创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL event指针为空。</p>
+<h3 id="tos_event_destroy">tos_event_destroy</h3>
+<pre><code class="language-c">k_err_t tos_event_destroy(k_event_t *event);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个事件。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>event</td>
+<td>事件句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 事件销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL event指针为空。</p>
+<p>K_ERR_OBJ_INVALID event指向的不是一个合法的事件。</p>
+<h3 id="tos_event_pend">tos_event_pend</h3>
+<pre><code class="language-c">k_err_t tos_event_pend(k_event_t *event, k_event_flag_t flag_expect, k_event_flag_t *flag_match, k_tick_t timeout, k_opt_t opt);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试获取一个特定的事件。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>event</td>
+<td>事件句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>flag_expect</td>
+<td>期望获取到的事件旗标</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>flag_match</td>
+<td>实际获取到的事件旗标</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>等待超时参数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>opt</td>
+<td>选项</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>注意</strong></li>
+</ul>
+<p>opt选项说明：</p>
+<p>1、TOS_OPT_EVENT_PEND_ANY</p>
+<p>​ 尝试从事件中获取一组旗标，并且这一组旗标包含flag_expect中标识的任意一个旗标，如果在此场景下视作event获取成功，则opt传递此参数。</p>
+<p>​ 举例来说，如果传入的flag_expect为0x9（0x8 | 0x1），且opt为TOS_OPT_EVENT_PEND_ANY，则event包含的旗标包含0x8或者0x1即视为事件获取成功，也就是说，event包含的旗标为(0x8 | X, X为整数，且X∈(0, 0xFFFFFFFF])，或者(0x1 | X, X为整数，且X∈(0, 0xFFFFFFFF])。</p>
+<p>2、TOS_OPT_EVENT_PEND_ALL</p>
+<p>​ 尝试从事件中获取一组旗标，并且这一组旗标必须至少包含flag_expect中标识的所有旗标，如果只在此种场景下视作event获取成功，则opt传递此参数。</p>
+<p>​ 举例来说，如果传入的flag_expect为0x9（0x8 | 0x1），且opt为TOS_OPT_EVENT_PEND_ALL，则event包含的旗标至少为0x9的最小全集才视为事件获取成功，也就是说，event包含的旗标应为(0x9 | X, X为整数，且X∈(0, 0xFFFFFFFF])。</p>
+<p>3、TOS_OPT_EVENT_PEND_CLR</p>
+<p>​ 如果希望读取完事件后，直接复位清空event的所有旗标，则opt传递此参数。</p>
+<p>​ 举例来说，原event包含旗标为0x9，在传递TOS_OPT_EVENT_PEND_CLR参数并成功获取event中的旗标后，event包含的旗标会复位为0x0。</p>
+<p>​ 如果希望一次传入多个选项，可以用逻辑“或”将多个参数连接传入，譬如同时希望采用TOS_OPT_EVENT_PEND_ANY 语义及TOS_OPT_EVENT_PEND_CLR，可以传入（TOS_OPT_EVENT_PEND_ANY | TOS_OPT_EVENT_PEND_CLR）。</p>
+<p>​ 需要注意的是，不可以同时传入TOS_OPT_EVENT_PEND_ANY与TOS_OPT_EVENT_PEND_ALL。</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 读取特定的事件成功。</p>
+<p>K_ERR_EVENT_PEND_OPT_INVALID opt参数非法。</p>
+<p>K_ERR_PEND_NOWAIT 未能从event中获取到期望的旗标，并且timeout参数为TOS_TIME_NOWAIT（表示未获取到期望旗标时立即返回）。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 未能从event中获取到期望的旗标，并且系统调度处于锁定的状态。</p>
+<p>K_ERR_PEND_TIMEOUT 在超时范围内未能从event中获取到期望的旗标。</p>
+<p>K_ERR_PEND_DESTROY 尝试获取旗标的事件被销毁了（tos_event_destroy）。</p>
+<h3 id="tos_event_post">tos_event_post</h3>
+<pre><code class="language-c">k_err_t tos_event_post(k_event_t *event, k_event_flag_t flag);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向事件中放置一组旗标</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>event</td>
+<td>事件句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>flag</td>
+<td>要放置的旗标</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>注意</strong></li>
+</ul>
+<p>调用此接口放置一组旗标时，原event中包含的旗标将被覆盖。</p>
+<p>举例来说，如果原事件的旗标为0x1，并且要放置的旗标为0x8，此接口调用结束后，事件的旗标将被覆写为0x8。</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE  旗标放置成功。</p>
+<p>K_ERR_OBJ_PTR_NULL event为空指针。</p>
+<p>K_ERR_OBJ_INVALID event指向的并不是一个合法的事件。</p>
+<h3 id="tos_event_post_keep">tos_event_post_keep</h3>
+<pre><code class="language-c">k_err_t tos_event_post_keep(k_event_t *event, k_event_flag_t flag);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向事件中放置一组旗标，原event中包含的旗标将被保留。</p>
+<p>举例来说，如果原事件的旗标为0x1，并且要放置的旗标为0x8，此接口调用结束后，事件的旗标将被修改为0x9(0x8 | 0x1)，也就是说，原事件的包含的旗标被保留。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>event</td>
+<td>事件句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>flag</td>
+<td>要放置的旗标</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE  旗标放置成功。</p>
+<p>K_ERR_OBJ_PTR_NULL event为空指针。</p>
+<p>K_ERR_OBJ_INVALID event指向的并不是一个合法的事件。</p>
+<h2 id="completion">完成量completion</h2>
+<h3 id="tos_completion_create">tos_completion_create</h3>
+<pre><code class="language-c">k_err_t tos_completion_create(k_completion_t *completion);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个完成量。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>completion</td>
+<td>完成量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 完成量创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL completion指针为空。</p>
+<h3 id="tos_completion_destroy">tos_completion_destroy</h3>
+<pre><code class="language-c">k_err_t tos_completion_destroy(k_completion_t *completion);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个完成量。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>completion</td>
+<td>完成量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 完成量销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL completion指针为空。</p>
+<p>K_ERR_OBJ_INVALID completion指向的不是一个合法的完成量。</p>
+<h3 id="tos_completion_pend">tos_completion_pend</h3>
+<pre><code class="language-c">k_err_t tos_completion_pend(k_completion_t *completion);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>等待完成量完成（永久阻塞等待）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>completion</td>
+<td>完成量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 完成量已完成。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 完成量没有完成，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的完成量被删除了。</p>
+<h3 id="tos_completion_pend_timed">tos_completion_pend_timed</h3>
+<pre><code class="language-c">k_err_t tos_completion_pend_timed(k_completion_t *completion, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试等待完成量完成（有限时间内的阻塞等待）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>completion</td>
+<td>完成量句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>等待超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 完成量已完成。</p>
+<p>K_ERR_PEND_NOWAIT 此完成量尚未完成，同时timeout参数为TOS_TIME_NOWAIT（表示完成量未完成时立即返回）</p>
+<p>K_ERR_PEND_SCHED_LOCKED 完成量没有完成，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的完成量被删除了。</p>
+<p>K_ERR_PEND_TIMEOUT 在timeout时间范围内完成量未完成。</p>
+<h3 id="tos_completion_post">tos_completion_post</h3>
+<pre><code class="language-c">k_err_t tos_completion_post(k_completion_t *completion);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放完成量（此完成量状态变为已完成），并唤醒等待队列上的一个任务。如果有多个任务在此完成量的等待队列上，唤醒优先级最高的任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>completion</td>
+<td>完成量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 完成量释放成功。</p>
+<h3 id="tos_completion_post_all">tos_completion_post_all</h3>
+<pre><code class="language-c">k_err_t tos_completion_post_all(k_completion_t *completion);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放完成量（此完成量状态变为已完成），并唤醒等待队列上的所有任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>completion</td>
+<td>完成量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 完成量释放成功。</p>
+<h3 id="tos_completion_reset">tos_completion_reset</h3>
+<pre><code class="language-c">k_err_t tos_completion_reset(k_completion_t *completion);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>复位完成量（将此完成量状态更改为未完成）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>completion</td>
+<td>完成量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 完成量复位成功。</p>
+<h3 id="tos_completion_is_done">tos_completion_is_done</h3>
+<pre><code class="language-c">k_err_t tos_completion_is_done(k_completion_t *completion);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断此完成量是否已完成。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>completion</td>
+<td>完成量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 完成量已完成。</p>
+<p>K_FALSE 完成量未完成。</p>
+<h2 id="countdown-latch">计数锁countdown latch</h2>
+<h3 id="tos_countdownlatch_create">tos_countdownlatch_create</h3>
+<pre><code class="language-c">k_err_t tos_countdownlatch_create(k_countdownlatch_t *countdownlatch, k_countdownlatch_cnt_t count);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个计数锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>countdownlatch</td>
+<td>计数锁句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>count</td>
+<td>期望等待的计数值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计数锁创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL countdownlatch指针为空。</p>
+<h3 id="tos_countdownlatch_destroy">tos_countdownlatch_destroy</h3>
+<pre><code class="language-c">k_err_t tos_countdownlatch_destroy(k_countdownlatch_t *countdownlatch);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个计数锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>countdownlatch</td>
+<td>计数锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计数锁销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL countdownlatch指针为空。</p>
+<p>K_ERR_OBJ_INVALID countdownlatch指向的不是一个合法的计数锁。</p>
+<h3 id="tos_countdownlatch_pend">tos_countdownlatch_pend</h3>
+<pre><code class="language-c">k_err_t tos_countdownlatch_pend(k_countdownlatch_t *countdownlatch);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>等待计数锁完成（永久阻塞等待）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>countdownlatch</td>
+<td>计数量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计数锁已完成。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 计数锁没有完成，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的计数锁被删除了。</p>
+<h3 id="tos_countdownlatch_pend_timed">tos_countdownlatch_pend_timed</h3>
+<pre><code class="language-c">k_err_t tos_countdownlatch_pend_timed(k_countdownlatch_t *countdownlatch, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试等待计数锁完成（有限时间内的阻塞等待）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>countdownlatch</td>
+<td>计数锁句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>等待超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计数锁已完成。</p>
+<p>K_ERR_PEND_NOWAIT 此计数锁尚未完成，同时timeout参数为TOS_TIME_NOWAIT（表示计数锁未完成时立即返回）</p>
+<p>K_ERR_PEND_SCHED_LOCKED 计数锁没有完成，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的计数锁被删除了。</p>
+<p>K_ERR_PEND_TIMEOUT 在timeout时间范围内计数锁未完成。</p>
+<h3 id="tos_countdownlatch_post">tos_countdownlatch_post</h3>
+<pre><code class="language-c">k_err_t tos_countdownlatch_post(k_countdownlatch_t *countdownlatch);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>计数锁（此计数锁的计数值减一），并唤醒等待队列上的一个任务。如果有多个任务在此计数锁的等待队列上，唤醒优先级最高的任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>countdownlatch</td>
+<td>计数锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计数锁释放成功。</p>
+<h3 id="tos_countdownlatch_reset">tos_countdownlatch_reset</h3>
+<pre><code class="language-c">k_err_t tos_countdownlatch_reset(k_countdownlatch_t *countdownlatch, k_countdownlatch_cnt_t count);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>复位计数锁（将此计数锁的计数值复位为新的期望值）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>countdownlatch</td>
+<td>计数锁句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>count</td>
+<td>期望复位的新的计数值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计数锁复位成功。</p>
+<h2 id="barrier">栅栏barrier</h2>
+<h3 id="tos_barrier_create">tos_barrier_create</h3>
+<pre><code class="language-c">k_err_t tos_barrier_create(k_barrier_t *barrier, k_barrier_cnt_t count);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个栅栏。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>barrier</td>
+<td>栅栏句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>count</td>
+<td>期望等待的计数值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 栅栏创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL barrier指针为空。</p>
+<h3 id="tos_barrier_destroy">tos_barrier_destroy</h3>
+<pre><code class="language-c">k_err_t tos_barrier_destroy(k_barrier_t *barrier);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个栅栏。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>barrier</td>
+<td>栅栏句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 栅栏销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL barrier指针为空。</p>
+<p>K_ERR_OBJ_INVALID barrier指向的不是一个合法的栅栏。</p>
+<h3 id="tos_barrier_pend">tos_barrier_pend</h3>
+<pre><code class="language-c">k_err_t tos_barrier_pend(k_barrier_t *barrier);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>等待栅栏全部解除（永久阻塞等待）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>barrier</td>
+<td>栅栏句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 栅栏已完成。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 栅栏没有完成，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的栅栏被删除了。</p>
+<p>K_ERR_BARRIER_OVERFLOW 栅栏的pend次数超过了初始的count数量。</p>
+<h3 id="tos_barrier_reset">tos_barrier_reset</h3>
+<pre><code class="language-c">k_err_t tos_barrier_reset(k_barrier_t *barrier, k_barrier_cnt_t count);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>复位栅栏（将栅栏的count计数复位）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>barrier</td>
+<td>栅栏句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>count</td>
+<td>复位的计数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 栅栏复位成功。</p>
+<p>K_ERR_OBJ_PTR_NULL barrier指针为空。</p>
+<p>K_ERR_OBJ_INVALID barrier指向的不是一个合法的栅栏。</p>
+<h2 id="rwlock">读写锁rwlock</h2>
+<h3 id="tos_rwlock_create">tos_rwlock_create</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_create(k_rwlock_t *rwlock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个读写锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 读写锁创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL rwlock指针为空。</p>
+<h3 id="tos_rwlock_destroy">tos_rwlock_destroy</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_destroy(k_rwlock_t *rwlock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个栅栏。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 读写锁销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL rwlock指针为空。</p>
+<p>K_ERR_OBJ_INVALID rwlock指向的不是一个合法的读写锁。</p>
+<h3 id="tos_rwlock_rpend_timed">tos_rwlock_rpend_timed</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_rpend_timed(k_rwlock_t *rwlock, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>有限的时间内尝试获取读锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>超时时限</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 成功获取读锁。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 未成功获取到读锁，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的读锁被删除了。</p>
+<p>K_ERR_PEND_TIMEOUT 未在超时时限内成功获取到读锁。</p>
+<p>K_ERR_RWLOCK_READERS_TO_MANY 已获取读锁的读者过多。</p>
+<h3 id="tos_rwlock_rpend">tos_rwlock_rpend</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_rpend(k_rwlock_t *rwlock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>永久性阻塞尝试获取读锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 成功获取读锁。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 在超时时限内未成功获取到读锁，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的读锁被删除了。</p>
+<p>K_ERR_RWLOCK_READERS_TO_MANY 已获取读锁的读者过多。</p>
+<h3 id="tos_rwlock_rpend_try">tos_rwlock_rpend_try</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_rpend_try(k_rwlock_t *rwlock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试获取读锁，且并不阻塞等待，立即返回错误码。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 成功获取读锁。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 在超时时限内未成功获取到读锁，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的读锁被删除了。</p>
+<p>K_ERR_RWLOCK_READERS_TO_MANY 已获取读锁的读者过多。</p>
+<h3 id="tos_rwlock_wpend_timed">tos_rwlock_wpend_timed</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_wpend_timed(k_rwlock_t *rwlock, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>有限的时间内尝试获取写锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>超时时限</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 成功获取读锁。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 未成功获取到写锁，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的写锁被删除了。</p>
+<p>K_ERR_PEND_TIMEOUT 未在超时时限内成功获取到写锁。</p>
+<p>K_ERR_RWLOCK_WAITING_WRITERS_TO_MANY 尝试获取写锁的任务过多。</p>
+<h3 id="tos_rwlock_wpend">tos_rwlock_wpend</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_wpend(k_rwlock_t *rwlock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>永久性阻塞尝试获取写锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 成功获取写锁。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 在超时时限内未成功获取到写锁，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的写锁被删除了。</p>
+<p>K_ERR_RWLOCK_WAITING_WRITERS_TO_MANY 尝试获取写锁的任务过多。</p>
+<h3 id="tos_rwlock_wpend_try">tos_rwlock_wpend_try</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_wpend_try(k_rwlock_t *rwlock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试获取写锁，且并不阻塞等待，立即返回错误码。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 成功获取写锁。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 在超时时限内未成功获取到写锁，并且系统调度锁处于锁定状态。</p>
+<p>K_ERR_PEND_DESTROY 尝试等待的写锁被删除了。</p>
+<p>K_ERR_RWLOCK_WAITING_WRITERS_TO_MANY 尝试获取写锁的任务过多。</p>
+<h3 id="tos_rwlock_rpost">tos_rwlock_rpost</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_rpost(k_rwlock_t *rwlock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放一个读锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 成功释放读锁。</p>
+<p>K_ERR_RWLOCK_NOT_READING 当前任务并非此读锁拥有者。</p>
+<h3 id="tos_rwlock_wpost">tos_rwlock_wpost</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_wpost(k_rwlock_t *rwlock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放一个写锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 成功释放写锁。</p>
+<p>K_ERR_RWLOCK_NOT_WRITTING 当前任务并非此写锁拥有者。</p>
+<h3 id="tos_rwlock_post">tos_rwlock_post</h3>
+<pre><code class="language-c">k_err_t tos_rwlock_post(k_rwlock_t *rwlock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放一个读写锁。</p>
+<p>如果当前读写锁被读者持有，则释放读锁；如果是被写者持有，则释放写锁。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>rwlock</td>
+<td>读写锁句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 成功释放写锁。</p>
+<p>K_ERR_RWLOCK_NOT_TAKEN 此读写锁并未被任何读者或写者占有。</p>
+<h2 id="message-queue">消息队列message queue</h2>
+<h3 id="tos_msg_q_create">tos_msg_q_create</h3>
+<pre><code class="language-c">k_err_t tos_msg_q_create(k_msg_q_t *msg_q, void *pool, size_t msg_cnt);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个消息队列（消息就是指针）。消息队列是用来在任务间传递指针信息的机制。pool由用户传入，pool是一片大小为(msg_cnt * sizeof(void *))的内存buffer。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>msg_q</td>
+<td>消息队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>pool</td>
+<td>消息队列的buffer池</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>msg_cnt</td>
+<td>消息队列的最大消息数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 消息队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL msg_q指针为空。</p>
+<h3 id="tos_msg_q_create_dyn">tos_msg_q_create_dyn</h3>
+<pre><code class="language-c">k_err_t tos_msg_q_create_dyn(k_msg_q_t *msg_q, size_t msg_cnt);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>动态创建一个消息队列（消息就是指针）。消息队列是用来在任务间传递指针信息的机制。内部buffer由动态内存分配。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>msg_q</td>
+<td>消息队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>msg_cnt</td>
+<td>消息队列的最大消息数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 消息队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL msg_q指针为空。</p>
+<p>K_ERR_OUT_OF_MEMORY 堆内存不足。</p>
+<h3 id="tos_msg_q_destroy">tos_msg_q_destroy</h3>
+<pre><code class="language-c">k_err_t tos_msg_q_destroy(k_msg_q_t *msg_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个消息队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>msg_q</td>
+<td>消息队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 消息队列销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL msg_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID msg_q指向的不是一个合法的消息队列。</p>
+<h3 id="tos_msg_q_destroy_dyn">tos_msg_q_destroy_dyn</h3>
+<pre><code class="language-c">k_err_t tos_msg_q_destroy_dyn(k_msg_q_t *msg_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个动态创建的（tos_msg_q_create_dyn）消息队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>msg_q</td>
+<td>消息队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 消息队列销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL msg_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID msg_q指向的不是一个合法的消息队列。</p>
+<h3 id="tos_msg_q_flush">tos_msg_q_flush</h3>
+<pre><code class="language-c">k_err_t tos_msg_q_flush(k_msg_q_t *msg_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>冲洗消息队列（丢弃消息队列中的所有消息）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>msg_q</td>
+<td>消息队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 消息队列冲洗成功。</p>
+<p>K_ERR_OBJ_PTR_NULL msg_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID msg_q指向的不是一个合法的消息队列。</p>
+<h3 id="tos_msg_q_pend">tos_msg_q_pend</h3>
+<pre><code class="language-c">k_err_t tos_msg_q_pend(k_msg_q_t *msg_q, void **msg_ptr, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试从消息队列中获取消息。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>msg_q</td>
+<td>消息队列句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>msg_ptr</td>
+<td>获取到的消息地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>等待超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 从消息队列获取消息成功，msg_addr和msg_size分别是获取到的消息地址和消息长度。</p>
+<p>K_ERR_PEND_NOWAIT 未能从消息队列中获取到消息，并且timeout参数为TOS_TIME_NOWAIT（表示获取不到消息时立即返回）。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 未能从消息队列中获取到消息，并且系统调度处于锁定状态。</p>
+<p>K_ERR_PEND_TIMEOUT 在timeout超时范围内未能从消息队列中获取到消息。</p>
+<p>K_ERR_PEND_DESTROY 尝试获取消息的队列被销毁了（tos_msg_q_destroy）。</p>
+<h3 id="tos_msg_q_post">tos_msg_q_post</h3>
+<pre><code class="language-c">k_err_t tos_msg_q_post(k_msg_q_t *msg_q, void *msg_ptr);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向消息队列中放入一个消息，并唤醒等待队列上的一个任务。如果有多个任务在此消息队列的等待队列上，唤醒优先级最高的任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>msg_q</td>
+<td>消息队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>msg_ptr</td>
+<td>消息地址</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 向消息队列中放入消息成功。</p>
+<p>K_ERR_RING_Q_FULL 消息队列已满。</p>
+<h3 id="tos_msg_q_post_all">tos_msg_q_post_all</h3>
+<pre><code class="language-c">k_err_t tos_msg_q_post_all(k_msg_q_t *msg_q, void *msg_ptr);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向消息队列中放入一个消息，并唤醒等待队列上的所有任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>msg_q</td>
+<td>消息队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>msg_ptr</td>
+<td>消息地址</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 向消息队列中放入消息成功。</p>
+<p>K_ERR_RING_Q_FULL 消息队列已满。</p>
+<h2 id="mail-queue">邮箱队列mail queue</h2>
+<h3 id="tos_mail_q_create">tos_mail_q_create</h3>
+<pre><code class="language-c">k_err_t tos_mail_q_create(k_mail_q_t *mail_q, void *pool, size_t mail_cnt, size_t mail_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个邮箱队列（邮件是一片固定大小的内存）。邮箱队列是用来在任务间传递具有特定大小的内存信息的机制。pool由用户传入，pool是一片大小为(mail_cnt* mail_size)的内存buffer。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mail_q</td>
+<td>邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>pool</td>
+<td>邮箱队列的buffer池</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_cnt</td>
+<td>邮件的最大数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>邮件的大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 邮箱队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL mail_q指针为空。</p>
+<h3 id="tos_mail_q_create_dyn">tos_mail_q_create_dyn</h3>
+<pre><code class="language-c">k_err_t tos_mail_q_create_dyn(k_mail_q_t *mail_q, size_t mail_cnt, size_t mail_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>动态创建一个邮箱队列（邮件是一片固定大小的内存）。邮箱队列是用来在任务间传递具有特定大小的内存信息的机制。内部buffer由动态内存分配。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mail_q</td>
+<td>邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_cnt</td>
+<td>邮件的最大数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>邮件的大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 邮箱队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL mail_q指针为空。</p>
+<p>K_ERR_OUT_OF_MEMORY 堆内存不足。</p>
+<h3 id="tos_mail_q_destroy">tos_mail_q_destroy</h3>
+<pre><code class="language-c">k_err_t tos_mail_q_destroy(k_mail_q_t *mail_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个邮箱队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mail_q</td>
+<td>邮箱队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 邮箱队列销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL mail_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID mail_q指向的不是一个合法的邮箱队列。</p>
+<h3 id="tos_mail_q_destroy_dyn">tos_mail_q_destroy_dyn</h3>
+<pre><code class="language-c">k_err_t tos_mail_q_destroy_dyn(k_mail_q_t *mail_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个动态创建的（tos_mail_q_create_dyn）邮箱队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mail_q</td>
+<td>邮箱队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 邮箱队列销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL mail_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID mail_q指向的不是一个合法的邮箱队列。</p>
+<h3 id="tos_mail_q_flush">tos_mail_q_flush</h3>
+<pre><code class="language-c">k_err_t tos_mail_q_flush(k_mail_q_t *mail_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>冲洗邮箱队列（丢弃邮箱队列中的所有邮件）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mail_q</td>
+<td>邮箱队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 邮箱队列冲洗成功。</p>
+<p>K_ERR_OBJ_PTR_NULL mail_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID mail_q指向的不是一个合法的邮箱队列。</p>
+<h3 id="tos_mail_q_pend">tos_mail_q_pend</h3>
+<pre><code class="language-c">k_err_t tos_mail_q_pend(k_mail_q_t *mail_q, void *mail_buf, size_t *mail_size, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试从邮箱队列中获取邮件。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mail_q</td>
+<td>邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>mail_buf</td>
+<td>用来承载邮件内容的buffer地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>获取到的邮件长度</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>等待超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 从邮箱队列获取邮件成功，mail_buf中被写入邮件内容，msg_size获取到的邮件长度。</p>
+<p>K_ERR_PEND_NOWAIT 未能从邮箱队列中获取到邮件，并且timeout参数为TOS_TIME_NOWAIT（表示获取不到邮件时立即返回）。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 未能从邮箱队列中获取到邮件，并且系统调度处于锁定状态。</p>
+<p>K_ERR_PEND_TIMEOUT 在timeout超时范围内未能从邮箱队列中获取到邮件。</p>
+<p>K_ERR_PEND_DESTROY 尝试获取邮件的队列被销毁了（tos_mail_q_destroy）。</p>
+<h3 id="tos_mail_q_post">tos_mail_q_post</h3>
+<pre><code class="language-c">k_err_t tos_mail_q_post(k_mail_q_t *mail_q, void *mail_buf, size_t mail_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向邮箱队列中放入一个邮件，并唤醒等待队列上的一个任务。如果有多个任务在此邮箱队列的等待队列上，唤醒优先级最高的任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mail_q</td>
+<td>邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_buf</td>
+<td>要放入邮箱队列的邮件</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>邮件长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 向邮箱队列中放入邮件成功。</p>
+<p>K_ERR_RING_Q_FULL 邮箱队列已满。</p>
+<h3 id="tos_mail_q_post_all">tos_mail_q_post_all</h3>
+<pre><code class="language-c">k_err_t tos_mail_q_post_all(k_mail_q_t *mail_q, void *mail_buf, size_t mail_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向邮箱队列中放入一个邮件，并唤醒等待队列上的所有任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mail_q</td>
+<td>邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_buf</td>
+<td>要放入邮箱队列的邮件</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>邮件长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 向邮箱队列中放入邮件成功。</p>
+<p>K_ERR_RING_Q_FULL 邮箱队列已满。</p>
+<h2 id="priority-message-queue">优先级消息队列priority message queue</h2>
+<h3 id="tos_prio_msg_q_create">tos_prio_msg_q_create</h3>
+<pre><code class="language-c">k_err_t tos_prio_msg_q_create(k_prio_msg_q_t *prio_msg_q, void *pool, size_t msg_cnt);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个优先级消息队列（消息就是指针）。优先级消息队列是用来在任务间传递指针信息的机制，与消息队列不同的地方在于，优先级消息队列可以给消息赋予一个优先级，较高优先级（数值上更小）的消息会比较低优先级的消息更快传递到等待任务。pool由用户传入，pool是一片大小为(msg_cnt * sizeof(void *))的内存buffer。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_msg_q</td>
+<td>优先级消息队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>pool</td>
+<td>优先级消息队列的buffer池</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>msg_cnt</td>
+<td>优先级消息队列的最大消息数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级消息队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL prio_msg_q指针为空。</p>
+<h3 id="tos_prio_msg_q_create_dyn">tos_prio_msg_q_create_dyn</h3>
+<pre><code class="language-c">k_err_t tos_prio_msg_q_create_dyn(k_prio_msg_q_t *prio_msg_q, size_t msg_cnt);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>动态创建一个优先级消息队列（消息就是指针）。优先级消息队列是用来在任务间传递指针信息的机制，与消息队列不同的地方在于，优先级队列可以给消息赋予一个优先级，较高优先级（数值上更小）的消息会比较低优先级的消息更快传递到等待任务。内部buffer由动态内存分配。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_msg_q</td>
+<td>优先级消息队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>msg_cnt</td>
+<td>优先级消息队列的最大消息数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE优先级消息队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL prio_msg_q指针为空。</p>
+<p>K_ERR_OUT_OF_MEMORY 堆内存不足。</p>
+<h3 id="tos_prio_msg_q_destroy">tos_prio_msg_q_destroy</h3>
+<pre><code class="language-c">k_err_t tos_prio_msg_q_destroy(k_prio_msg_q_t *prio_msg_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个优先级消息队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_msg_q</td>
+<td>优先级消息队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级消息队列销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL msg_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID prio_msg_q指向的不是一个合法的优先级消息队列。</p>
+<h3 id="tos_prio_msg_q_destroy_dyn">tos_prio_msg_q_destroy_dyn</h3>
+<pre><code class="language-c">k_err_t tos_prio_msg_q_destroy_dyn(k_prio_msg_q_t *prio_msg_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个动态创建的（tos_prio_msg_q_create_dyn）优先级消息队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_msg_q</td>
+<td>优先级息队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级消息队列销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL prio_msg_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID prio_msg_q指向的不是一个合法的优先级消息队列。</p>
+<h3 id="tos_prio_msg_q_flush">tos_prio_msg_q_flush</h3>
+<pre><code class="language-c">k_err_t tos_prio_msg_q_flush(k_prio_msg_q_t *prio_msg_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>冲洗 优先级消息队列（丢弃优先级消息队列中的所有消息）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_msg_q</td>
+<td>优先级息队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级消息队列冲洗成功。</p>
+<p>K_ERR_OBJ_PTR_NULL prio_msg_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID prio_msg_q指向的不是一个合法的优先级消息队列。</p>
+<h3 id="tos_prio_msg_q_pend">tos_prio_msg_q_pend</h3>
+<pre><code class="language-c">k_err_t tos_prio_msg_q_pend(k_prio_msg_q_t *prio_msg_q, void **msg_ptr, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试从消息队列中获取消息。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_msg_q</td>
+<td>优先级消息队列句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>msg_ptr</td>
+<td>获取到的消息地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>等待超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 从优先级消息队列获取消息成功，msg_addr和msg_size分别是获取到的消息地址和消息长度。</p>
+<p>K_ERR_PEND_NOWAIT 未能从优先级消息队列中获取到消息，并且timeout参数为TOS_TIME_NOWAIT（表示获取不到消息时立即返回）。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 未能从优先级消息队列中获取到消息，并且系统调度处于锁定状态。</p>
+<p>K_ERR_PEND_TIMEOUT 在timeout超时范围内未能从优先级消息队列中获取到消息。</p>
+<p>K_ERR_PEND_DESTROY 尝试获取消息的队列被销毁了（tos_prio_msg_q_destroy）。</p>
+<h3 id="tos_prio_msg_q_post">tos_prio_msg_q_post</h3>
+<pre><code class="language-c">k_err_t tos_prio_msg_q_post(k_prio_msg_q_t *prio_msg_q, void *msg_ptr, k_prio_t prio);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向优先级消息队列中放入一个消息，并唤醒等待队列上的一个任务。如果有多个任务在此优先级消息队列的等待队列上，唤醒优先级最高的任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_msg_q</td>
+<td>优先级消息队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>msg_ptr</td>
+<td>消息地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>prio</td>
+<td>消息的优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 向优先级消息队列中放入消息成功。</p>
+<p>K_ERR_RING_Q_FULL 优先级消息队列已满。</p>
+<h3 id="tos_prio_msg_q_post_all">tos_prio_msg_q_post_all</h3>
+<pre><code class="language-c">k_err_t tos_prio_msg_q_post_all(k_prio_msg_q_t *prio_msg_q, void *msg_ptr, k_prio_t prio);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向优先级消息队列中放入一个消息，并唤醒等待队列上的所有任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_msg_q</td>
+<td>优先级消息队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>msg_ptr</td>
+<td>消息地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>prio</td>
+<td>消息的优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 向优先级消息队列中放入消息成功。</p>
+<p>K_ERR_RING_Q_FULL 优先级消息队列已满。</p>
+<h2 id="priority-mail-queue">优先级邮箱队列priority mail queue</h2>
+<h3 id="tos_prio_mail_q_create">tos_prio_mail_q_create</h3>
+<pre><code class="language-c">k_err_t tos_prio_msg_q_create(k_prio_mail_q_t *prio_mail_q, void *pool, size_t mail_cnt, size_t mail_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个优先级邮箱队列（邮件是一片固定大小的内存）。优先级邮箱队列是用来在任务间传递具有特定大小的内存信息的机制，与邮箱队列不同的地方在于，优先级邮箱队列可以给邮件赋予一个优先级，较高优先级（数值上更小）的邮件会比较低优先级的邮件更快传递到等待任务。pool由用户传入，pool是一片大小为(mail_cnt* mail_size)的内存buffer。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_mail_q</td>
+<td>优先级邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>pool</td>
+<td>优先级邮箱队列的buffer池</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_cnt</td>
+<td>邮件的最大数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>邮件的大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级邮箱队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL prio_mail_q指针为空。</p>
+<h3 id="tos_prio_mail_q_create_dyn">tos_prio_mail_q_create_dyn</h3>
+<pre><code class="language-c">k_err_t tos_prio_mail_q_create_dyn(k_prio_mail_q_t *prio_mail_q, size_t mail_cnt, size_t mail_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>动态创建一个优先级邮箱队列（邮件是一片固定大小的内存）。优先级邮箱队列是用来在任务间传递具有特定大小的内存信息的机制。内部buffer由动态内存分配。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_mail_q</td>
+<td>优先级邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_cnt</td>
+<td>邮件的最大数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>邮件的大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级邮箱队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL prio_mail_q指针为空。</p>
+<p>K_ERR_OUT_OF_MEMORY 堆内存不足。</p>
+<h3 id="tos_prio_mail_q_destroy">tos_prio_mail_q_destroy</h3>
+<pre><code class="language-c">k_err_t tos_prio_mail_q_destroy(k_prio_mail_q_t *prio_mail_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个邮箱队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_mail_q</td>
+<td>优先级邮箱队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级邮箱队列销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL prio_mail_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID prio_mail_q指向的不是一个合法的邮箱队列。</p>
+<h3 id="tos_prio_mail_q_destroy_dyn">tos_prio_mail_q_destroy_dyn</h3>
+<pre><code class="language-c">k_err_t tos_prio_mail_q_destroy_dyn(k_prio_mail_q_t *prio_mail_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个动态创建的（tos_mail_q_create_dyn）优先级邮箱队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_mail_q</td>
+<td>优先级邮箱队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级邮箱队列销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL prio_mail_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID prio_mail_q指向的不是一个合法的优先级邮箱队列。</p>
+<h3 id="tos_prio_mail_q_flush">tos_prio_mail_q_flush</h3>
+<pre><code class="language-c">k_err_t tos_prio_mail_q_flush(k_prio_mail_q_t *prio_mail_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>冲洗邮箱队列（丢弃邮箱队列中的所有邮件）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_mail_q</td>
+<td>优先级邮箱队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级邮箱队列冲洗成功。</p>
+<p>K_ERR_OBJ_PTR_NULL prio_mail_q指针为空。</p>
+<p>K_ERR_OBJ_INVALID prio_mail_q指向的不是一个合法的邮箱队列。</p>
+<h3 id="tos_prio_mail_q_pend">tos_prio_mail_q_pend</h3>
+<pre><code class="language-c">k_err_t tos_prio_mail_q_pend(k_prio_mail_q_t *prio_mail_q, void *mail_buf, size_t *mail_size, k_tick_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试从邮箱队列中获取邮件。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_mail_q</td>
+<td>优先级邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>mail_buf</td>
+<td>用来承载邮件内容的buffer地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>获取到的邮件长度</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>等待超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 从优先级邮箱队列获取邮件成功，mail_buf中被写入邮件内容，msg_size获取到的邮件长度。</p>
+<p>K_ERR_PEND_NOWAIT 未能从优先级邮箱队列中获取到邮件，并且timeout参数为TOS_TIME_NOWAIT（表示获取不到邮件时立即返回）。</p>
+<p>K_ERR_PEND_SCHED_LOCKED 未能从优先级邮箱队列中获取到邮件，并且系统调度处于锁定状态。</p>
+<p>K_ERR_PEND_TIMEOUT 在timeout超时范围内未能从优先级邮箱队列中获取到邮件。</p>
+<p>K_ERR_PEND_DESTROY 尝试获取邮件的队列被销毁了（tos_prio_mail_q_destroy）。</p>
+<h3 id="tos_prio_mail_q_post">tos_prio_mail_q_post</h3>
+<pre><code class="language-c">k_err_t tos_prio_mail_q_post(k_prio_mail_q_t *prio_mail_q, void *mail_buf, size_t mail_size, k_prio_t prio);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向优先级邮箱队列中放入一个邮件，并唤醒等待队列上的一个任务。如果有多个任务在此优先级邮箱队列的等待队列上，唤醒优先级最高的任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_mail_q</td>
+<td>优先级邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_buf</td>
+<td>要放入优先级邮箱队列的邮件</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>邮件长度</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>prio</td>
+<td>邮件的优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 向优先级邮箱队列中放入邮件成功。</p>
+<p>K_ERR_RING_Q_FULL 优先级邮箱队列已满。</p>
+<h3 id="tos_prio_mail_q_post_all">tos_prio_mail_q_post_all</h3>
+<pre><code class="language-c">k_err_t tos_prio_mail_q_post_all(k_prio_mail_q_t *prio_mail_q, void *mail_buf, size_t mail_size, k_prio_t prio);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向优先级邮箱队列中放入一个邮件，并唤醒等待队列上的所有任务。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_mail_q</td>
+<td>优先级邮箱队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_buf</td>
+<td>要放入优先级邮箱队列的邮件</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mail_size</td>
+<td>邮件长度</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>prio</td>
+<td>邮件的优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 向优先级邮箱队列中放入邮件成功。</p>
+<p>K_ERR_RING_Q_FULL 优先级邮箱队列已满。</p>
+<h2 id="ring-queue">环形队列ring queue</h2>
+<h3 id="tos_ring_q_create">tos_ring_q_create</h3>
+<pre><code class="language-c">k_err_t tos_ring_q_create(k_ring_q_t *ring_q, void *pool, size_t item_cnt, size_t item_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个环形队列。环形队列提供了一种对数据进行先入先出管理的机制，可以作为上层数据结构或算法的底层数据容器。pool由用户传入，pool是一片大小为(item_cnt * item_size)的内存buffer。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ring_q</td>
+<td>环形队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>pool</td>
+<td>环形队列的buffer池</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_cnt</td>
+<td>环形队列管理的元素的数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_size</td>
+<td>环形队列管理的元素的大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 环形队列创建成功。</p>
+<h3 id="tos_ring_q_create_dyn">tos_ring_q_create_dyn</h3>
+<pre><code class="language-c">k_err_t tos_ring_q_create(k_ring_q_t *ring_q, size_t item_cnt, size_t item_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个动态分配的环形队列。环形队列提供了一种对数据进行先入先出管理的机制，可以作为上层数据结构或算法的底层数据容器。内部的pool池由动态内存分配。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ring_q</td>
+<td>环形队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_cnt</td>
+<td>环形队列管理的元素的数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_size</td>
+<td>环形队列管理的元素的大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 环形队列创建成功。</p>
+<p>K_ERR_OUT_OF_MEMORY 堆内存不足。</p>
+<h3 id="tos_ring_q_destroy">tos_ring_q_destroy</h3>
+<pre><code class="language-c">k_err_t tos_ring_q_destroy(k_ring_q_t *ring_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个环形队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ring_q</td>
+<td>环形队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 销毁环形队列成功。</p>
+<p>K_ERR_OBJ_INVALID ring_q指向的不是一个合法的环形队列。</p>
+<h3 id="tos_ring_q_destroy_dyn">tos_ring_q_destroy_dyn</h3>
+<pre><code class="language-c">k_err_t tos_ring_q_destroy_dyn(k_ring_q_t *ring_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个动态创建的环形队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ring_q</td>
+<td>环形队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 销毁环形队列成功。</p>
+<p>K_ERR_OBJ_INVALID ring_q指向的不是一个合法的环形队列。</p>
+<h3 id="tos_ring_q_enqueue">tos_ring_q_enqueue</h3>
+<pre><code class="language-c">k_err_t tos_ring_q_enqueue(k_ring_q_t *ring_q, void *item, size_t item_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向环形队列中放入一个元素。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ring_q</td>
+<td>环形队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item</td>
+<td>待入队的元素地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_size</td>
+<td>待入队的元素大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 元素入队成功。</p>
+<p>K_ERR_RING_Q_FULL 环形队列已满。</p>
+<h3 id="tos_ring_q_dequeue">tos_ring_q_dequeue</h3>
+<pre><code class="language-c">k_err_t tos_ring_q_dequeue(k_ring_q_t *ring_q, void *item, size_t *item_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从环形队列中获取一个元素。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ring_q</td>
+<td>环形队列句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>item</td>
+<td>承接出队元素的内存buffer</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>item_size</td>
+<td>出队的元素大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 元素出队成功。</p>
+<p>K_ERR_RING_Q_EMPTY 环形队列已空。</p>
+<h3 id="tos_ring_q_flush">tos_ring_q_flush</h3>
+<pre><code class="language-c">k_err_t tos_ring_q_flush(k_ring_q_t *ring_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>冲洗环形队列（复位环形队列，丢弃环形队列中的所有元素）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ring_q</td>
+<td>环形队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 冲洗环形队列成功。</p>
+<h3 id="tos_ring_q_is_empty">tos_ring_q_is_empty</h3>
+<pre><code class="language-c">k_err_t tos_ring_q_is_empty(k_ring_q_t *ring_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断一个环形队列是否为空。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ring_q</td>
+<td>环形队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 环形队列为空。</p>
+<p>K_FALSE 环形队列非空。</p>
+<h3 id="tos_ring_q_is_full">tos_ring_q_is_full</h3>
+<pre><code class="language-c">k_err_t tos_ring_q_is_full(k_ring_q_t *ring_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断一个环形队列是否为满。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ring_q</td>
+<td>环形队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 环形队列为满。</p>
+<p>K_FALSE 环形队列非满。</p>
+<h2 id="fifo">字符流先入先出队列fifo</h2>
+<h3 id="tos_chr_fifo_create">tos_chr_fifo_create</h3>
+<pre><code class="language-c">k_err_t tos_chr_fifo_create(k_chr_fifo_t *chr_fifo, uint8_t *buffer, size_t size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个字符流先入先出队列。字符流先入先出队列的底层数据容器是环形队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>buffer</td>
+<td>字符流先入先出队列内存池</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>size</td>
+<td>字符流先入先出队列内存池大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL fifo是空指针。</p>
+<h3 id="tos_chr_fifo_create_dyn">tos_chr_fifo_create_dyn</h3>
+<pre><code class="language-c">k_err_t tos_chr_fifo_create(k_chr_fifo_t *chr_fifo, size_t fifo_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>动态创建一个字符流先入先出队列（内部buffer动态分配）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>size</td>
+<td>字符流先入先出队列内存池大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL chr_fifo是空指针。</p>
+<p>K_ERR_OUT_OF_MEMORY 堆内存不足。</p>
+<h3 id="tos_chr_fifo_destroy">tos_chr_fifo_destroy</h3>
+<pre><code class="language-c">k_err_t tos_chr_fifo_destroy(k_chr_fifo_t *chr_fifo);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个字符流先入先出队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL chr_fifo是空指针。</p>
+<p>K_ERR_OBJ_INVALID chr_fifo指向的不是一个合法的先入先出队列。</p>
+<h3 id="tos_chr_fifo_destroy_dyn">tos_chr_fifo_destroy_dyn</h3>
+<pre><code class="language-c">k_err_t tos_chr_fifo_destroy_dyn(k_chr_fifo_t *chr_fifo);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个动态创建（tos_chr_fifo_create_dyn）的字符流先入先出队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 队列创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL chr_fifo是空指针。</p>
+<p>K_ERR_OBJ_INVALID chr_fifo指向的不是一个合法的先入先出队列。</p>
+<h3 id="tos_chr_fifo_push">tos_chr_fifo_push</h3>
+<pre><code class="language-c">k_err_t tos_chr_fifo_push(k_chr_fifo_t *chr_fifo, uint8_t data);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向字符流先入先出队列压入一个字符。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>data</td>
+<td>压入的字符</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 字符压入成功。</p>
+<p>K_ERR_FIFO_FULL 字符流先入先出队列已满。</p>
+<h3 id="tos_chr_fifo_push_stream">tos_chr_fifo_push_stream</h3>
+<pre><code class="language-c">k_err_t tos_chr_fifo_push_stream(k_chr_fifo_t *chr_fifo, uint8_t *stream, size_t size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向字符流先入先出队列压入一个字符流。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>stream</td>
+<td>压入的字符流</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>size</td>
+<td>字符流长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>实际压入的字符流长度。</p>
+<h3 id="tos_chr_fifo_pop">tos_chr_fifo_pop</h3>
+<pre><code class="language-c">k_err_t tos_chr_fifo_pop(k_chr_fifo_t *chr_fifo, uint8_t *out);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从字符流先入先出队列弹出一个字符。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>out</td>
+<td>弹出的字符</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 字符弹出成功。</p>
+<p>K_ERR_FIFO_EMPTY 字符流先入先出队列内存池已空。</p>
+<h3 id="tos_chr_fifo_pop_stream">tos_chr_fifo_pop_stream</h3>
+<pre><code class="language-c">int tos_chr_fifo_pop_stream(k_chr_fifo_t *fifo, uint8_t *buffer, size_t size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从字符流先入先出队列弹出一个字符流。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>stream</td>
+<td>弹出的字符流</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>size</td>
+<td>字符流长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>实际弹出的字符流长度。</p>
+<h3 id="tos_chr_fifo_flush">tos_chr_fifo_flush</h3>
+<pre><code class="language-c">void tos_chr_fifo_flush(k_chr_fifo_t *chr_fifo);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>冲洗字符流先入先出队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>无</p>
+<h3 id="tos_chr_fifo_is_empty">tos_chr_fifo_is_empty</h3>
+<pre><code class="language-c">int tos_chr_fifo_is_empty(k_chr_fifo_t *chr_fifo);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断字符流先入先出队列是否为空。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，fifo不为空。</p>
+<p>非0值，fifo为空。</p>
+<h3 id="tos_chr_fifo_is_full">tos_chr_fifo_is_full</h3>
+<pre><code class="language-c">int tos_chr_fifo_is_full(k_chr_fifo_t *chr_fifo);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断字符流先入先出队列是否为满。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>chr_fifo</td>
+<td>字符流先入先出队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，fifo不为满。</p>
+<p>非0值，fifo为满。</p>
+<h2 id="binary-heap">二项堆binary heap</h2>
+<h3 id="tos_bin_heap_create">tos_bin_heap_create</h3>
+<pre><code class="language-c">k_err_t tos_bin_heap_create(k_bin_heap_t *bin_heap, void *pool, size_t item_cnt, size_t item_size, k_bin_heap_cmp cmp);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个二项堆。二项堆是实现优先级队列的底层数据结构。pool由用户传入，pool是一片大小为(item_cnt * item_size)的内存buffer，cmp是比较两个元素大小的比较函数。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bin_heap</td>
+<td>二项堆句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>pool</td>
+<td>二项堆的buffer池</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_cnt</td>
+<td>二项堆管理的元素的数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_size</td>
+<td>二项堆管理的元素的大小</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>cmp</td>
+<td>比较两个二项堆元素大小的接口</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 二项堆创建成功。</p>
+<h3 id="tos_bin_heap_create_dyn">tos_bin_heap_create_dyn</h3>
+<pre><code class="language-c">k_err_t tos_bin_heap_create_dyn(k_bin_heap_t *bin_heap, size_t item_cnt, size_t item_size, k_bin_heap_cmp cmp);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>动态创建一个二项堆。内部的pool池由动态内存分配。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bin_heap</td>
+<td>环形队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_cnt</td>
+<td>此环形队列管理的元素的数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_size</td>
+<td>从环形队列管理的元素的大小</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>cmp</td>
+<td>比较两个二项堆元素大小的接口</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 二项堆创建成功。</p>
+<p>K_ERR_OUT_OF_MEMORY 堆内存不足。</p>
+<h3 id="tos_bin_heap_destroy">tos_bin_heap_destroy</h3>
+<pre><code class="language-c">k_err_t tos_bin_heap_destroy(k_bin_heap_t *bin_heap);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个二项堆。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bin_heap</td>
+<td>二项堆句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 销毁二项堆成功。</p>
+<p>K_ERR_OBJ_INVALID bin_heap指向的不是一个合法的二项堆。</p>
+<h3 id="tos_bin_heap_destroy_dyn">tos_bin_heap_destroy_dyn</h3>
+<pre><code class="language-c">k_err_t tos_bin_heap_destroy_dyn(k_bin_heap_t *bin_heap);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个动态创建的二项堆。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bin_heap</td>
+<td>二项堆句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 销毁二项堆成功。</p>
+<p>K_ERR_OBJ_INVALID bin_heap指向的不是一个合法的二项堆。</p>
+<h3 id="tos_bin_heap_push">tos_bin_heap_push</h3>
+<pre><code class="language-c">k_err_t tos_bin_heap_push(k_bin_heap_t *bin_heap, void *item, size_t item_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向二项堆中放入一个元素。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bin_heap</td>
+<td>二项堆句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>item</td>
+<td>待入堆的元素地址</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>item_size</td>
+<td>待入堆的元素大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 元素入堆成功。</p>
+<p>K_ERR_BIN_HEAP_FULL 二项堆已满。</p>
+<h3 id="tos_bin_heap_pop">tos_bin_heap_pop</h3>
+<pre><code class="language-c">k_err_t tos_bin_heap_pop(k_bin_heap_t *bin_heap, void *item, size_t *item_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从二项堆中获取一个元素。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bin_heap</td>
+<td>二项堆句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>item</td>
+<td>承接出堆元素的内存buffer</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>item_size</td>
+<td>出堆的元素大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 元素出堆成功。</p>
+<p>K_ERR_BIN_HEAP_EMPTY 二项堆已空。</p>
+<h3 id="tos_bin_heap_flush">tos_bin_heap_flush</h3>
+<pre><code class="language-c">k_err_t tos_bin_heap_flush(k_bin_heap_t *bin_heap);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>冲洗二项堆（复位二项堆，丢弃二项堆中的所有元素）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bin_heap</td>
+<td>二项堆句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 冲洗二项堆成功。</p>
+<h3 id="tos_bin_heap_is_empty">tos_bin_heap_is_empty</h3>
+<pre><code class="language-c">int tos_bin_heap_is_empty(k_bin_heap_t *bin_heap);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断一个二项堆是否为空。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bin_heap</td>
+<td>二项堆句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 二项堆为空。</p>
+<p>K_FALSE 二项堆非空。</p>
+<h3 id="tos_bin_heap_is_full">tos_bin_heap_is_full</h3>
+<pre><code class="language-c">int tos_bin_heap_is_full(k_bin_heap_t *bin_heap);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断一个二项堆是否为满。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bin_heap</td>
+<td>二项堆句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 二项堆为满。</p>
+<p>K_FALSE 二项堆非满。</p>
+<h2 id="priority-queue">优先级队列priority queue</h2>
+<h3 id="tos_prio_q_create">tos_prio_q_create</h3>
+<pre><code class="language-c">k_err_t tos_prio_q_create(k_prio_q_t *prio_q, void *mgr_array, void *pool, size_t item_cnt, size_t item_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个优先级队列。优先级提供了一种对数据进行基于优先级管理的机制，每次出队的总是队列中优先级最高的元素，可以作为上层数据结构或算法的底层数据容器。pool由用户传入，pool是一片大小为(item_cnt * item_size)的内存buffer，mgr_array也是由用户传入，是一片大小为TOS_PRIO_Q_MGR_ARRAY_SIZE(item_cnt)的内存buffer。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_q</td>
+<td>优先级队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>mgr_array</td>
+<td>优先级队列的内部管理数据池</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>pool</td>
+<td>优先级队列的buffer池</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_cnt</td>
+<td>优先级队列管理的元素的数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_size</td>
+<td>优先级队列管理的元素的大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级队列创建成功。</p>
+<h3 id="tos_prio_q_create_dyn">tos_prio_q_create_dyn</h3>
+<pre><code class="language-c">k_err_t tos_prio_q_create_dyn(k_prio_q_t *prio_q, size_t item_cnt, size_t item_size);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个动态分配的优先级队列。优先级提供了一种对数据进行基于优先级管理的机制，每次出队的总是队列中优先级最高的元素，可以作为上层数据结构或算法的底层数据容器。内部的pool池及管理数据池由动态内存分配。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_q</td>
+<td>优先级队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_cnt</td>
+<td>优先级队列管理的元素的数量</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_size</td>
+<td>优先级队列管理的元素的大小</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 优先级队列创建成功。</p>
+<p>K_ERR_OUT_OF_MEMORY 堆内存不足。</p>
+<h3 id="tos_prio_q_destroy">tos_prio_q_destroy</h3>
+<pre><code class="language-c">k_err_t tos_prio_q_destroy(k_prio_q_t *prio_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个优先级队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_q</td>
+<td>优先级队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 销毁优先级队列成功。</p>
+<p>K_ERR_OBJ_INVALID prio_q指向的不是一个合法的优先级队列。</p>
+<h3 id="tos_prio_q_destroy_dyn">tos_prio_q_destroy_dyn</h3>
+<pre><code class="language-c">k_err_t tos_prio_q_destroy_dyn(k_prio_q_t *prio_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个动态创建的优先级队列。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_q</td>
+<td>优先级队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 销毁优先级队列成功。</p>
+<p>K_ERR_OBJ_INVALID prio_q指向的不是一个合法的优先级队列。</p>
+<h3 id="tos_prio_q_enqueue">tos_prio_q_enqueue</h3>
+<pre><code class="language-c">k_err_t tos_prio_q_enqueue(k_prio_q_t *prio_q, void *item, size_t item_size, k_prio_t prio);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向优先级队列中放入一个元素。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_q</td>
+<td>优先级队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item</td>
+<td>待入队的元素地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>item_size</td>
+<td>待入队的元素大小</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>prio</td>
+<td>入队元素的优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 元素入队成功。</p>
+<p>K_ERR_PRIO_Q_FULL 优先级队列已满。</p>
+<h3 id="tos_prio_q_dequeue">tos_prio_q_dequeue</h3>
+<pre><code class="language-c">k_err_t tos_prio_q_dequeue(k_prio_q_t *prio_q, void *item, size_t *item_size, k_prio_t *prio);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从优先级队列中获取一个元素。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_q</td>
+<td>优先级队列句柄</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>item</td>
+<td>承接出队元素的内存buffer</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>item_size</td>
+<td>出队的元素大小</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>prio</td>
+<td>出队的元素的优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 元素出队成功。</p>
+<p>K_ERR_PRIO_Q_EMPTY 优先级队列已空。</p>
+<h3 id="tos_prio_q_flush">tos_prio_q_flush</h3>
+<pre><code class="language-c">k_err_t tos_prio_q_flush(k_prio_q_t *prio_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>冲洗优先级队列（复位优先级队列，丢弃优先级队列中的所有元素）。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_q</td>
+<td>优先级队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 冲洗优先级队列成功。</p>
+<h3 id="tos_prio_q_is_empty">tos_prio_q_is_empty</h3>
+<pre><code class="language-c">int tos_prio_q_is_empty(k_prio_q_t *prio_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断一个优先级队列是否为空。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_q</td>
+<td>优先级队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 优先级队列为空。</p>
+<p>K_FALSE 优先级队列非空。</p>
+<h3 id="tos_prio_q_is_full">tos_prio_q_is_full</h3>
+<pre><code class="language-c">int tos_prio_q_is_full(k_prio_q_t *prio_q);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断一个优先级队列是否为满。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>prio_q</td>
+<td>优先级队列句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 优先级队列为满。</p>
+<p>K_FALSE 优先级队列非满。</p>
+<h2 id="timer">定时器timer</h2>
+<h3 id="tos_timer_create">tos_timer_create</h3>
+<pre><code class="language-c">k_err_t tos_timer_create(k_timer_t *tmr,
+                         k_tick_t delay,
+                         k_tick_t period,
+                         k_timer_callback_t callback,
+                         void *cb_arg,
+                         k_opt_t opt);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个定时器。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>tmr</td>
+<td>定时器句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>delay</td>
+<td>定时器延迟多久后执行</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>period</td>
+<td>周期性timer的周期</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>callback</td>
+<td>定时器回调</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>cb_arg</td>
+<td>定时器回调参数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>opt</td>
+<td>选项</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>注意</strong></li>
+</ul>
+<p>opt选项说明：</p>
+<p>1、TOS_OPT_TIMER_ONESHOT</p>
+<p>​ 一次性定时器，创建定时器时传入此参数，表示该定时器是一次性的，只会执行一次。</p>
+<p>2、TOS_OPT_TIMER_PERIODIC</p>
+<p>​ 周期性定时器，创建定时器时传入此参数，表示该定时器是周期性的，定时器到期后，会按period参数开启下一个周期。</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 定时器创建成功。</p>
+<p>K_ERR_TIMER_INVALID_PERIOD 非法的period参数。</p>
+<p>K_ERR_TIMER_INVALID_DELAY 非法的delay参数。</p>
+<h3 id="tos_timer_destroy">tos_timer_destroy</h3>
+<pre><code class="language-c">k_err_t tos_timer_destroy(k_timer_t *tmr);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个定时器。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>tmr</td>
+<td>定时器句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 定时器启动成功。</p>
+<p>K_ERR_TIMER_INACTIVE 定时器并未被创建。</p>
+<h3 id="tos_timer_start">tos_timer_start</h3>
+<pre><code class="language-c">k_err_t tos_timer_start(k_timer_t *tmr);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>启动一个定时器。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>tmr</td>
+<td>定时器句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 定时器启动成功。</p>
+<p>K_ERR_TIMER_INACTIVE 定时器并未被创建。</p>
+<p>K_ERR_TIMER_INVALID_STATE 定时器状态非法。</p>
+<h3 id="tos_timer_stop">tos_timer_stop</h3>
+<pre><code class="language-c">k_err_t tos_timer_stop(k_timer_t *tmr);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>停止一个定时器。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>tmr</td>
+<td>定时器句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 停止定时器成功。</p>
+<p>K_ERR_TIMER_INACTIVE 定时器并未被创建。</p>
+<p>K_ERR_TIMER_STOPPED 定时器已经处于停止状态。</p>
+<h3 id="tos_timer_delay_change">tos_timer_delay_change</h3>
+<pre><code class="language-c">k_err_t tos_timer_delay_change(k_timer_t *tmr, k_tick_t delay);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>修改一个定时器的触发延时。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>tmr</td>
+<td>定时器句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>delay</td>
+<td>修改后的触发延时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 修改定时器触发延时成功。</p>
+<p>K_ERR_TIMER_INACTIVE 定时器并未被创建。</p>
+<p>K_ERR_TIMER_RUNNING 定时器正处于运行状态（不允许修改运行中的定时器的触发延时参数）。</p>
+<p>K_ERR_TIMER_INVALID_DELAY 非法的delay参数（试图将一个一次性定时器的delay参数修改为0）。</p>
+<h3 id="tos_timer_period_change">tos_timer_period_change</h3>
+<pre><code class="language-c">k_err_t tos_timer_period_change(k_timer_t *tmr, k_tick_t perio);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>修改一个定时器的触发周期。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>tmr</td>
+<td>定时器句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>period</td>
+<td>修改后的触发周期参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 修改定时器触发周期成功。</p>
+<p>K_ERR_TIMER_INACTIVE 定时器并未被创建。</p>
+<p>K_ERR_TIMER_RUNNING 定时器正处于运行状态（不允许修改运行中的定时器的触发延时参数）。</p>
+<p>K_ERR_TIMER_INVALID_PERIOD 非法的period参数（试图将一个周期性定时器的period参数修改为0）。</p>
+<h2 id="stopwatch">计时表stopwatch</h2>
+<h3 id="tos_stopwatch_create">tos_stopwatch_create</h3>
+<pre><code class="language-c">k_err_t tos_stopwatch_create(k_stopwatch_t *stopwatch);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个计时表。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>stopwatch</td>
+<td>计时表句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计时表创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL stopwatch是空指针。</p>
+<h3 id="tos_stopwatch_destroy">tos_stopwatch_destroy</h3>
+<pre><code class="language-c">k_err_t tos_stopwatch_destroy(k_stopwatch_t *stopwatch);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个计时表。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>stopwatch</td>
+<td>计时表句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计时表销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL stopwatch是空指针。</p>
+<p>K_ERR_OBJ_INVALID stopwatch指向的不是一个合法的计时表。</p>
+<h3 id="tos_stopwatch_countdown">tos_stopwatch_countdown</h3>
+<pre><code class="language-c">k_err_t tos_stopwatch_countdown(k_stopwatch_t *stopwatch, k_tick_t tick);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>开始计时，时间单位为系统滴答数。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>stopwatch</td>
+<td>定时器句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>tick</td>
+<td>计时的时间长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计时表启动成功。</p>
+<h3 id="tos_stopwatch_countdown_ms">tos_stopwatch_countdown_ms</h3>
+<pre><code class="language-c">k_err_t tos_stopwatch_countdown_ms(k_stopwatch_t *stopwatch, k_time_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>开始计时，时间单位为毫秒。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>stopwatch</td>
+<td>定时器句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>计时的时间长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 计时表启动成功。</p>
+<h3 id="tos_stopwatch_delay">tos_stopwatch_delay</h3>
+<pre><code class="language-c">void tos_stopwatch_delay(k_tick_t tick);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>利用计时表进行一次延时，时间单位为系统滴答数。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>stopwatch</td>
+<td>定时器句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>tick</td>
+<td>延迟的时间长度</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tos_stopwatch_delay_ms">tos_stopwatch_delay_ms</h3>
+<pre><code class="language-c">void tos_stopwatch_delay_ms(k_time_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>利用计时表进行一次延时，时间单位为毫秒。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>stopwatch</td>
+<td>定时器句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>延迟的时间长度</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tos_stopwatch_remain">tos_stopwatch_remain</h3>
+<pre><code class="language-c">k_tick_t tos_stopwatch_remain(k_stopwatch_t *stopwatch);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>返回计时表剩余的时间，时间单位为系统滴答数，如果计时已到则返回0。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>stopwatch</td>
+<td>定时器句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>计时表剩余时间。</p>
+<h3 id="tos_stopwatch_remain_ms">tos_stopwatch_remain_ms</h3>
+<pre><code class="language-c">k_tick_t tos_stopwatch_remain_ms(k_stopwatch_t *stopwatch);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>返回计时表剩余的时间，时间单位为毫秒，如果计时已到则返回0。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>stopwatch</td>
+<td>定时器句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>计时表剩余时间。</p>
+<h3 id="tos_stopwatch_is_expired">tos_stopwatch_is_expired</h3>
+<pre><code class="language-c">int tos_stopwatch_is_expired(k_stopwatch_t *stopwatch);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>返回计时表是否已超时。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>stopwatch</td>
+<td>定时器句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 计时表已超时。</p>
+<p>K_FALSE 计时表未超时。</p>
+<h2 id="bitmap">位图bitmap</h2>
+<h3 id="tos_bitmap_create_empty">tos_bitmap_create_empty</h3>
+<pre><code class="language-c">__API__ k_err_t tos_bitmap_create_empty(k_bitmap_t *bitmap, k_bmtbl_t *bitmap_tbl, uint32_t bit_max);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个全0的位图。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bitmap</td>
+<td>位图句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>bitmap_tbl</td>
+<td>位图所需的存储表。</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>bit_max</td>
+<td>位图中可记录的最大的bit位长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>注意</li>
+</ul>
+<p>bitmap_tbl是由用户传入的一片内存区域，其长度由TOS_BITMAP_SIZE计算，对于最大的bit位长度为bit_max的位图存储表来说，其长度为TOS_BITMAP_SIZE(bit_max)，那么用户可以定义一个k_bmtbl_t bitmap_tbl[TOS_BITMAP_SIZE(bit_max)]，bitmap_tbl作为此接口的第二个入参。</p>
+<ul>
+<li>返回值**</li>
+</ul>
+<p>K_ERR_NONE 计时表创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL bitmap或bitmap_tbl是空指针。</p>
+<h3 id="tos_bitmap_create_full">tos_bitmap_create_full</h3>
+<pre><code class="language-c">__API__ k_err_t tos_bitmap_create_full(k_bitmap_t *bitmap, k_bmtbl_t *bitmap_tbl, uint32_t bit_max);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个全1的位图。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bitmap</td>
+<td>位图句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>bitmap_tbl</td>
+<td>位图所需的存储表。</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>bit_max</td>
+<td>位图中可记录的最大的bit位长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>注意</li>
+</ul>
+<p>bitmap_tbl是由用户传入的一片内存区域，其长度由TOS_BITMAP_SIZE计算，对于最大的bit位长度为bit_max的位图存储表来说，其长度为TOS_BITMAP_SIZE(bit_max)，那么用户可以定义一个k_bmtbl_t bitmap_tbl[TOS_BITMAP_SIZE(bit_max)]，bitmap_tbl作为此接口的第二个入参。</p>
+<ul>
+<li>返回值**</li>
+</ul>
+<p>K_ERR_NONE 计时表创建成功。</p>
+<p>K_ERR_OBJ_PTR_NULL bitmap或bitmap_tbl是空指针。</p>
+<h3 id="tos_bitmap_destroy">tos_bitmap_destroy</h3>
+<pre><code class="language-c">k_err_t tos_bitmap_destroy(k_bitmap_t *bitmap);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁一个位图。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bitmap</td>
+<td>位图句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 位图销毁成功。</p>
+<p>K_ERR_OBJ_PTR_NULL bitmap是空指针。</p>
+<p>K_ERR_OBJ_INVALID bitmap指向的不是一个合法的位图。</p>
+<h3 id="tos_bitmap_set">tos_bitmap_set</h3>
+<pre><code class="language-c">k_err_t tos_bitmap_set(k_bitmap_t *bitmap, uint32_t bit);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>设置一个bit位，即将此bit位标记为1。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bitmap</td>
+<td>位图句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>bit</td>
+<td>要设置的bit位</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE bit位设置成功。</p>
+<p>K_ERR_BITMAP_EXCEED bit超出了bitmap可以记录的范围。</p>
+<h3 id="tos_bitmap_reset">tos_bitmap_reset</h3>
+<pre><code class="language-c">k_err_t tos_bitmap_reset(k_bitmap_t *bitmap, uint32_t bit);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>复位一个bit位，即将此bit位标记为0。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bitmap</td>
+<td>位图句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>bit</td>
+<td>要设置的bit位</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE bit位复位成功。</p>
+<p>K_ERR_BITMAP_EXCEED bit超出了bitmap可以记录的范围。</p>
+<h3 id="tos_bitmap_is_set">tos_bitmap_is_set</h3>
+<pre><code class="language-c">k_err_t tos_bitmap_is_set(k_bitmap_t *bitmap, uint32_t bit);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断某bit位是否处于设置状态，也即是否为1。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bitmap</td>
+<td>位图句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>bit</td>
+<td>bit位</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 该位被设置，即为1。</p>
+<p>K_FALSE 该位未被设置，即为0。</p>
+<p>K_ERR_BITMAP_EXCEED bit超出了bitmap可以记录的范围。</p>
+<h3 id="tos_bitmap_is_reset">tos_bitmap_is_reset</h3>
+<pre><code class="language-c">k_err_t tos_bitmap_is_reset(k_bitmap_t *bitmap, uint32_t bit);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>判断某bit位是否处于复位状态，也即是否为0。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bitmap</td>
+<td>位图句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>bit</td>
+<td>bit位</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_TRUE 该位被复位，即为0。</p>
+<p>K_FALSE 该位未被设置，即为1。</p>
+<h3 id="tos_bitmap_lsb">tos_bitmap_lsb</h3>
+<pre><code class="language-c">int tos_bitmap_lsb(k_bitmap_t *bitmap);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>获取位图的最低有效位，也即最低的被设置为1的位。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>bitmap</td>
+<td>定时器句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>位图的最低有效位。</p>
+<h2 id="_5">时间管理</h2>
+<h3 id="tos_systick_get">tos_systick_get</h3>
+<pre><code class="language-c">k_tick_t tos_systick_get(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>获取系统时钟滴答数。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>系统自启动为止到目前为止的时钟滴答数。</p>
+<h3 id="tos_systick_set">tos_systick_set</h3>
+<pre><code class="language-c">void tos_systick_set(k_tick_t tick);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>设置系统时钟滴答数。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>tick</td>
+<td>系统时钟滴答数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>无</p>
+<h3 id="tos_tick2millisec">tos_tick2millisec</h3>
+<pre><code class="language-c">k_time_t tos_tick2millisec(k_tick_t tick);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>系统时钟滴答数转化为毫秒。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>tick</td>
+<td>系统时钟滴答数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>毫秒数。</p>
+<h3 id="tos_millisec2tick">tos_millisec2tick</h3>
+<pre><code class="language-c">k_tick_t tos_millisec2tick(k_time_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>毫秒转化为系统时钟滴答数。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>毫秒数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>系统时钟滴答数。</p>
+<h3 id="tos_sleep_ms">tos_sleep_ms</h3>
+<pre><code class="language-c">k_err_t tos_sleep_ms(k_time_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>睡眠当前任务，以毫秒为单位。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>任务睡眠毫秒数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 睡眠成功。</p>
+<p>K_ERR_DELAY_ZERO 毫秒数为0。</p>
+<h3 id="tos_sleep_hmsm">tos_sleep_hmsm</h3>
+<pre><code class="language-c">k_err_t tos_sleep_hmsm(k_time_t hour, k_time_t minute, k_time_t second, k_time_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>睡眠当前任务，睡眠时长以特定的时分秒毫秒度量。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>hour</td>
+<td>小时数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>minute</td>
+<td>分钟数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>second</td>
+<td>秒数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>毫秒数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 睡眠成功。</p>
+<p>K_ERR_DELAY_ZERO 毫秒数为0。</p>
+<h2 id="_6">功耗管理</h2>
+<h3 id="tos_pm_cpu_lpwr_mode_set">tos_pm_cpu_lpwr_mode_set</h3>
+<pre><code class="language-c">k_err_t tos_pm_cpu_lpwr_mode_set(k_cpu_lpwr_mode_t cpu_lpwr_mode);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>设置CPU的低功耗模式。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>cpu_lpwr_mode</td>
+<td>CPU的低功耗模式</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_PM_WKUP_SOURCE_NOT_INSTALL 对应低功耗模式下的唤醒源没有安装。</p>
+<p>K_ERR_NONE 低功耗模式设置成功。</p>
+<h3 id="tos_pm_device_register">tos_pm_device_register</h3>
+<pre><code class="language-c">int tos_pm_device_register(k_pm_device_t *device);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>注册一个低功耗管理设备。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>device</td>
+<td>低功耗管理设备句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_NONE 注册成功。</p>
+<p>K_ERR_OBJ_PTR_NULL device为空。</p>
+<p>K_ERR_PM_DEVICE_ALREADY_REG 设备已注册过。</p>
+<p>K_ERR_PM_DEVICE_OVERFLOW 注册设备数量太多。</p>
+<h3 id="tos_tickless_wkup_alarm_install">tos_tickless_wkup_alarm_install</h3>
+<pre><code class="language-c">void tos_tickless_wkup_alarm_install(k_cpu_lpwr_mode_t mode, k_tickless_wkup_alarm_t *wkup_alarm);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>安装一个低功耗模式下的唤醒时钟。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mode</td>
+<td>低功耗模式</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>wkup_alarm</td>
+<td>唤醒时钟</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>无</p>
+<h3 id="tos_tickless_wkup_alarm_init">tos_tickless_wkup_alarm_init</h3>
+<pre><code class="language-c">int tos_tickless_wkup_alarm_init(k_cpu_lpwr_mode_t mode);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>初始化特定低功耗模式下的唤醒时钟。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mode</td>
+<td>低功耗模式</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>K_ERR_TICKLESS_WKUP_ALARM_NOT_INSTALLED 对应低功耗模式的唤醒闹钟没有被安装</p>
+<p>K_ERR_TICKLESS_WKUP_ALARM_NO_INIT 对应低功耗模式的唤醒闹钟没有初始化函数</p>
+<h1 id="api_1">组件API</h1>
+<h2 id="mqtt">MQTT端云对接</h2>
+<h3 id="tos_mqtt_connect">tos_mqtt_connect</h3>
+<pre><code class="language-c">int tos_mqtt_connect(char *host, const char *port, mqtt_con_param_t *param);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>连接MQTT服务器。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>host</td>
+<td>服务器IP地址或域名</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>port</td>
+<td>服务器端口</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>param</td>
+<td>连接参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，返回socket fd。</p>
+<p>失败，返回-1。</p>
+<h3 id="tos_mqtt_publish">tos_mqtt_publish</h3>
+<pre><code class="language-c">int tos_mqtt_publish(int sock, mqtt_pub_param_t *param);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>发布MQTT消息</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sock</td>
+<td>socket fd，由tos_mqtt_connect获取。</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>param</td>
+<td>消息发布参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，发布成功。</p>
+<p>-1，发布失败。</p>
+<h3 id="tos_mqtt_subscribe">tos_mqtt_subscribe</h3>
+<pre><code class="language-c">int tos_mqtt_subscribe(int sock, mqtt_sub_param_t *param);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>订阅MQTT消息</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sock</td>
+<td>socket fd，由tos_mqtt_connect获取。</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>param</td>
+<td>消息订阅参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，订阅成功。</p>
+<p>-1，订阅失败。</p>
+<h3 id="tos_mqtt_receive">tos_mqtt_receive</h3>
+<pre><code class="language-c">int tos_mqtt_receive(char *topic, int topic_len, unsigned char *payload, int payload_len);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>收取MQTT消息</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[out]</td>
+<td>topic</td>
+<td>收取到的MQTT topic</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>topic_len</td>
+<td>MQTT topic buffer长度</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>payload</td>
+<td>收取到的payload</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>payload_len</td>
+<td>payload buffer长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，返回收取到的payload长度。</p>
+<p>失败，返回-1。</p>
+<h2 id="cmsis">CMSIS适配层</h2>
+<h3 id="oskernelstart">osKernelStart</h3>
+<pre><code class="language-c">osStatus osKernelStart(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>启动内核</p>
+<ul>
+<li>
+<p><strong>参数解释</strong>
+  无</p>
+</li>
+<li>
+<p><strong>返回值</strong>
+  osOK，返回成功。</p>
+</li>
+</ul>
+<p>osErrorOS，返回失败。</p>
+<h3 id="oskernelinitialize">osKernelInitialize</h3>
+<pre><code class="language-c">osStatus osKernelInitialize(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>初始化内核</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="oskernelrunning">osKernelRunning</h3>
+<pre><code class="language-c">int32_t osKernelRunning(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>返回内核是否正在运行</p>
+<ul>
+<li>
+<p><strong>参数解释</strong>
+  无</p>
+</li>
+<li>
+<p><strong>返回值</strong>
+  0，内核不在运行。</p>
+</li>
+</ul>
+<p>非0，内核正在运行。</p>
+<h3 id="oskernelsystick">osKernelSysTick</h3>
+<pre><code class="language-c">uint32_t osKernelSysTick(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>获取系统时钟滴答数</p>
+<ul>
+<li>
+<p><strong>参数解释</strong>
+  无</p>
+</li>
+<li>
+<p><strong>返回值</strong>
+  系统自启动开始到目前的时钟滴答数。</p>
+</li>
+</ul>
+<h3 id="osthreadcreate">osThreadCreate</h3>
+<pre><code class="language-c">osThreadId osThreadCreate(const osThreadDef_t *thread_def, void *argument);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建任务</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>thread_def</td>
+<td>任务初始化参数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>argument</td>
+<td>传递给任务入参</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回创建的任务句柄。</p>
+<p>失败，返回NULL。</p>
+<h3 id="osthreadgetid">osThreadGetId</h3>
+<pre><code class="language-c">osThreadId osThreadGetId(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>获取当前任务句柄</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>当前任务句柄。</p>
+<h3 id="osthreadterminate">osThreadTerminate</h3>
+<pre><code class="language-c">osStatus osThreadTerminate(osThreadId thread_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>终止任务运行并删除任务</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>thread_id</td>
+<td>任务句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="osthreadsetpriority">osThreadSetPriority</h3>
+<pre><code class="language-c">osStatus osThreadSetPriority(osThreadId thread_id, osPriority priority);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>设置任务优先级</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>thread_id</td>
+<td>任务句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>priority</td>
+<td>优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="osthreadgetpriority">osThreadGetPriority</h3>
+<pre><code class="language-c">osPriority osThreadGetPriority(osThreadId thread_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>获取任务优先级</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>thread_id</td>
+<td>任务句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>任务优先级。</p>
+<h3 id="osdelay">osDelay</h3>
+<pre><code class="language-c">osStatus osDelay(uint32_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>睡眠当前任务，以毫秒为单位。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>睡眠时间毫秒数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="ostimercreate">osTimerCreate</h3>
+<pre><code class="language-c">osTimerId osTimerCreate(const osTimerDef_t *timer_def, os_timer_type type, void *argument);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个定时器。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>timer_def</td>
+<td>定时器初始化参数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>type</td>
+<td>定时器类型</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>argument</td>
+<td>定时器回调入参</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回创建的定时器句柄。</p>
+<p>失败，返回NULL。</p>
+<h3 id="ostimerstart">osTimerStart</h3>
+<pre><code class="language-c">osStatus osTimerStart(osTimerId timer_id, uint32_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>启动定时器</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>timer_id</td>
+<td>定时器句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>执行延迟参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="ostimerstop">osTimerStop</h3>
+<pre><code class="language-c">osStatus osTimerStop(osTimerId timer_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>停止定时器</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>timer_id</td>
+<td>定时器句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="ostimerdelete">osTimerDelete</h3>
+<pre><code class="language-c">osStatus osTimerDelete(osTimerId timer_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁定时器</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>timer_id</td>
+<td>定时器句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="osmutexcreate">osMutexCreate</h3>
+<pre><code class="language-c">osStatus osMutexCreate(const osMutexDef_t *mutex_def);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建互斥量</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mutex_def</td>
+<td>互斥量初始化参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回创建的互斥量句柄。</p>
+<p>失败，返回NULL。</p>
+<h3 id="osmutexwait">osMutexWait</h3>
+<pre><code class="language-c">osStatus osMutexWait(osMutexId mutex_id, uint32_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>尝试获取一个互斥量</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mutex_id</td>
+<td>互斥量句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="osmutexrelease">osMutexRelease</h3>
+<pre><code class="language-c">osStatus osMutexRelease(osMutexId mutex_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放互斥量</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mutex_id</td>
+<td>互斥量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="osmutexdelete">osMutexDelete</h3>
+<pre><code class="language-c">osStatus osMutexDelete(osMutexId mutex_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁互斥量</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>mutex_id</td>
+<td>互斥量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="ossemaphorecreate">osSemaphoreCreate</h3>
+<pre><code class="language-c">osSemaphoreId osSemaphoreCreate(const osSemaphoreDef_t *semaphore_def, int32_t count);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个信号量</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>semaphore_def</td>
+<td>信号量初始化参数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>count</td>
+<td>信号量初始值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回创建的信号量句柄。</p>
+<p>失败，返回NULL。</p>
+<h3 id="ossemaphorewait">osSemaphoreWait</h3>
+<pre><code class="language-c">int32_t osSemaphoreWait(osSemaphoreId semaphore_id, uint32_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>等待一个信号量</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>semaphore_id</td>
+<td>信号量句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回信号量可用的资源数。</p>
+<p>失败，返回-1。</p>
+<h3 id="ossemaphorerelease">osSemaphoreRelease</h3>
+<pre><code class="language-c">osStatus osSemaphoreRelease(osSemaphoreId semaphore_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放信号量</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>semaphore_id</td>
+<td>信号量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="ossemaphoredelete">osSemaphoreDelete</h3>
+<pre><code class="language-c">osStatus osSemaphoreDelete(osSemaphoreId semaphore_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>销毁信号量</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>semaphore_id</td>
+<td>信号量句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="ospoolcreate">osPoolCreate</h3>
+<pre><code class="language-c">osPoolId osPoolCreate(const osPoolDef_t *pool_def);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个内存池</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>pool_def</td>
+<td>内存池初始化参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回创建的内存池句柄。</p>
+<p>失败，返回NULL。</p>
+<h3 id="ospoolalloc">osPoolAlloc</h3>
+<pre><code class="language-c">void *osPoolAlloc(osPoolId pool_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从内存池中获取一个内存块</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>pool_id</td>
+<td>内存池句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回分配到的内存块起始地址。</p>
+<p>失败，返回NULL。</p>
+<h3 id="ospoolcalloc">osPoolCAlloc</h3>
+<pre><code class="language-c">void *osPoolCAlloc(osPoolId pool_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从内存池中获取一个内存块，并将此内存块清空为0。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>pool_id</td>
+<td>内存池句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回分配到的内存块起始地址。</p>
+<p>失败，返回NULL。</p>
+<h3 id="ospoolfree">osPoolFree</h3>
+<pre><code class="language-c">osStatus osPoolFree(osPoolId pool_id, void *block);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>释放一个内存块</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>pool_id</td>
+<td>内存池句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>block</td>
+<td>内存块起始地址</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="osmessagecreate">osMessageCreate</h3>
+<pre><code class="language-c">osMessageQId osMessageCreate(const osMessageQDef_t *queue_def, osThreadId thread_id);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>创建一个队列</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>queue_def</td>
+<td>队列初始化参数</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>thread_id</td>
+<td>任务句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回创建的队列句柄。</p>
+<p>失败，返回NULL。</p>
+<h3 id="osmessageput">osMessagePut</h3>
+<pre><code class="language-c">osStatus osMessagePut(osMessageQId queue_id, uint32_t info, uint32_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向队列中放置一个消息</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>queue_id</td>
+<td>队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>info</td>
+<td>要放置的消息体</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>osOK，返回成功。</p>
+<p>osErrorOS，返回失败。</p>
+<h3 id="osmessageget">osMessageGet</h3>
+<pre><code class="language-c">osEvent osMessageGet(osMessageQId queue_id, uint32_t millisec);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从内存池中获取一个消息</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>queue_id</td>
+<td>队列句柄</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>millisec</td>
+<td>超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>一个包含了返回状态的osEvent信息结构体。</p>
+<h1 id="api_2">网络API</h1>
+<h2 id="sal">sal模组联网接口</h2>
+<h3 id="tos_sal_module_register">tos_sal_module_register</h3>
+<pre><code class="language-c">int tos_sal_module_register(sal_module_t *module);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>注册一个联网模组</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>module</td>
+<td>联网模组句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_sal_module_init">tos_sal_module_init</h3>
+<pre><code class="language-c">int tos_sal_module_init(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>初始化模组</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_sal_module_parse_domain">tos_sal_module_parse_domain</h3>
+<pre><code class="language-c">int tos_sal_module_parse_domain(const char *host_name, char *host_ip);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>域名解析，将一个域名转换为IP地址。</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>host_name</td>
+<td>待解析的域名</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>host_ip</td>
+<td>解析后的IP地址</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_sal_module_connect">tos_sal_module_connect</h3>
+<pre><code class="language-c">int tos_sal_module_connect(const char *ip, const char *port, sal_proto_t proto);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向远端发起连接</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>ip</td>
+<td>IP地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>port</td>
+<td>端口</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>proto</td>
+<td>TCP/UDP协议</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>成功，则返回连接的socket id。</p>
+<p>失败，返回-1。</p>
+<h3 id="tos_sal_module_send">tos_sal_module_send</h3>
+<pre><code class="language-c">int tos_sal_module_send(int sock, const void *buf, size_t len);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向远端发送数据（TCP协议栈）</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sock</td>
+<td>socket id(由tos_sal_module_connect获取)</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>buf</td>
+<td>发送的数据起始地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>len</td>
+<td>发送的数据长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong>
+  发送的数据长度。</li>
+</ul>
+<h3 id="tos_sal_module_recv">tos_sal_module_recv</h3>
+<pre><code class="language-c">int tos_sal_module_recv(int sock, void *buf, size_t len);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从远端读取数据（TCP协议栈）</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sock</td>
+<td>socket id（由tos_sal_module_connect获取）</td>
+</tr>
+<tr>
+<td>[out]</td>
+<td>buf</td>
+<td>接收数据buffer</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>len</td>
+<td>接收数据buffer长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong>
+  实际接收到的数据长度。</li>
+</ul>
+<h3 id="tos_sal_module_recv_timeout">tos_sal_module_recv_timeout</h3>
+<pre><code class="language-c">int tos_sal_module_recv_timeout(int sock, void *buf, size_t len, uint32_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从远端接收数据（TCP协议栈）</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sock</td>
+<td>socket id（由tos_sal_module_connect获取）</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>buf</td>
+<td>数据起始地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>len</td>
+<td>数据长度</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong>
+  实际接收到的数据长度。</li>
+</ul>
+<h3 id="tos_sal_module_sendto">tos_sal_module_sendto</h3>
+<pre><code class="language-c">int tos_sal_module_sendto(int sock, char *ip, char *port, void *buf, size_t len);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>向远端发送数据（UDP协议栈）</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sock</td>
+<td>socket id（由tos_sal_module_connect获取）</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>ip</td>
+<td>IP地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>port</td>
+<td>端口</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>buf</td>
+<td>待发送数据起始地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>len</td>
+<td>待发送数据长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong>
+  发送的数据长度。</li>
+</ul>
+<h3 id="tos_sal_module_recvfrom">tos_sal_module_recvfrom</h3>
+<pre><code class="language-c">int tos_sal_module_recvfrom(int sock, char *ip, char *port, void *buf, size_t len);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>从远端接收数据（UDP协议栈）</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sock</td>
+<td>socket id（由tos_sal_module_connect获取）</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>ip</td>
+<td>IP地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>port</td>
+<td>端口</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>buf</td>
+<td>接收数据buffer起始地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>len</td>
+<td>接收数据buffer长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong>
+  实际接收到的数据长度。</li>
+</ul>
+<h3 id="tos_sal_module_close">tos_sal_module_close</h3>
+<pre><code class="language-c">int tos_sal_module_close(int sock);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>关闭与远端的连接</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>sock</td>
+<td>socket id（由tos_sal_module_connect获取）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h2 id="lora">lora模组联网接口</h2>
+<h3 id="tos_lora_module_register">tos_lora_module_register</h3>
+<pre><code class="language-c">int tos_lora_module_register(lora_module_t *module);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>注册一个lora模组</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>module</td>
+<td>lora模组句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_lora_module_init">tos_lora_module_init</h3>
+<pre><code class="language-c">int tos_lora_module_init(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>初始化lora模组</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_lora_module_join">tos_lora_module_join</h3>
+<pre><code class="language-c">int tos_lora_module_join(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>加入lora网关</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_lora_module_send">tos_lora_module_send</h3>
+<pre><code class="language-c">int tos_lora_module_send(const void *buf, size_t len);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>通过lora模组发送数据</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>buf</td>
+<td>要发送的数据起始地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>len</td>
+<td>要发送的数据长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_lora_module_recv">tos_lora_module_recv</h3>
+<pre><code class="language-c">int tos_lora_module_recv(void *buf, size_t len);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>通过lora模组接收数据</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[out]</td>
+<td>buf</td>
+<td>接收数据的buffer地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>len</td>
+<td>buffer长度</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_lora_module_recv_timeout">tos_lora_module_recv_timeout</h3>
+<pre><code class="language-c">int tos_lora_module_recv_timeout(void *buf, size_t len, uint32_t timeout);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>通过lora模组接收数据</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>buf</td>
+<td>接收数据的buffer地址</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>len</td>
+<td>buffer长度</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>timeout</td>
+<td>超时参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_lora_module_close">tos_lora_module_close</h3>
+<pre><code class="language-c">int tos_lora_module_close(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>关闭lora模组</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h2 id="_7">腾讯定制固件模组联网接口</h2>
+<h3 id="tos_tf_module_register">tos_tf_module_register</h3>
+<pre><code class="language-c">int tos_tf_module_register(tencent_firmware_module_t *module);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>注册一个腾讯定制固件模组</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>module</td>
+<td>腾讯定制固件模组句柄</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_init">tos_tf_module_init</h3>
+<pre><code class="language-c">int tos_tf_module_init(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>初始化腾讯定制固件模组</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_info_set">tos_tf_module_info_set</h3>
+<pre><code class="language-c">int tos_tf_module_info_set(device_info_t *info, tls_mode_t tls_mode);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>设置腾讯定制固件模组设备信息</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>device_info_t</td>
+<td>腾讯定制固件模组设备信息描述结构体</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>tls_mode</td>
+<td>tls校验模式</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_mqtt_conn">tos_tf_module_mqtt_conn</h3>
+<pre><code class="language-c">int tos_tf_module_mqtt_conn(mqtt_param_t init_params);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>通过腾讯定制固件模组发起MQTT连接</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>init_params</td>
+<td>MQTT连接参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_mqtt_discon">tos_tf_module_mqtt_discon</h3>
+<pre><code class="language-c">int tos_tf_module_mqtt_discon(void);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>断开腾讯定制固件模组的MQTT连接</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<p>无</p>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_mqtt_pub">tos_tf_module_mqtt_pub</h3>
+<pre><code class="language-c">int tos_tf_module_mqtt_pub(const char *topic, qos_t qos, char *payload);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>发布主题</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>topic</td>
+<td>主题</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>qos</td>
+<td>qos</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>payload</td>
+<td>主题的消息负载</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_mqtt_publ">tos_tf_module_mqtt_publ</h3>
+<pre><code class="language-c">int tos_tf_module_mqtt_publ(const char *topic, qos_t qos, char *payload);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>发布长消息负载（&gt; 200）主题</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>topic</td>
+<td>主题</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>qos</td>
+<td>qos</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>payload</td>
+<td>主题的消息负载</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_mqtt_sub">tos_tf_module_mqtt_sub</h3>
+<pre><code class="language-c">int tos_tf_module_mqtt_sub(char *topic, qos_t qos);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>订阅主题</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>topic</td>
+<td>主题</td>
+</tr>
+<tr>
+<td>[in]</td>
+<td>qos</td>
+<td>qos</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_mqtt_unsub">tos_tf_module_mqtt_unsub</h3>
+<pre><code class="language-c">int tos_tf_module_mqtt_unsub(char *topic);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>取消订阅主题</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>topic</td>
+<td>主题</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_mqtt_state">tos_tf_module_mqtt_state</h3>
+<pre><code class="language-c">int tos_tf_module_mqtt_state(mqtt_state_t *state);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>查询MQTT连接状态</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[out]</td>
+<td>state</td>
+<td>连接状态</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+<h3 id="tos_tf_module_debug_level_set">tos_tf_module_debug_level_set</h3>
+<pre><code class="language-c">int tos_tf_module_debug_level_set(int log_level);
+</code></pre>
+<ul>
+<li><strong>功能描述</strong></li>
+</ul>
+<p>设置模组调试日志级别</p>
+<ul>
+<li><strong>参数解释</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IN/OUT</th>
+<th>参数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[in]</td>
+<td>log_level</td>
+<td>调试日志级别</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>返回值</strong></li>
+</ul>
+<p>0，返回成功。</p>
+<p>-1，返回失败。</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../04.Development_Manual/" class="btn btn-neutral float-left" title="04.Development_Manual"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../06.FAQ/" class="btn btn-neutral float-right" title="06.FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../04.Development_Manual/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../06.FAQ/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
